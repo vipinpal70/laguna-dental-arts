@@ -44,6 +44,7 @@ export default function ServicesPage() {
       <section className="section">
         <div className="container">
           <CategoryFilterGrid
+            gridClassName="prodgrid prodgrid--keep"
             ariaLabel="Filter lab services"
             filters={[
               { key: "all", label: "All" },
@@ -92,7 +93,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section" id="faq">
+      <section className="section" style={{ paddingBottom: 0 }} id="faq">
         <div className="container">
           <div className="shead shead--center reveal"><span className="eyebrow center">FAQ</span><h2 className="display">Dental lab service questions.</h2></div>
           <FaqAccordion items={FAQ} />

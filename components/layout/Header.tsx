@@ -20,14 +20,21 @@ export function Header() {
   const pathname = usePathname();
   const [isSolid, setIsSolid] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [quickLinksOpen, setQuickLinksOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileQuickLinksOpen, setMobileQuickLinksOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const quickLinksTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [prevPathname, setPrevPathname] = useState(pathname);
-  if (pathname !== prevPathname) {
+  if (pathname !== prevPathname) {  
     setPrevPathname(pathname);
     setMobileOpen(false);
     setServicesOpen(false);
+    setQuickLinksOpen(false);
+    setMobileServicesOpen(false);
+    setMobileQuickLinksOpen(false);
   }
 
   useEffect(() => {
@@ -49,28 +56,22 @@ export function Header() {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 140);
   };
 
+  const openQuickLinks = () => {
+    if (quickLinksTimer.current) clearTimeout(quickLinksTimer.current);
+    setQuickLinksOpen(true);
+  };
+  const closeQuickLinks = () => {
+    quickLinksTimer.current = setTimeout(() => setQuickLinksOpen(false), 140);
+  };
+
   const isActive = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(href));
+
+  if (pathname === "/admin" || pathname?.startsWith("/admin/")) {
+    return null;
+  }
 
   return (
     <>
-      <div className="topbar">
-        <div className="topbar__inner">
-          <a href="https://synergy3d.net/synergy_script.pdf" target="_blank" rel="noopener noreferrer">
-            <Icon name="download" size={15} strokeWidth={1.9} />
-            Download Rx Form
-          </a>
-          <span className="topbar__divider" aria-hidden="true" />
-          <Link href="/shipping-label">
-            <Icon name="truck" size={15} strokeWidth={1.9} />
-            Shipping Label
-          </Link>
-          <span className="topbar__divider" aria-hidden="true" />
-          <Link href="/track-case">
-            <Icon name="track" size={15} strokeWidth={1.9} />
-            Track Case
-          </Link>
-        </div>
-      </div>
 
       <header className={`nav${isSolid ? " is-solid" : ""}`}>
         <div className="nav__inner">
@@ -126,6 +127,59 @@ export function Header() {
                 ))}
               </div>
             </div>
+
+            <div
+              className={`nav__item${quickLinksOpen ? " open" : ""}`}
+              onMouseEnter={openQuickLinks}
+              onMouseLeave={closeQuickLinks}
+            >
+              <button
+                type="button"
+                className={`nav__link${
+                  isActive("/shipping-label") || isActive("/track-case") ? " is-active" : ""
+                }`}
+                aria-haspopup="true"
+                aria-expanded={quickLinksOpen}
+              >
+                Quick Links
+                <Icon name="chev" size={11} strokeWidth={2.4} className="chev" />
+              </button>
+              <div className="mega mega--quick" role="menu">
+                <a
+                  className="mega__item"
+                  href="https://synergy3d.net/synergy_script.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="mega__ico">
+                    <Icon name="download" size={20} strokeWidth={1.9} />
+                  </span>
+                  <span className="mega__txt">
+                    <b>Download Rx Form</b>
+                    <span>Print or save digital Rx sheet</span>
+                  </span>
+                </a>
+                <Link className="mega__item" href="/shipping-label">
+                  <span className="mega__ico">
+                    <Icon name="truck" size={20} strokeWidth={1.9} />
+                  </span>
+                  <span className="mega__txt">
+                    <b>Shipping Label</b>
+                    <span>Generate & print prepaid label</span>
+                  </span>
+                </Link>
+                <Link className="mega__item" href="/track-case">
+                  <span className="mega__ico">
+                    <Icon name="track" size={20} strokeWidth={1.9} />
+                  </span>
+                  <span className="mega__txt">
+                    <b>Track Case</b>
+                    <span>Real-time status of your lab case</span>
+                  </span>
+                </Link>
+              </div>
+            </div>
+
             {NAV_LINKS.filter((l) => l.label !== "About Us").map((l) => (
               <Link key={l.href} className={`nav__link${isActive(l.href) ? " is-active" : ""}`} href={l.href}>
                 {l.label}
@@ -153,25 +207,68 @@ export function Header() {
         <button className="mnav__close" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
           <Icon name="close" size={18} />
         </button>
-        <Link href="/">Home</Link>
-        <Link href="/about">About Us</Link>
-        <Link href="/services">Lab Services</Link>
-        <div className="sub">
-          <Link href="/services">All Services</Link>
-          {SERVICE_LINKS.map((s) => (
-            <Link key={s.title} href={s.href}>
-              {s.title}
-            </Link>
-          ))}
+        <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
+        <Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
+
+        {/* Lab Services Accordion Dropdown */}
+        <div className="mnav__acc">
+          <button
+            type="button"
+            className={`mnav__acc-trigger${mobileServicesOpen ? " is-open" : ""}`}
+            onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+            aria-expanded={mobileServicesOpen}
+          >
+            <span>Lab Services</span>
+            <Icon name="chev" size={12} strokeWidth={2.4} className={`chev${mobileServicesOpen ? " is-open" : ""}`} />
+          </button>
+          {mobileServicesOpen && (
+            <div className="sub">
+              <Link href="/services" onClick={() => setMobileOpen(false)}>
+                All Services
+              </Link>
+              {SERVICE_LINKS.map((s) => (
+                <Link key={s.title} href={s.href} onClick={() => setMobileOpen(false)}>
+                  {s.title}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
-        <Link href="/insights">Insights</Link>
-        <Link href="/portal">Dental Portal</Link>
-        <Link href="/contact">Contact</Link>
+
+        {/* Quick Links Accordion Dropdown */}
+        <div className="mnav__acc">
+          <button
+            type="button"
+            className={`mnav__acc-trigger${mobileQuickLinksOpen ? " is-open" : ""}`}
+            onClick={() => setMobileQuickLinksOpen(!mobileQuickLinksOpen)}
+            aria-expanded={mobileQuickLinksOpen}
+          >
+            <span>Quick Links</span>
+            <Icon name="chev" size={12} strokeWidth={2.4} className={`chev${mobileQuickLinksOpen ? " is-open" : ""}`} />
+          </button>
+          {mobileQuickLinksOpen && (
+            <div className="sub">
+              <a href="https://synergy3d.net/synergy_script.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
+                Download Rx Form
+              </a>
+              <Link href="/shipping-label" onClick={() => setMobileOpen(false)}>
+                Shipping Label
+              </Link>
+              <Link href="/track-case" onClick={() => setMobileOpen(false)}>
+                Track Case
+              </Link>
+            </div>
+          )}
+        </div>
+
+        <Link href="/insights" onClick={() => setMobileOpen(false)}>Insights</Link>
+        <Link href="/portal" onClick={() => setMobileOpen(false)}>Dental Portal</Link>
+        <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
         <div className="mnav__actions">
-          <a className="btn" href={SITE.phoneHref}>
+          <a className="btn btn--outline-light btn--full" href={SITE.phoneHref}>
             <Icon name="phone" size={16} /> {SITE.phone}
           </a>
-          <Link className="btn btn--light" href="/portal">
+          <Link className="btn btn--light btn--full" href="/portal" onClick={() => setMobileOpen(false)}>
             Send a Case
           </Link>
         </div>

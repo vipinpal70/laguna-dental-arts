@@ -69,7 +69,7 @@ export default function PortalPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingBottom: 0 }}>
         <div className="container">
           <div className="shead shead--center reveal"><span className="eyebrow center">What you get</span><h2 className="display">A calmer way to run lab work.</h2></div>
           <div className="pfeatures reveal">

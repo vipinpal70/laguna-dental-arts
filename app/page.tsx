@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Compass, Layers, MessageSquare } from "lucide-react";
 import { Icon } from "@/components/icons/Icon";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { CategoryFilterGrid } from "@/components/ui/CategoryFilterGrid";
@@ -65,9 +66,9 @@ const PRODUCTS = [
 ];
 
 const VALUES = [
-  { icon: "compass" as const, title: "Digital Precision", desc: "3Shape and Exocad design paired with in-house milling of zirconia, PMMA, and PFM work — engineered for accurate margins and consistent fit." },
-  { icon: "gem" as const, title: "Expert Craftsmanship", desc: "Experienced technicians refine anatomy, texture, shade, and finish by hand — where digital production meets restorative artistry." },
-  { icon: "chat" as const, title: "Dentist-Focused Support", desc: "Speak with real people who understand dental lab cases. We contact you when records need clarification and keep your clinical intent at the center." },
+  { icon: Compass, title: "Digital Precision", desc: "3Shape and Exocad design paired with in-house milling of zirconia, PMMA, and PFM work — engineered for accurate margins and consistent fit." },
+  { icon: Layers, title: "Expert Craftsmanship", desc: "Experienced technicians refine anatomy, texture, shade, and finish by hand — where digital production meets restorative artistry." },
+  { icon: MessageSquare, title: "Dentist-Focused Support", desc: "Speak with real people who understand dental lab cases. We contact you when records need clarification and keep your clinical intent at the center." },
 ];
 
 const WHY = [
@@ -112,6 +113,7 @@ const STRIP_ITEMS = [
 export default function HomePage() {
   return (
     <main>
+      {/* Hero */}
       <section className="hhero">
         <div className="hhero-grid">
           <div className="hhero-media">
@@ -130,7 +132,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <div className="strip">
         <div className="strip-inner">
           {STRIP_ITEMS.map((item) => (
@@ -141,7 +142,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      <section className="section">
+      {/* More than a dental lab */}
+      <section className="section" style={{ paddingBottom: 0 }}>
         <div className="container">
           <div className="shead shead--center reveal">
             <span className="eyebrow center">More than a dental lab</span>
@@ -149,17 +151,23 @@ export default function HomePage() {
             <p className="lead">Working with multiple laboratories makes case management harder than it needs to be. Laguna brings a broad restorative menu, digital tooling, and real people together in one place.</p>
           </div>
           <div className="val-grid">
-            {VALUES.map((v) => (
-              <div className="card val-card reveal" key={v.title}>
-                <div className="val-ic ic-tile"><Icon name={v.icon} size={22} strokeWidth={1.9} /></div>
-                <h3>{v.title}</h3>
-                <p>{v.desc}</p>
-              </div>
-            ))}
+            {VALUES.map((v) => {
+              const IconComponent = v.icon;
+              return (
+                <div className="card val-card reveal" key={v.title}>
+                  <div className="val-ic ic-tile">
+                    <IconComponent size={22} strokeWidth={1.9} />
+                  </div>
+                  <h3>{v.title}</h3>
+                  <p>{v.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
+      {/* One lab built for everyon */}
       <section className="section">
         <div className="container">
           <div className="shead shead--center reveal">
@@ -176,6 +184,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* products */}
       <section className="section section--tint" id="products">
         <div className="container">
           <div className="shead reveal" style={{ maxWidth: 560 }}>
@@ -192,6 +201,11 @@ export default function HomePage() {
               { key: "removable", label: "Removable" },
               { key: "digital", label: "Digital" },
             ]}
+            rightElement={
+              <Link className="btn" href="/services">
+                View All <Icon name="arrow" size={16} strokeWidth={2.4} />
+              </Link>
+            }
             items={PRODUCTS.map((p) => ({
               key: p.key,
               categories: p.categories,
@@ -209,11 +223,6 @@ export default function HomePage() {
               ),
             }))}
           />
-          <div className="reveal" style={{ display: "flex", justifyContent: "flex-end", marginTop: 30 }}>
-            <Link className="btn" href="/services">
-              View All <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
-            </Link>
-          </div>
         </div>
       </section>
 

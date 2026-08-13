@@ -103,7 +103,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section" id="team">
+      <section className="section" style={{ paddingBottom: 0 }} id="team">
         <div className="container">
           <div className="team-showcase__head reveal">
             <span className="eyebrow center">Our Team</span>
