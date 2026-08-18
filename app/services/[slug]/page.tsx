@@ -80,7 +80,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <Link className="btn" href="/portal">
                 Start a Case <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
               </Link>
-              <a className="pd-rx" href="https://synergy3d.net/synergy_script.pdf" target="_blank" rel="noopener noreferrer">
+              <a className="pd-rx" href="/downloads">
                 Download Rx Form
               </a>
             </div>

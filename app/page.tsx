@@ -12,7 +12,7 @@ const PRODUCTS = [
   {
     key: "crown-bridge",
     categories: ["fixed"],
-    image: "/images/products/crown-bridge.png",
+    image: "/images/products/Crown.jpg",
     title: "Crown & Bridge",
     desc: "Precise-margin zirconia, e.max, and PFM restorations.",
     href: "/services/crowns",
@@ -21,7 +21,7 @@ const PRODUCTS = [
   {
     key: "implants",
     categories: ["implant", "fixed"],
-    image: "/images/products/implant-restorations.png",
+    image: "/images/products/implant_supported.jpg",
     title: "Implant Restorations",
     desc: "Custom abutments to screw-retained crowns, built to your plan.",
     href: "/services/implants",
@@ -30,7 +30,7 @@ const PRODUCTS = [
   {
     key: "full-arch",
     categories: ["implant", "fixed"],
-    image: "/images/products/full-arch-solutions.png",
+    image: "/images/products/Bridges.jpg",
     title: "Full-Arch Solutions",
     desc: "All-on-X hybrids and screw-retained zirconia, planned to delivery.",
     href: "/services/bridges",
@@ -39,7 +39,7 @@ const PRODUCTS = [
   {
     key: "removables",
     categories: ["removable"],
-    image: "/images/products/removables-partials.png",
+    image: "/images/products/removables.jpg",
     title: "Removables & Partials",
     desc: "Dentures, partials, and flexible frameworks — digital or traditional.",
     href: "/services/dentures",
@@ -48,7 +48,7 @@ const PRODUCTS = [
   {
     key: "night-guards",
     categories: ["removable"],
-    image: "/images/products/night-guards.png",
+    image: "/images/products/Night Guards.jpg",
     title: "Night Guards & Appliances",
     desc: "Splints, retainers, and orthodontic appliances, made to spec.",
     href: "/services/night-guards",
@@ -57,7 +57,7 @@ const PRODUCTS = [
   {
     key: "guides-models",
     categories: ["digital"],
-    image: "/images/products/guides-models.png",
+    image: "/images/products/Surgical Guides.jpg",
     title: "Guides, Models & Wax-Ups",
     desc: "Surgical guides, printed models, and diagnostic wax-ups.",
     href: "/services",

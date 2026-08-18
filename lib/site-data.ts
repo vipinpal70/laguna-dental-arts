@@ -41,10 +41,19 @@ export const FOOTER_LAB_SERVICES = [
   { label: "View all →", href: "/services" },
 ];
 
+export const SOCIAL_LINKS = [
+  { name: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/laguna-dental-arts" },
+  { name: "instagram", label: "Instagram", href: "https://www.instagram.com/lagunadentalarts" },
+  { name: "facebook", label: "Facebook", href: "https://www.facebook.com/LagunaDentalArts/" },
+];
+
 export const FOOTER_COMPANY = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
   { label: "Customer Portal", href: "/portal" },
+  { label: "Downloads & Rx Slips", href: "/downloads" },
   { label: "Contact", href: "/contact" },
   { label: "Become a Partner", href: "/contact" },
+  { label: "Terms & Conditions", href: "/terms" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];

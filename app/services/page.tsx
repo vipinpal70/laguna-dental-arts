@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@/components/icons/Icon";
 import { ProductIcon } from "@/components/icons/ProductIcon";
 import { CategoryFilterGrid } from "@/components/ui/CategoryFilterGrid";
@@ -60,7 +61,7 @@ export default function ServicesPage() {
                 <Link className="card pcard" href={`/services/${s.slug}`}>
                   <div className="pcard__media">
                     <span className="pcard__tag">{s.code}</span>
-                    <ProductIcon name={s.art as never} />
+                    <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} />
                   </div>
                   <div className="pcard__body">
                     <h3>{s.title}</h3>

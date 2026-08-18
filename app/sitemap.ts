@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/portal",
     "/shipping-label",
     "/track-case",
+    "/terms",
+    "/privacy",
+    "/downloads",
   ];
 
   const routes = staticRoutes.map((path) => ({

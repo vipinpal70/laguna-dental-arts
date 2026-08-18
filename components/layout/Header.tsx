@@ -106,9 +106,6 @@ export function Header() {
               </Link>
               <div className="mega" role="menu">
                 <Link className="mega__all" href="/services">
-                  <span className="mega__all-ic">
-                    <Icon name="grid" size={20} strokeWidth={2} />
-                  </span>
                   <span>
                     <b>All Services</b>
                     <small>Explore our complete lab services</small>
@@ -116,9 +113,6 @@ export function Header() {
                 </Link>
                 {SERVICE_LINKS.map((s) => (
                   <Link key={s.title} className="mega__item" href={s.href}>
-                    <span className="mega__ico">
-                      <Icon name={NAV_ICON_MAP[s.icon as keyof typeof NAV_ICON_MAP]} size={20} strokeWidth={1.9} />
-                    </span>
                     <span className="mega__txt">
                       <b>{s.title}</b>
                       <span>{s.desc}</span>
@@ -145,33 +139,22 @@ export function Header() {
                 <Icon name="chev" size={11} strokeWidth={2.4} className="chev" />
               </button>
               <div className="mega mega--quick" role="menu">
-                <a
+                <Link
                   className="mega__item"
-                  href="https://synergy3d.net/synergy_script.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/downloads"
                 >
-                  <span className="mega__ico">
-                    <Icon name="download" size={20} strokeWidth={1.9} />
-                  </span>
                   <span className="mega__txt">
                     <b>Download Rx Form</b>
                     <span>Print or save digital Rx sheet</span>
                   </span>
-                </a>
+                </Link>
                 <Link className="mega__item" href="/shipping-label">
-                  <span className="mega__ico">
-                    <Icon name="truck" size={20} strokeWidth={1.9} />
-                  </span>
                   <span className="mega__txt">
                     <b>Shipping Label</b>
                     <span>Generate & print prepaid label</span>
                   </span>
                 </Link>
                 <Link className="mega__item" href="/track-case">
-                  <span className="mega__ico">
-                    <Icon name="track" size={20} strokeWidth={1.9} />
-                  </span>
                   <span className="mega__txt">
                     <b>Track Case</b>
                     <span>Real-time status of your lab case</span>

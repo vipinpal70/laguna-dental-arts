@@ -14,7 +14,7 @@ export default async function InsightsPage() {
 
   return (
     <main>
-      <section className="phero">
+      <section className="phero phero--image phero--insights">
         <div className="container">
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Insights</div>
           <span className="eyebrow reveal">Insights</span>

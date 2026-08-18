@@ -30,7 +30,7 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
   return (
     <main>
       {/* Header Hero */}
-      <section className="phero">
+      <section className="phero phero--image phero--blog">
         <div className="container">
           <div className="phero__crumbs reveal">
             <Link href="/">Home</Link> / <Link href="/insights">Insights</Link> / {article.categoryLabel}

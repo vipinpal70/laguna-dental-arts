@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@/components/icons/Icon";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -17,13 +18,11 @@ const VALUES = [
 ];
 
 const TEAM = [
-  { mark: "LD", title: "Laboratory Leadership", role: "Quality, operations & clinical partnerships", href: "/contact", label: "Meet the team →" },
-  { mark: "CB", title: "Crown & Bridge", role: "Restorative design & ceramics", href: "/services/crowns", label: "View expertise →" },
-  { mark: "FA", title: "Full-Arch Team", role: "Complex cases & digital planning", href: "/services/bridges", label: "View expertise →" },
-  { mark: "IR", title: "Implant Restorations", role: "Custom abutments & implant workflows", href: "/services/implants", label: "View expertise →" },
-  { mark: "RP", title: "Removables Team", role: "Dentures, frameworks & partials", href: "/services/dentures", label: "View expertise →" },
-  { mark: "DT", title: "Digital Technology", role: "CAD/CAM, scanning & manufacturing", href: "/services", label: "View expertise →" },
-  { mark: "CS", title: "Client Support", role: "Case coordination & practice success", href: "/contact", label: "Talk with us →" },
+  { name: "Jeton Zajmi", mark: "JZ", role: "President", image: "/images/team/Jeton.jpg" },
+  { name: "Joey Kong", mark: "JK", role: "General Manager", image: "/images/team/Joey.jpg" },
+  { name: "Sheila Reis", mark: "SR", role: "Sales Manager", image: "/images/team/Sheila.jpg" },
+  { name: "Julian Inthvongxay", mark: "JI", role: "Removable Manager", image: "/images/team/Julian.jpg" },
+  { name: "Cheer Cha", mark: "CC", role: "Aesthetic Finishing Manager", image: "/images/team/Cheer.jpg" },
 ];
 
 export default function AboutPage() {
@@ -42,9 +41,8 @@ export default function AboutPage() {
         <div className="container split">
           <div className="reveal">
             <div className="media media--tall">
-              <div className="artscene" style={{ background: "linear-gradient(150deg,#163a76,#06132e)" }} />
+              <Image src="/images/about-founded.jpg" alt="Founded by ceramists, run like a manufacturer" width={800} height={1000} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
               <span className="media__corner tl" /><span className="media__corner tr" /><span className="media__corner bl" /><span className="media__corner br" />
-              <span className="media__cap">CAD DESIGN BAY · TECHNICIAN WORKSTATION</span>
             </div>
           </div>
           <div className="reveal">
@@ -72,9 +70,8 @@ export default function AboutPage() {
         <div className="container split split--rev">
           <div className="split__media reveal">
             <div className="media media--wide">
-              <div className="artscene" style={{ background: "linear-gradient(150deg,#123061,#0a1e45)" }} />
+              <Image src="/images/digital-pipeline.jpg" alt="A fully digital pipeline, under one roof" width={800} height={500} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
               <span className="media__corner tl" /><span className="media__corner tr" /><span className="media__corner bl" /><span className="media__corner br" />
-              <span className="media__cap">5-AXIS MILLING · IN-HOUSE MANUFACTURING</span>
             </div>
           </div>
           <div className="reveal">
@@ -112,23 +109,17 @@ export default function AboutPage() {
           </div>
           <div className="team-grid reveal">
             {TEAM.map((t) => (
-              <article className="card team-card" key={t.mark}>
-                <div className="team-card__portrait"><span className="team-card__mark">{t.mark}</span></div>
+              <article className="card team-card" key={t.name}>
+                <div className="team-card__portrait">
+                  <span className="team-card__mark">{t.mark}</span>
+                  <Image src={t.image} alt={t.name} width={400} height={400} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+                </div>
                 <div className="team-card__body">
-                  <h3>{t.title}</h3>
+                  <h3>{t.name}</h3>
                   <div className="team-card__role">{t.role}</div>
-                  <Link className="team-card__link" href={t.href}>{t.label}</Link>
                 </div>
               </article>
             ))}
-            <article className="card team-card team-card--join">
-              <div className="team-card__body">
-                <div className="team-card__plus">+</div>
-                <h3>Build your career with us.</h3>
-                <p>We welcome skilled dental professionals who care deeply about precision and partnership.</p>
-                <Link className="team-card__link" href="/contact">Get in touch →</Link>
-              </div>
-            </article>
           </div>
         </div>
       </section>
