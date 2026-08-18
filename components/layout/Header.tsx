@@ -231,9 +231,9 @@ export function Header() {
           </button>
           {mobileQuickLinksOpen && (
             <div className="sub">
-              <a href="https://synergy3d.net/synergy_script.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
+              <Link href="/downloads" onClick={() => setMobileOpen(false)}>
                 Download Rx Form
-              </a>
+              </Link>
               <Link href="/shipping-label" onClick={() => setMobileOpen(false)}>
                 Shipping Label
               </Link>

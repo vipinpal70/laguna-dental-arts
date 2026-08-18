@@ -41,15 +41,18 @@ export default function ContactPage() {
               <span className="ic ic-tile"><Icon name="clock" size={20} strokeWidth={1.8} /></span>
               <div><h4>Business hours</h4><p>{SITE.hours}<br />{SITE.hoursNote}</p></div>
             </div>
-            <div className="map-frame">
-              <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
-                <div style={{ textAlign: "center" }}>
-                  <span style={{ display: "inline-grid", placeItems: "center", width: 52, height: 52, borderRadius: "50%", background: "rgba(59,157,255,.25)" }}>
-                    <span style={{ display: "block", width: 20, height: 20, borderRadius: "50%", background: "var(--blue)" }} />
-                  </span>
-                </div>
-              </div>
-              <span className="media__cap">MAP · {SITE.addressLine1.toUpperCase()}</span>
+            <div className="map-frame" style={{ width: "100%", maxWidth: "100%", height: 300, position: "relative" }}>
+              <iframe
+                title="Laguna Dental Arts Location Map"
+                src="https://maps.google.com/maps?q=9152+Elkmont+Way,+Elk+Grove,+CA+95624&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, position: "absolute", inset: 0, width: "100%", height: "100%", borderRadius: "inherit" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <span className="media__cap" style={{ zIndex: 10, pointerEvents: "none" }}>MAP · {SITE.addressLine1.toUpperCase()}</span>
             </div>
           </div>
         </div>
