@@ -87,9 +87,8 @@ export function Header() {
           </Link>
 
           <nav className="nav__menu" aria-label="Primary">
-            <Link className={`nav__link${isActive("/about") ? " is-active" : ""}`} href="/about">
-              About Us
-            </Link>
+
+            {/* Lab Services */}
             <div
               className={`nav__item${servicesOpen ? " open" : ""}`}
               onMouseEnter={openServices}
@@ -121,7 +120,7 @@ export function Header() {
                 ))}
               </div>
             </div>
-
+            {/* Quick Links*/}
             <div
               className={`nav__item${quickLinksOpen ? " open" : ""}`}
               onMouseEnter={openQuickLinks}
@@ -162,12 +161,18 @@ export function Header() {
                 </Link>
               </div>
             </div>
-
+            
+            {/* Insight, Dental portal, Contact, Training */}
             {NAV_LINKS.filter((l) => l.label !== "About Us").map((l) => (
               <Link key={l.href} className={`nav__link${isActive(l.href) ? " is-active" : ""}`} href={l.href}>
                 {l.label}
               </Link>
             ))}
+            
+            {/* About */}
+            <Link className={`nav__link${isActive("/about") ? " is-active" : ""}`} href="/about">
+              About Us
+            </Link>
           </nav>
 
           <div className="nav__actions">

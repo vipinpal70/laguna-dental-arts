@@ -134,11 +134,13 @@ export default function HomePage() {
       </section>
       <div className="strip">
         <div className="strip-inner">
-          {STRIP_ITEMS.map((item) => (
-            <span key={item}>
-              <Icon name="check" size={14} strokeWidth={2.3} /> {item}
-            </span>
-          ))}
+          <div className="strip-track">
+            {STRIP_ITEMS.concat(STRIP_ITEMS).map((item, index) => (
+              <span key={index}>
+                <Icon name="check" size={17} strokeWidth={2.3} /> {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 

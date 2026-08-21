@@ -46,7 +46,7 @@ export function ContactForm() {
           <label>Message</label>
           <textarea placeholder="Tell us about your typical case volume and what you're looking for in a lab." />
         </div>
-        <button className="btn btn--lg btn--full" type="submit">
+        <button className="btn btn--lg" type="submit">
           Send inquiry <Icon name="arrow" size={18} strokeWidth={2.4} className="arw" />
         </button>
         {sent && <div className="form-success">Request received ✓ We&apos;ll be in touch shortly.</div>}

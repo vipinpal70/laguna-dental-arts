@@ -49,7 +49,7 @@ export function CategoryFilterGrid({
 
   return (
     <>
-      <div className="filter-bar reveal">
+      <div className="filter-bar">
         <div className="filter-group" role="group" aria-label={ariaLabel}>
           {filters.map((f) => (
             <button
@@ -66,7 +66,7 @@ export function CategoryFilterGrid({
         {renderedRightElement && <div className="filter-bar__right">{renderedRightElement}</div>}
       </div>
 
-      <div className={`${gridClassName} reveal`}>
+      <div className={gridClassName}>
         {items.map((item) => {
           const categoryMatch = active === "all" || item.categories.includes(active);
           const query = search.trim().toLowerCase();

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Icon } from "@/components/icons/Icon";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { TeamGrid } from "@/components/about/TeamGrid";
 
 export const metadata: Metadata = {
   title: "About",
@@ -15,14 +16,6 @@ const VALUES = [
   { n: "02", title: "Craft", desc: "Digital tools handle the geometry; our master ceramists give each restoration the character of a natural tooth." },
   { n: "03", title: "Partnership", desc: "You get named technicians and an account lead who learn your preferences — support that feels like an extension of your team." },
   { n: "04", title: "Innovation", desc: "We adopt new materials and workflows deliberately, validating each one before it ever touches a patient case." },
-];
-
-const TEAM = [
-  { name: "Jeton Zajmi", mark: "JZ", role: "President", image: "/images/team/Jeton.jpg" },
-  { name: "Joey Kong", mark: "JK", role: "General Manager", image: "/images/team/Joey.jpg" },
-  { name: "Sheila Reis", mark: "SR", role: "Sales Manager", image: "/images/team/Sheila.jpg" },
-  { name: "Julian Inthvongxay", mark: "JI", role: "Removable Manager", image: "/images/team/Julian.jpg" },
-  { name: "Cheer Cha", mark: "CC", role: "Aesthetic Finishing Manager", image: "/images/team/Cheer.jpg" },
 ];
 
 export default function AboutPage() {
@@ -107,20 +100,7 @@ export default function AboutPage() {
             <h2 className="display">The people behind <span>every restoration.</span></h2>
             <p>Experienced specialists across design, ceramics, implants and client support work together to make every case predictable from intake to delivery.</p>
           </div>
-          <div className="team-grid reveal">
-            {TEAM.map((t) => (
-              <article className="card team-card" key={t.name}>
-                <div className="team-card__portrait">
-                  <span className="team-card__mark">{t.mark}</span>
-                  <Image src={t.image} alt={t.name} width={400} height={400} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
-                </div>
-                <div className="team-card__body">
-                  <h3>{t.name}</h3>
-                  <div className="team-card__role">{t.role}</div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <TeamGrid />
         </div>
       </section>
 

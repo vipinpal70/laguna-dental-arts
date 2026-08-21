@@ -61,7 +61,7 @@ export default function ServicesPage() {
                 <Link className="card pcard" href={`/services/${s.slug}`}>
                   <div className="pcard__media">
                     <span className="pcard__tag">{s.code}</span>
-                    <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} />
+                    <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} className="pcard__product-image" />
                   </div>
                   <div className="pcard__body">
                     <h3>{s.title}</h3>

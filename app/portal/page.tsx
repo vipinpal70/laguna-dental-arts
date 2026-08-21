@@ -30,7 +30,12 @@ export default function PortalPage() {
               <h1 className="display" style={{ marginTop: 18 }}>Your cases, in real time.</h1>
               <p className="phero__sub">Submit cases, track every unit from design to delivery, download prescriptions and invoices, and message your case team — all in one secure place.</p>
               <div className="hhero-ctas" style={{ marginTop: 32 }}>
-                <a className="btn btn--lg btn--light" href="#">
+                <a
+                  className="btn btn--lg btn--light"
+                  href="https://lagunadentalarts.absevolutionwebservices.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon name="lock" size={16} /> Sign in to the portal
                 </a>
                 <Link className="btn btn--lg btn--outline-light" href="/contact">Request access</Link>
