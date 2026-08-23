@@ -750,6 +750,14 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
 .filter-btn:hover { border-color: var(--blue-line); color: var(--blue); }
 .filter-btn.is-active { background: var(--blue); border-color: var(--blue); color: #fff; }
 .pcard.is-filtered-out { display: none; }
+.service-filter-grid[data-active-filter="fixed"] .pcard,
+.service-filter-grid[data-active-filter="implant"] .pcard,
+.service-filter-grid[data-active-filter="removable"] .pcard,
+.service-filter-grid[data-active-filter="digital"] .pcard { display: none; }
+.service-filter-grid[data-active-filter="fixed"] .pcard[data-categories~="fixed"],
+.service-filter-grid[data-active-filter="implant"] .pcard[data-categories~="implant"],
+.service-filter-grid[data-active-filter="removable"] .pcard[data-categories~="removable"],
+.service-filter-grid[data-active-filter="digital"] .pcard[data-categories~="digital"] { display: flex; }
 
 /* Filter bar container */
 .filter-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
@@ -1304,5 +1312,4 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
     margin-top: 20px !important;
   }
 }
-
 

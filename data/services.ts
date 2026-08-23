@@ -1457,3 +1457,5 @@ export function buildServiceFaq(service: Service) {
 }
 
 export const SCANNERS = ["iTero", "3Shape", "Medit", "Carestream", "Dexis", "Sirona", "Planmeca"];
+
+
