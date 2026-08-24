@@ -53,24 +53,26 @@ export default function ServicesPage() {
               { key: "removable", label: "Removable" },
               { key: "digital", label: "Digital" },
             ]}
-            items={SERVICES.map((s) => ({
-              key: s.slug,
-              categories: s.categories,
-              node: (
-                <Link className="card pcard" href={`/services/${s.slug}`}>
-                  <div className="pcard__media">
-                    {/* <span className="pcard__tag">{s.code}</span> */}
-                    <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} className="pcard__product-image" />
-                  </div>
-                  <div className="pcard__body">
-                    <h3>{s.title}</h3>
-                    <p>{s.cardDesc}</p>
-                    <span className="pcard__link">Explore <Icon name="arrow" size={15} strokeWidth={2.4} /></span>
-                  </div>
-                </Link>
-              ),
-            }))}
-          />
+          >
+            {SERVICES.map((s) => (
+              <Link
+                key={s.slug}
+                className="card pcard"
+                href={`/services/${s.slug}`}
+                data-categories={s.categories.join(" ")}
+              >
+                <div className="pcard__media">
+                  {/* <span className="pcard__tag">{s.code}</span> */}
+                  <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} className="pcard__product-image" />
+                </div>
+                <div className="pcard__body">
+                  <h3>{s.title}</h3>
+                  <p>{s.cardDesc}</p>
+                  <span className="pcard__link">Explore <Icon name="arrow" size={15} strokeWidth={2.4} /></span>
+                </div>
+              </Link>
+            ))}
+          </ServiceFilterGrid>
         </div>
       </section>
 
