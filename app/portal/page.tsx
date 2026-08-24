@@ -21,13 +21,13 @@ const FEATURES = [
 export default function PortalPage() {
   return (
     <main>
-      <section className="phero">
+      <section className="phero phero--image phero--portal">
         <div className="container">
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Customer Portal</div>
           <div className="split" style={{ alignItems: "center", marginTop: 24 }}>
             <div className="reveal">
               <span className="eyebrow">Customer Portal</span>
-              <h1 className="display" style={{ marginTop: 18 }}>Your cases, in real time.</h1>
+              <h1 className="display" style={{ marginTop: 18 }}>Your cases, <br/> in real time.</h1>
               <p className="phero__sub">Submit cases, track every unit from design to delivery, download prescriptions and invoices, and message your case team — all in one secure place.</p>
               <div className="hhero-ctas" style={{ marginTop: 32 }}>
                 <a
@@ -45,7 +45,9 @@ export default function PortalPage() {
               <div className="portal-mock">
                 <div className="portal-mock__bar">
                   <i /><i /><i />
-                  <span className="portal-mock__url">portal.lagunadentalarts.com</span>
+                  <span className="portal-mock__url">
+                    portal.lagunadentalarts.com
+                  </span>
                 </div>
                 <div className="portal-mock__body">
                   <div className="portal-mock__head">

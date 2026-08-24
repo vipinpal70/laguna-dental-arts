@@ -26,9 +26,9 @@ export const SERVICE_LINKS: ServiceLink[] = [
 ];
 
 export const NAV_LINKS = [
-  { label: "About Us", href: "/about" },
   { label: "Insights", href: "/insights" },
   { label: "Dental Portal", href: "/portal" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -42,9 +42,10 @@ export const FOOTER_LAB_SERVICES = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/laguna-dental-arts" },
-  { name: "instagram", label: "Instagram", href: "https://www.instagram.com/lagunadentalarts" },
-  { name: "facebook", label: "Facebook", href: "https://www.facebook.com/LagunaDentalArts/" },
+  { name: "facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61583964119515#" },
+  { name: "instagram", label: "Instagram", href: "https://www.instagram.com/lagunadentalarts?igsi=aHFxbXp2dzg2OGY4" },
+  { name: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/laguna-dental-arts/home/" },
+  { name: "youtube", label: "YouTube", href: "https://www.youtube.com/@LagunaDentalArts" },
 ];
 
 export const FOOTER_COMPANY = [

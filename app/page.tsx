@@ -41,7 +41,7 @@ const PRODUCTS = [
     categories: ["removable"],
     image: "/images/products/removables.jpg",
     title: "Removables & Partials",
-    desc: "Dentures, partials, and flexible frameworks — digital or traditional.",
+    desc: "Dentures, partials, and flexible frameworks digital or traditional.",
     href: "/services/dentures",
     linkLabel: "Explore removables",
   },
@@ -56,7 +56,7 @@ const PRODUCTS = [
   },
   {
     key: "guides-models",
-    categories: ["digital"],
+    categories: ["digital", "digital-guides"],
     image: "/images/products/Surgical Guides.jpg",
     title: "Guides, Models & Wax-Ups",
     desc: "Surgical guides, printed models, and diagnostic wax-ups.",
@@ -66,30 +66,30 @@ const PRODUCTS = [
 ];
 
 const VALUES = [
-  { icon: Compass, title: "Digital Precision", desc: "3Shape and Exocad design paired with in-house milling of zirconia, PMMA, and PFM work — engineered for accurate margins and consistent fit." },
-  { icon: Layers, title: "Expert Craftsmanship", desc: "Experienced technicians refine anatomy, texture, shade, and finish by hand — where digital production meets restorative artistry." },
+  { icon: Compass, title: "Digital Precision", desc: "3Shape and Exocad design paired with in-house milling of zirconia, PMMA, and PFM work engineered for accurate margins and consistent fit." },
+  { icon: Layers, title: "Expert Craftsmanship", desc: "Experienced technicians refine anatomy, texture, shade, and finish by hand where digital production meets restorative artistry." },
   { icon: MessageSquare, title: "Dentist-Focused Support", desc: "Speak with real people who understand dental lab cases. We contact you when records need clarification and keep your clinical intent at the center." },
 ];
 
 const WHY = [
   { icon: "compass" as const, title: "Advanced Technology", desc: "Digital design, in-house milling, and 3D production support consistency across the cases you send." },
   { icon: "gem" as const, title: "Experienced Technicians", desc: "Hand finishing and technical review from specialists in esthetics, removables, and implants." },
-  { icon: "check" as const, title: "Consistent Quality", desc: "Defined quality-control steps review the case before it leaves the lab — not after it reaches your chair." },
+  { icon: "check" as const, title: "Consistent Quality", desc: "Defined quality-control steps review the case before it leaves the lab not after it reaches your chair." },
   { icon: "chat" as const, title: "Responsive Communication", desc: "Real people, not anonymous case processing. Reach the lab when questions or complex decisions arise." },
-  { icon: "list3" as const, title: "Full-Service Breadth", desc: "Manage more restorative categories — routine, specialty, and complex — through one relationship." },
+  { icon: "list3" as const, title: "Full-Service Breadth", desc: "Manage more restorative categories routine, specialty, and complex through one relationship." },
   { icon: "clock" as const, title: "Dentist-Centered Workflow", desc: "Predictable schedules and case consultation when treatment requires real collaboration." },
 ];
 
 const WORKFLOW = [
   { icon: "scan" as const, name: "Capture", desc: "Scan complete upper, lower, and bite records with your intraoral scanner." },
-  { icon: "upload" as const, name: "Submit", desc: "Upload files, photos, and the Rx securely — or send a traditional case." },
+  { icon: "upload" as const, name: "Submit", desc: "Upload files, photos, and the Rx securely or send a traditional case." },
   { icon: "search" as const, name: "Review & Plan", desc: "We check completeness and contact you if anything needs clarification." },
   { icon: "mill" as const, name: "Fabricate & QC", desc: "CAD design, milling, finishing, and a defined quality-control review." },
   { icon: "truck" as const, name: "Deliver", desc: "Your case ships back with access to the team for questions or follow-up." },
 ];
 
 const TESTIMONIALS = [
-  { initials: "RM", name: "Dr. R. Martinez, DDS", role: "Sample placeholder · replace with approved quote", quote: "The communication is what sets Laguna apart. When a full-arch case needs a design decision, someone who actually understands the workflow calls me — not a ticketing system." },
+  { initials: "RM", name: "Dr. R. Martinez, DDS", role: "Sample placeholder · replace with approved quote", quote: "The communication is what sets Laguna apart. When a full-arch case needs a design decision, someone who actually understands the workflow calls me not a ticketing system." },
   { initials: "SP", name: "Dr. S. Patel, DMD", role: "Sample placeholder · replace with approved quote", quote: "Consistent margins, natural esthetics, and a team that flags missing records before production. My crown & bridge cases come back predictable, case after case." },
   { initials: "JC", name: "Dr. J. Cho, DDS", role: "Sample placeholder · replace with approved quote", quote: "Daily pickup keeps our schedule tight, and the digital workflow made switching from impressions painless. It genuinely feels like an extension of our practice." },
 ];
@@ -177,12 +177,12 @@ export default function HomePage() {
             <h2 className="display">Capability you can plan around</h2>
           </div>
           <div className="stat-grid stat-grid--light reveal">
-            <div className="stat"><StatCounter to={6} /><div className="stat__label">Restorative categories handled under one roof</div></div>
-            <div className="stat"><StatCounter to={2} /><div className="stat__label">Case workflows welcome — digital and traditional</div></div>
-            <div className="stat"><StatCounter to={100} suffix="%" /><div className="stat__label">Of cases pass a defined quality-control review before shipping</div></div>
-            <div className="stat"><StatCounter to={5} /><div className="stat__label">Step case journey — from capture to delivery</div></div>
+            <div className="stat"><StatCounter to={27} suffix="+"/><div className="stat__label">Years in business</div></div>
+            <div className="stat"><StatCounter to={700} suffix="K+" /><div className="stat__label">Cases delivered</div></div>
+            <div className="stat"><StatCounter to={10} suffix="K+" /><div className="stat__label">Dental practices served</div></div>
+            <div className="stat"><StatCounter to={13} suffix="K"/><div className="stat__label">Sq. ft. facility</div></div>
           </div>
-          <p className="stat-note">Figures describe Laguna Dental Arts&apos; service scope and process. Turnaround and case specifics vary — contact the lab for details.</p>
+          <p className="stat-note">Figures describe Laguna Dental Arts&apos; service scope and process. Turnaround and case specifics vary contact the lab for details.</p>
         </div>
       </section>
 
@@ -228,6 +228,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* workflow */}
       <section className="section" id="workflow">
         <div className="container">
           <div className="shead shead--center reveal">
@@ -254,13 +255,14 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section>  
 
+      {/* why */}
       <section className="section section--tint" id="why">
         <div className="container">
           <div className="shead reveal">
             <span className="eyebrow">Why practices choose Laguna</span>
-            <h2 className="display">More than a vendor. A laboratory partner.</h2>
+            <h2 className="display">More than a vendor. <br/> A laboratory partner.</h2>
             <p>The best laboratory relationship is built on clear communication, repeatable processes, technical capability, and a team that understands how lab decisions affect your schedule.</p>
           </div>
           <div className="why__grid">

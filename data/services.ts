@@ -194,7 +194,7 @@ export const SERVICES: Service[] = [
       "digital"
     ],
     "title": "Dentures",
-    "heroHtml": "Digital dentures. <em>Repeatable fit.</em>",
+    "heroHtml": "Digital dentures. <br /><em>Repeatable fit.</em>",
     "art": "denture",
     "image": "/images/products/removables-partials.png",
     "cardDesc": "Full dentures, partial frameworks and implant overdentures are designed for balanced function, natural tooth arrangement and an archived workflow that makes future service simpler.",

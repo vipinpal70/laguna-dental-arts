@@ -185,6 +185,8 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
   background: transparent; border: none; font-family: inherit; cursor: pointer;
 }
 .nav__link:hover, .nav__link.is-active { color: var(--blue); }
+.nav.nav--light:not(.is-solid) .nav__link { color: var(--navy); }
+.nav.nav--light:not(.is-solid) .nav__link:hover, .nav.nav--light:not(.is-solid) .nav__link.is-active { color: var(--blue); }
 .nav__link .chev { width: 10px; height: 10px; transition: transform 0.3s var(--ease); }
 .nav__item { position: relative; }
 .nav__item.open .chev { transform: rotate(180deg); }
@@ -285,15 +287,33 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
 /* =====================================================================
    HERO (interior pages)
    ===================================================================== */
-.phero { background: var(--navy); color: #fff; position: relative; overflow: hidden; padding: clamp(150px, 20vh, 210px) 0 clamp(70px, 9vw, 110px); }
+.phero {
+  background: var(--navy);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 150px 0 56px;
+}
+@media (min-width: 901px) {
+  .phero {
+    margin-top: -80px;
+    min-height: 820px;
+    padding-bottom: 56px;
+  }
+}
 .phero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(59, 157, 255, 0.14) 1px, transparent 0); background-size: 28px 28px; opacity: 0.4; }
 .phero--image { background-size: cover; background-position: center; background-repeat: no-repeat; }
 .phero--image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(3, 14, 68, 0.9) 0%, rgba(3, 14, 68, 0.68) 46%, rgba(3, 14, 68, 0.28) 100%); }
 .phero--about { background-image: url("/images/hero-about.jpg"); }
 .phero--services { background-image: url("/images/hero-services.jpg"); }
 .phero--contact { background-image: url("/images/hero-contact.jpg"); }
-.phero--insights { background-image: url("/images/insights-banner.jpg"); }
-.phero--blog { background-image: url("/images/blog-banner.jpg"); }
+.phero--insights { background-image: url("/images/hero-insights.jpg"); }
+.phero--portal { background-image: url("/images/hero-portal.jpg"); }
+.phero--blog { background-image: url("/images/hero-insights.jpg"); }
 .phero .container { position: relative; z-index: 1; }
 .phero h1 { max-width: 20ch; margin-top: 20px; color: #fff; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -0.03em; }
 .phero__sub { margin-top: 20px; max-width: 56ch; color: rgba(250, 250, 252, 0.82); font-size: clamp(1.05rem, 1.4vw, 1.2rem); }
@@ -622,19 +642,19 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
 /* =====================================================================
    WORKFLOW TIMELINE
    ===================================================================== */
-.flow__track { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; position: relative; margin-top: 52px; }
-.flow__line { position: absolute; top: 31px; left: 0; right: 0; height: 2px; background: var(--line); overflow: hidden; }
+.flow__track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; margin-top: 52px; }
+.flow__line { position: absolute; top: 31px; left: 10%; right: 10%; height: 2px; background: var(--line); overflow: hidden; }
 .section--tint .flow__line { background: var(--line-dark); }
 .flow__line i { position: absolute; inset: 0; background: linear-gradient(90deg, var(--blue), var(--blue-dark)); transform: scaleX(0); transform-origin: left; transition: transform 1.4s var(--ease); }
 .flow.is-in .flow__line i { transform: scaleX(1); }
-.flow__step { position: relative; padding: 0 12px; text-align: left; }
-.flow__dot { width: 60px; height: 60px; border-radius: 50%; position: relative; z-index: 2; box-shadow: var(--shadow-sm); transition: 0.5s var(--ease); }
+.flow__step { position: relative; padding: 0 12px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.flow__dot { width: 60px; height: 60px; border-radius: 50%; position: relative; z-index: 2; box-shadow: var(--shadow-sm); transition: 0.5s var(--ease); margin: 0 auto; }
 .flow__dot svg { width: 24px; height: 24px; }
 .flow__idx { font-size: 0.7rem; color: var(--blue); letter-spacing: 0.1em; margin-top: 20px; font-weight: 600; }
 .section--navy .flow__idx, .section--tint .flow__idx { color: var(--blue); }
 .flow__name { font-weight: 640; font-size: 1.1rem; letter-spacing: -0.01em; margin-top: 6px; color: var(--navy); }
 .section--navy .flow__name, .section--tint .flow__name { color: #fff; }
-.flow__desc { font-size: 0.86rem; color: var(--ink-soft); margin-top: 6px; max-width: 20ch; }
+.flow__desc { font-size: 0.86rem; color: var(--ink-soft); margin-top: 6px; max-width: 22ch; margin-left: auto; margin-right: auto; }
 .section--navy .flow__desc, .section--tint .flow__desc { color: rgba(250, 250, 252, 0.68); }
 @media (max-width: 900px) { .flow__track { grid-template-columns: repeat(2, 1fr); row-gap: 40px; } .flow__line { display: none; } }
 @media (max-width: 768px) {
@@ -1015,7 +1035,25 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
 /* =====================================================================
    PRODUCT DETAIL TEMPLATE
    ===================================================================== */
-.pd-hero { position: relative; min-height: 340px; padding: 150px 0 68px; background: var(--navy); color: #fff; overflow: hidden; }
+.pd-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 140px 0 56px;
+  background: var(--navy);
+  color: #fff;
+  overflow: hidden;
+}
+@media (min-width: 901px) {
+  .pd-hero {
+    margin-top: -80px;
+    padding-top: 160px;
+    padding-bottom: 64px;
+    min-height: 580px;
+  }
+}
 .pd-hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(59, 157, 255, 0.13) 1px, transparent 0); background-size: 28px 28px; opacity: 0.38; }
 .pd-hero .container { position: relative; z-index: 1; }
 .pd-hero h1 { max-width: 820px; margin-top: 22px; color: #fff; font-size: clamp(42px, 5vw, 62px); line-height: 1.05; letter-spacing: -0.03em; }
@@ -1061,13 +1099,30 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
 .pd-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .pd-chip { padding: 8px 13px; border: 1px solid var(--line); border-radius: 9px; background: #f1f5fb; color: #35415f; font-size: 0.82rem; font-weight: 500; }
 .pd-pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
-@media (max-width: 900px) { .pd-grid { grid-template-columns: 1fr; } .pd-visual { position: relative; top: auto; min-height: 400px; } .pd-hero { min-height: 300px; padding-top: 128px; } }
+@media (max-width: 900px) { .pd-grid { grid-template-columns: 1fr; } .pd-visual { position: relative; top: auto; min-height: 400px; } }
 @media (max-width: 600px) { .pd-specs { grid-template-columns: 1fr; } .pd-actions { align-items: stretch; } .pd-actions .btn { width: 100%; justify-content: center; } }
 
 /* =====================================================================
    TOOL PAGES (shipping label / track case)
    ===================================================================== */
-.tool-hero { position: relative; min-height: 460px; padding: 160px 0 90px; overflow: hidden; background: var(--navy); color: #fff; }
+.tool-hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 150px 0 56px;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+}
+@media (min-width: 901px) {
+  .tool-hero {
+    margin-top: -80px;
+    min-height: 820px;
+    padding-bottom: 56px;
+  }
+}
 .tool-hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(59, 157, 255, 0.18) 1px, transparent 0); background-size: 28px 28px; opacity: 0.42; }
 .tool-hero .container { position: relative; }
 .tool-hero h1 { max-width: 820px; margin: 16px 0 0; color: #fff; font-size: clamp(40px, 5vw, 58px); line-height: 1.06; letter-spacing: -0.03em; }
@@ -1092,8 +1147,8 @@ h3.display { font-size: clamp(26px, 3vw, 32px); }
 .tool-result { margin-top: 26px; padding: 20px; border: 1px solid var(--line); border-radius: var(--r-md); background: #f8faff; }
 .tool-result h3 { font-size: 1.05rem; }
 .tool-result p { margin: 8px 0 16px; color: var(--ink-soft); font-size: 0.9rem; }
-@media (max-width: 900px) { .tool-grid { grid-template-columns: 1fr; } .tool-hero { min-height: 400px; } .tool-form-grid { grid-template-columns: 1fr; } .tool-field--full { grid-column: auto; } }
-@media (max-width: 600px) { .tool-hero { padding: 140px 0 68px; } .tool-card, .tool-aside { padding: 24px; border-radius: 20px; } }
+@media (max-width: 900px) { .tool-grid { grid-template-columns: 1fr; } .tool-form-grid { grid-template-columns: 1fr; } .tool-field--full { grid-column: auto; } }
+@media (max-width: 600px) { .tool-card, .tool-aside { padding: 24px; border-radius: 20px; } }
 
 /* =====================================================================
    FOOTER

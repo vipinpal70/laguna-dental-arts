@@ -70,10 +70,12 @@ export function Header() {
     return null;
   }
 
+  const isLightPage = ["/privacy", "/terms"].includes(pathname);
+
   return (
     <>
 
-      <header className={`nav${isSolid ? " is-solid" : ""}`}>
+      <header className={`nav${isSolid ? " is-solid" : ""}${isLightPage ? " nav--light" : ""}`}>
         <div className="nav__inner">
           <Link className="brand" href="/" aria-label="Laguna Dental Arts home">
             <Image
@@ -163,16 +165,16 @@ export function Header() {
             </div>
             
             {/* Insight, Dental portal, Contact, Training */}
-            {NAV_LINKS.filter((l) => l.label !== "About Us").map((l) => (
+            {NAV_LINKS.map((l) => (
               <Link key={l.href} className={`nav__link${isActive(l.href) ? " is-active" : ""}`} href={l.href}>
                 {l.label}
               </Link>
             ))}
             
             {/* About */}
-            <Link className={`nav__link${isActive("/about") ? " is-active" : ""}`} href="/about">
+            {/* <Link className={`nav__link${isActive("/about") ? " is-active" : ""}`} href="/about">
               About Us
-            </Link>
+            </Link> */}
           </nav>
 
           <div className="nav__actions">

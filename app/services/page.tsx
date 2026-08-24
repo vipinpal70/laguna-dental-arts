@@ -37,7 +37,7 @@ export default function ServicesPage() {
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Lab Services</div>
           <span className="eyebrow reveal">Lab Services</span>
           <h1 className="display reveal">Everything your practice sends out, made in one lab.</h1>
-          <p className="phero__sub reveal">Fixed, removable, cosmetic and appliance work — engineered around fit, function and a natural finish. Choose a service to explore materials, workflow and downloads.</p>
+          <p className="phero__sub reveal">Fixed, removable, cosmetic and appliance work engineered around fit, function and a natural finish. Choose a service to explore materials, workflow and downloads.</p>
         </div>
       </section>
 
@@ -53,26 +53,24 @@ export default function ServicesPage() {
               { key: "removable", label: "Removable" },
               { key: "digital", label: "Digital" },
             ]}
-          >
-            {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                className="card pcard"
-                href={`/services/${s.slug}`}
-                data-categories={s.categories.join(" ")}
-              >
-                <div className="pcard__media">
-                  <span className="pcard__tag">{s.code}</span>
-                  <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} className="pcard__product-image" />
-                </div>
-                <div className="pcard__body">
-                  <h3>{s.title}</h3>
-                  <p>{s.cardDesc}</p>
-                  <span className="pcard__link">Explore <Icon name="arrow" size={15} strokeWidth={2.4} /></span>
-                </div>
-              </Link>
-            ))}
-          </ServiceFilterGrid>
+            items={SERVICES.map((s) => ({
+              key: s.slug,
+              categories: s.categories,
+              node: (
+                <Link className="card pcard" href={`/services/${s.slug}`}>
+                  <div className="pcard__media">
+                    {/* <span className="pcard__tag">{s.code}</span> */}
+                    <Image src={s.image || "/laguna-sample-img.jpg"} alt={s.title} width={600} height={450} className="pcard__product-image" />
+                  </div>
+                  <div className="pcard__body">
+                    <h3>{s.title}</h3>
+                    <p>{s.cardDesc}</p>
+                    <span className="pcard__link">Explore <Icon name="arrow" size={15} strokeWidth={2.4} /></span>
+                  </div>
+                </Link>
+              ),
+            }))}
+          />
         </div>
       </section>
 
@@ -80,7 +78,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="shead shead--center reveal"><span className="eyebrow center">How we work</span><h2 className="display">One workflow behind every service.</h2></div>
           <div className="flow">
-            <div className="flow__track">
+            <div className="flow__track" style={{ gridTemplateColumns: `repeat(${WORKFLOW.length}, 1fr)` }}>
               <div className="flow__line"><i /></div>
               {WORKFLOW.map((step, i) => (
                 <div className="flow__step" key={step.name}>
