@@ -284,7 +284,6 @@ export default function HomePage() {
             <h2 className="display">What dental professionals say</h2>
           </div>
           <TestimonialCarousel items={TESTIMONIALS} />
-          <p className="tst-note">Placeholder quotes shown for layout. Publish only verified testimonials with written permission.</p>
         </div>
       </section>
 
