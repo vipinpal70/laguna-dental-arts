@@ -48,7 +48,7 @@ const PRODUCTS = [
   {
     key: "night-guards",
     categories: ["removable"],
-    image: "/images/products/Night Guards.jpg",
+    image: "/images/products/night-guards.png",
     title: "Night Guards & Appliances",
     desc: "Splints, retainers, and orthodontic appliances, made to spec.",
     href: "/services/night-guards",
@@ -57,7 +57,7 @@ const PRODUCTS = [
   {
     key: "guides-models",
     categories: ["digital", "digital-guides"],
-    image: "/images/products/Surgical Guides.jpg",
+    image: "/images/products/guides-models.png",
     title: "Guides, Models & Wax-Ups",
     desc: "Surgical guides, printed models, and diagnostic wax-ups.",
     href: "/services",
@@ -132,6 +132,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <div className="strip">
         <div className="strip-inner">
           <div className="strip-track">
@@ -177,10 +178,10 @@ export default function HomePage() {
             <h2 className="display">Capability you can plan around</h2>
           </div>
           <div className="stat-grid stat-grid--light reveal">
-            <div className="stat"><StatCounter to={27} suffix="+"/><div className="stat__label">Years in business</div></div>
+            <div className="stat"><StatCounter to={27} suffix="+" /><div className="stat__label">Years in business</div></div>
             <div className="stat"><StatCounter to={700} suffix="K+" /><div className="stat__label">Cases delivered</div></div>
             <div className="stat"><StatCounter to={10} suffix="K+" /><div className="stat__label">Dental practices served</div></div>
-            <div className="stat"><StatCounter to={13} suffix="K"/><div className="stat__label">Sq. ft. facility</div></div>
+            <div className="stat"><StatCounter to={13} suffix="K" /><div className="stat__label">Sq. ft. facility</div></div>
           </div>
           <p className="stat-note">Figures describe Laguna Dental Arts&apos; service scope and process. Turnaround and case specifics vary contact the lab for details.</p>
         </div>
@@ -196,6 +197,8 @@ export default function HomePage() {
           </div>
           <CategoryFilterGrid
             ariaLabel="Filter products"
+            gridClassName="prodgrid prodgrid--3 prodgrid--keep"
+            defaultFilter="all"
             filters={[
               { key: "all", label: "All" },
               { key: "fixed", label: "Fixed" },
@@ -211,6 +214,8 @@ export default function HomePage() {
             items={PRODUCTS.map((p) => ({
               key: p.key,
               categories: p.categories,
+              title: p.title,
+              desc: p.desc,
               node: (
                 <Link className="card pcard" href={p.href}>
                   <div className="pcard__media">
@@ -255,14 +260,14 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>  
+      </section>
 
       {/* why */}
       <section className="section section--tint" id="why">
         <div className="container">
           <div className="shead reveal">
             <span className="eyebrow">Why practices choose Laguna</span>
-            <h2 className="display">More than a vendor. <br/> A laboratory partner.</h2>
+            <h2 className="display">More than a vendor. <br /> A laboratory partner.</h2>
             <p>The best laboratory relationship is built on clear communication, repeatable processes, technical capability, and a team that understands how lab decisions affect your schedule.</p>
           </div>
           <div className="why__grid">

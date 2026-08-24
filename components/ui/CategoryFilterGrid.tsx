@@ -1,6 +1,6 @@
 "use client";
 
-import { cloneElement, isValidElement, useState } from "react";
+import { useState } from "react";
 import { Icon } from "@/components/icons/Icon";
 
 export type FilterOption = { key: string; label: string };
@@ -9,13 +9,14 @@ export type FilterableItem = {
   categories: string[];
   title?: string;
   desc?: string;
-  node: React.ReactElement<{ className?: string }>;
+  node: React.ReactNode;
 };
 
 export function CategoryFilterGrid({
   filters,
   items,
-  gridClassName = "prodgrid",
+  gridClassName = "prodgrid prodgrid--3",
+  defaultFilter = "all",
   ariaLabel,
   showSearch,
   searchPlaceholder = "Search...",
@@ -24,12 +25,13 @@ export function CategoryFilterGrid({
   filters: FilterOption[];
   items: FilterableItem[];
   gridClassName?: string;
+  defaultFilter?: string;
   ariaLabel: string;
   showSearch?: boolean;
   searchPlaceholder?: string;
   rightElement?: React.ReactNode;
 }) {
-  const [active, setActive] = useState("all");
+  const [active, setActive] = useState(defaultFilter);
   const [search, setSearch] = useState("");
 
   const renderedRightElement =
@@ -68,7 +70,9 @@ export function CategoryFilterGrid({
 
       <div className={gridClassName}>
         {items.map((item) => {
-          const categoryMatch = active === "all" || item.categories.includes(active);
+          const categoryMatch =
+            active === "all" ||
+            item.categories.some((c) => c.toLowerCase() === active.toLowerCase());
           const query = search.trim().toLowerCase();
           const searchMatch =
             !query ||
@@ -76,12 +80,15 @@ export function CategoryFilterGrid({
             (item.desc && item.desc.toLowerCase().includes(query)) ||
             item.categories.some((c) => c.toLowerCase().includes(query));
           const hidden = !categoryMatch || !searchMatch;
-          if (!isValidElement(item.node)) return null;
-          const existing = item.node.props.className ?? "";
-          return cloneElement(item.node, {
-            key: item.key,
-            className: hidden ? `${existing} is-filtered-out`.trim() : existing,
-          });
+          return (
+            <div
+              key={item.key}
+              className={hidden ? "is-filtered-out" : undefined}
+              style={hidden ? { display: "none" } : undefined}
+            >
+              {item.node}
+            </div>
+          );
         })}
       </div>
     </>
