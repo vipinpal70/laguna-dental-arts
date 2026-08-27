@@ -22,7 +22,7 @@ const WORKFLOW = [
 ];
 
 const FAQ = [
-  { q: "What services does Laguna Dental Arts provide?", a: "We support crown and bridge, implant restorations, full-arch solutions, veneers, dentures and partials, night guards, orthodontic appliances, sleep appliances, surgical guides, models, and digital planning." },
+  { q: "What services does Laguna Dental Arts provide?", a: "We support crown and bridge, implant restorations, full-arch solutions, veneers, dentures and partials, night guards, orthodontic appliances, surgical guides, models, and digital planning." },
   { q: "Do you accept both digital scans and traditional impressions?", a: "Yes. We work with major intraoral scanner systems and open digital files, while continuing to support conventional impressions and physical records when the case calls for them." },
   { q: "Can your technicians help me choose a material or workflow?", a: "Yes. Send the clinical objective, restorative space, occlusion, esthetic requirements, and relevant records. Our team can explain laboratory options while the prescribing dentist retains the clinical decision." },
   { q: "What information should accompany every lab case?", a: "Include a complete prescription, patient identifier, due date, restoration and material, shade, prepared and opposing arches, bite, and any implant or appliance details. Add photographs or diagnostic records when they affect design." },

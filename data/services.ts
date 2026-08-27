@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5 Business Days"
+        "6–9 Days in lab"
       ],
       [
         "Fit Accuracy",
@@ -44,7 +44,7 @@ export const SERVICES: Service[] = [
         "Materials",
         "Zirconia / e.max / PFM"
       ],
-      [
+      [ 
         "Shade System",
         "VITA Classical"
       ]
@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7 Business Days"
+        "8–10 Days in lab"
       ],
       [
         "Design Review",
@@ -118,7 +118,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Systems",
@@ -160,7 +160,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7 Business Days"
+        "8 Days in lab"
       ],
       [
         "Thickness",
@@ -193,7 +193,7 @@ export const SERVICES: Service[] = [
       "fixed",
       "digital"
     ],
-    "title": "Dentures",
+    "title": "Digital Dentures",
     "heroHtml": "Digital dentures. <br /><em>Repeatable fit.</em>",
     "art": "denture",
     "image": "/images/products/removables-partials.png",
@@ -202,7 +202,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "10 Business Days"
+        "8–9 Days in lab"
       ],
       [
         "Workflow",
@@ -244,7 +244,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5 Business Days"
+        "4–7 Days in lab"
       ],
       [
         "Materials",
@@ -286,7 +286,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "5–7 Days in lab"
       ],
       [
         "Records",
@@ -312,48 +312,6 @@ export const SERVICES: Service[] = [
     "faq": []
   },
   {
-    "slug": "sleep-appliances",
-    "code": "SLEEP · 08",
-    "category": "Sleep Appliances",
-    "categories": [
-      "fixed",
-      "digital"
-    ],
-    "title": "Sleep Appliances",
-    "heroHtml": "Better nights start with a <em>precise fit.</em>",
-    "art": "sleep",
-    "image": "/images/products/night-guards.png",
-    "cardDesc": "Mandibular advancement devices are fabricated for comfort, adjustability and repeatable fit, supporting dentist-directed treatment for snoring and appropriate sleep-disordered breathing cases.",
-    "intro": "Mandibular advancement devices are fabricated for comfort, adjustability and repeatable fit, supporting dentist-directed treatment for snoring and appropriate sleep-disordered breathing cases.",
-    "specs": [
-      [
-        "Turnaround",
-        "10 Business Days"
-      ],
-      [
-        "Design",
-        "Titratable"
-      ],
-      [
-        "Workflow",
-        "Digital / Traditional"
-      ],
-      [
-        "Support",
-        "Adjustment Guidance"
-      ]
-    ],
-    "included": [
-      "Multiple appliance designs available",
-      "Patient-comfort focused finishing",
-      "Titratable advancement options",
-      "Digital records accepted",
-      "Replacement and repair support",
-      "Case review available before production"
-    ],
-    "faq": []
-  },
-  {
     "slug": "zirconia-crowns",
     "code": "CRWN · 09",
     "category": "Crown & Bridge",
@@ -370,7 +328,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "6–9 Days in lab"
       ],
       [
         "Workflow",
@@ -412,7 +370,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "Case Specific"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -454,7 +412,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "8 Days in lab"
       ],
       [
         "Workflow",
@@ -495,7 +453,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7 Business Days"
+        "8 Days in lab"
       ],
       [
         "Workflow",
@@ -537,7 +495,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "5 Days in lab"
       ],
       [
         "Workflow",
@@ -578,7 +536,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "3–5 Business Days"
+        "3–5 Days in lab"
       ],
       [
         "Workflow",
@@ -620,7 +578,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -662,7 +620,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "3–5 Days in lab"
       ],
       [
         "Workflow",
@@ -704,7 +662,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -746,7 +704,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "6 Days in lab"
       ],
       [
         "Workflow",
@@ -788,7 +746,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "10 Business Days"
+        "8–9 Days in lab"
       ],
       [
         "Workflow",
@@ -829,7 +787,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "7–8 Days in lab"
       ],
       [
         "Workflow",
@@ -871,7 +829,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "10–12 Business Days"
+        "10 Days in lab"
       ],
       [
         "Workflow",
@@ -913,7 +871,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "3–5 Business Days"
+        "3–5 Days in lab"
       ],
       [
         "Workflow",
@@ -955,7 +913,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "Case Specific"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -997,7 +955,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "5–7 Business Days"
+        "5–8 Days in lab"
       ],
       [
         "Workflow",
@@ -1039,7 +997,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "10–12 Business Days"
+        "8–9 Days in lab"
       ],
       [
         "Workflow",
@@ -1080,7 +1038,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "9 Days in lab"
       ],
       [
         "Workflow",
@@ -1093,48 +1051,6 @@ export const SERVICES: Service[] = [
       [
         "Options",
         "Layered Ceramic"
-      ]
-    ],
-    "included": [
-      "Design reviewed against the submitted prescription and records",
-      "Digital and traditional case submissions supported",
-      "Material and workflow guidance available before production",
-      "Quality-control review completed before delivery",
-      "Major scanner workflows and open files accepted",
-      "Case-specific technical support from the Laguna team"
-    ],
-    "faq": []
-  },
-  {
-    "slug": "millable-flexible-partials",
-    "code": "MFP · 27",
-    "category": "Removables",
-    "categories": [
-      "removable",
-      "digital"
-    ],
-    "title": "Millable Flexible Partials",
-    "heroHtml": "Flexible comfort, <em>digitally designed.</em>",
-    "art": "denture",
-    "image": "/images/products/removables-partials.png",
-    "cardDesc": "Lightweight metal-free partials created in a controlled digital workflow.",
-    "intro": "Digitally designed flexible partials provide a lightweight, metal-free option with controlled clasp contours and a consistent manufacturing workflow.",
-    "specs": [
-      [
-        "Turnaround",
-        "7–10 Business Days"
-      ],
-      [
-        "Workflow",
-        "Digital / Traditional"
-      ],
-      [
-        "Materials",
-        "Flexible Polymer"
-      ],
-      [
-        "Options",
-        "Metal-Free"
       ]
     ],
     "included": [
@@ -1164,7 +1080,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -1206,7 +1122,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -1247,7 +1163,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "9 Days in lab"
       ],
       [
         "Workflow",
@@ -1289,7 +1205,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "Case Specific"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -1331,7 +1247,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–12 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",
@@ -1373,7 +1289,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "3–5 Business Days"
+        "3–5 Days in lab"
       ],
       [
         "Workflow",
@@ -1415,7 +1331,7 @@ export const SERVICES: Service[] = [
     "specs": [
       [
         "Turnaround",
-        "7–10 Business Days"
+        "10–14 Days in lab"
       ],
       [
         "Workflow",

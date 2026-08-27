@@ -95,7 +95,7 @@ const TESTIMONIALS = [
 ];
 
 const FAQ = [
-  { q: "What dental lab services does Laguna Dental Arts provide?", a: "Laguna is a full-service dental laboratory for crowns and bridges, implants and full-arch restorations, removables, veneers, night guards, orthodontic and sleep appliances, surgical guides, models, and related digital workflows." },
+  { q: "What dental lab services does Laguna Dental Arts provide?", a: "Laguna is a full-service dental laboratory for crowns and bridges, implants and full-arch restorations, removables, veneers, night guards, orthodontic appliances, surgical guides, models, and related digital workflows." },
   { q: "Does Laguna Dental Arts accept digital scans?", a: "Yes. We accept cases from major intraoral scanner workflows and open STL or PLY files. Contact the lab if you need help connecting your scanner or transferring a case." },
   { q: "Can I send traditional impressions?", a: "Yes. The lab supports digital and conventional workflows. Include a complete prescription, opposing records, bite, shade, and any photographs or component details required for the restoration." },
   { q: "Do you offer dental lab pickup and delivery near Sacramento and Elk Grove?", a: "Laguna is located in Elk Grove and offers eligible Sacramento-area practices local pickup and delivery. Call the lab to confirm your practice location, schedule, and case requirements." },
@@ -177,11 +177,9 @@ export default function HomePage() {
             <span className="eyebrow center">One lab, built for your bench</span>
             <h2 className="display">Capability you can plan around</h2>
           </div>
-          <div className="stat-grid stat-grid--light reveal">
-            <div className="stat"><StatCounter to={27} suffix="+" /><div className="stat__label">Years in business</div></div>
-            <div className="stat"><StatCounter to={700} suffix="K+" /><div className="stat__label">Cases delivered</div></div>
-            <div className="stat"><StatCounter to={10} suffix="K+" /><div className="stat__label">Dental practices served</div></div>
-            <div className="stat"><StatCounter to={13} suffix="K" /><div className="stat__label">Sq. ft. facility</div></div>
+          <div className="stat-grid stat-grid--light stat-grid--2 reveal">
+            <div className="stat"><StatCounter to={35} suffix="+"/><div className="stat__label">Years in business</div></div>
+            <div className="stat"><StatCounter to={1} suffix="M+" /><div className="stat__label">Cases delivered</div></div>
           </div>
           <p className="stat-note">Figures describe Laguna Dental Arts&apos; service scope and process. Turnaround and case specifics vary contact the lab for details.</p>
         </div>

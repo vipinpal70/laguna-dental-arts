@@ -1323,79 +1323,21 @@ h3.display {
 /* =====================================================================
    STAT GRID
    ===================================================================== */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  margin-top: 44px;
-  background: var(--line-dark);
-  border: 1px solid var(--line-dark);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-}
-
-.stat-grid--light {
-  background: var(--line);
-  border-color: var(--line);
-}
-
-.stat {
-  border-radius: 0;
-  border: 0;
-  padding: 26px 28px;
-  text-align: left;
-  box-shadow: none;
-}
-
-.stat-grid--light .stat {
-  background: #fff;
-}
-
-.stat__num {
-  font-weight: 700;
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
-  letter-spacing: -0.03em;
-  line-height: 1;
-  color: var(--navy);
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-}
-
-.section--navy .stat__num,
-.section--tint .stat__num {
-  color: #fff;
-}
-
-.stat__num .suf {
-  color: var(--blue);
-  font-size: 0.6em;
-}
-
-.stat__label {
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: var(--ink-faint);
-  margin-top: 8px;
-}
-
-.section--navy .stat__label,
-.section--tint .stat__label {
-  color: rgba(210, 224, 250, 0.6);
-}
-
-.stat-note {
-  margin-top: 24px;
-  color: var(--ink-faint);
-  font-size: 0.86rem;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  .stat-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 44px; background: var(--line-dark); border: 1px solid var(--line-dark); border-radius: var(--r-lg); overflow: hidden; }
+.stat-grid--light { background: var(--line); border-color: var(--line); }
+.stat { border-radius: 0; border: 0; padding: 26px 28px; text-align: left; box-shadow: none; }
+.stat-grid--light .stat { background: #fff; }
+.stat__num { font-weight: 700; font-size: clamp(2rem, 3.2vw, 2.7rem); letter-spacing: -0.03em; line-height: 1; color: var(--navy); display: flex; align-items: baseline; gap: 2px; }
+.section--navy .stat__num, .section--tint .stat__num { color: #fff; }
+.stat__num .suf { color: var(--blue); font-size: 0.6em; }
+.stat__label { font-size: 0.78rem; letter-spacing: 0.04em; color: var(--ink-faint); margin-top: 8px; }
+.section--navy .stat__label, .section--tint .stat__label { color: rgba(210, 224, 250, 0.6); }
+.stat-note { margin-top: 24px; color: var(--ink-faint); font-size: 0.86rem; text-align: center; }
+.stat-grid--2 { grid-template-columns: repeat(2, 1fr); max-width: 680px; margin-inline: auto; }
+.stat-grid--2 .stat { text-align: center; }
+.stat-grid--2 .stat__num { justify-content: center; }
+@media (max-width: 900px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .stat-grid--2 { grid-template-columns: 1fr; } }
 
 /* =====================================================================
    TEAM SHOWCASE & BIO MODAL (about)
