@@ -129,7 +129,7 @@ export const TEAM: TeamMember[] = [
   {
     name: "DeAnna Marie Mendez",
     mark: "DM",
-    role: "Treatment Plan Coordinator",
+    role: "Front Office Desk Manager ",
     image: "/images/team/DeAnna.jpg",
     objectPosition: "center top",
     bio: [
