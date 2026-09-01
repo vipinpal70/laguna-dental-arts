@@ -11,7 +11,7 @@ const PRODUCTS = [
   {
     key: "crowns",
     categories: ["fixed"],
-    image: "/images/products/crown-bridge.png",
+    image: "/images/products/crown_new.jpeg",
     title: "Crown",
     desc: "Precise-margin zirconia, e.max, and PFM restorations.",
     href: "/services/crowns",
