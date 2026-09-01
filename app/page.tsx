@@ -29,10 +29,10 @@ const PRODUCTS = [
   {
     key: "full-arch",
     categories: ["implant", "fixed"],
-    image: "/images/products/full-arch-solutions.png",
+    image: "/images/products/full-arch.jpg",
     title: "Full-Arch Solutions",
     desc: "All-on-X hybrids and screw-retained zirconia, planned to delivery.",
-    href: "/services/bridges",
+    href: "/services/full-arch",
     linkLabel: "Explore full-arch",
   },
   {

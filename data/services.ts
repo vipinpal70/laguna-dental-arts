@@ -387,6 +387,47 @@ export const SERVICES: Service[] = [
     "faq": []
   },
   {
+    "slug": "full-arch",
+    "code": "ARCH · 33",
+    "category": "Implant Solutions",
+    "categories": [
+      "implant"
+    ],
+    "title": "Full Arch",
+    "heroHtml": "Full Arch. <em>One coordinated plan.</em>",
+    "art": "bridge",
+    "image": "/images/products/full-arch.jpg",
+    "cardDesc": "Coordinated full-arch zirconia and PMMA workflows from records to approval.",
+    "intro": "Full-arch hybrid restorations are planned from approved records, restorative space and implant positions. Our team coordinates design checkpoints before the case moves into final production.",
+    "specs": [
+      [
+        "Turnaround",
+        "10–14 Days in lab"
+      ],
+      [
+        "Workflow",
+        "Digital / Traditional"
+      ],
+      [
+        "Materials",
+        "Zirconia / PMMA"
+      ],
+      [
+        "Options",
+        "All-on-4 / All-on-6"
+      ]
+    ],
+    "included": [
+      "Design reviewed against the submitted prescription and records",
+      "Digital and traditional case submissions supported",
+      "Material and workflow guidance available before production",
+      "Quality-control review completed before delivery",
+      "Major scanner workflows and open files accepted",
+      "Case-specific technical support from the Laguna team"
+    ],
+    "faq": []
+  },
+  {
     "slug": "e-max-restorations",
     "code": "EMAX · 11",
     "category": "Ceramics",
