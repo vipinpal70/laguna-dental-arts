@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
     "title": "Bridges",
     "heroHtml": "Engineered spans. <em>Predictable fit.</em>",
     "art": "bridge",
-    "image": "/images/products/bridges.jpg",
+    "image": "/images/products/bridges_new.jpeg",
     "cardDesc": "Multi-unit bridges are engineered for strength, connector integrity and clean tissue contours. Our team balances material selection, span length and esthetics for a restoration designed to seat confidently.",
     "intro": "Multi-unit bridges are engineered for strength, connector integrity and clean tissue contours. Our team balances material selection, span length and esthetics for a restoration designed to seat confidently.",
     "specs": [
