@@ -149,18 +149,18 @@ export function Header() {
                     <span>Print or save digital Rx sheet</span>
                   </span>
                 </Link>
-                <Link className="mega__item" href="/shipping-label">
+                {/* <Link className="mega__item" href="/shipping-label">
                   <span className="mega__txt">
                     <b>Shipping Label</b>
                     <span>Generate & print prepaid label</span>
                   </span>
-                </Link>
-                <Link className="mega__item" href="/track-case">
+                </Link> */}
+                {/* <Link className="mega__item" href="/track-case">
                   <span className="mega__txt">
                     <b>Track Case</b>
                     <span>Real-time status of your lab case</span>
                   </span>
-                </Link>
+                </Link> */}
               </div>
             </div>
             

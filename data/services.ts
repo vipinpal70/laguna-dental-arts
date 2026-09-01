@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
     "title": "Bridges",
     "heroHtml": "Engineered spans. <em>Predictable fit.</em>",
     "art": "bridge",
-    "image": "/images/products/full-arch-solutions.png",
+    "image": "/images/products/bridges.jpg",
     "cardDesc": "Multi-unit bridges are engineered for strength, connector integrity and clean tissue contours. Our team balances material selection, span length and esthetics for a restoration designed to seat confidently.",
     "intro": "Multi-unit bridges are engineered for strength, connector integrity and clean tissue contours. Our team balances material selection, span length and esthetics for a restoration designed to seat confidently.",
     "specs": [
@@ -150,7 +150,7 @@ export const SERVICES: Service[] = [
     "title": "Veneers",
     "heroHtml": "Thin ceramics. <em>Natural light.</em>",
     "art": "veneer",
-    "image": "/images/products/crown-bridge.png",
+    "image": "/images/products/veneers.jpg",
     "cardDesc": "Layered and pressed veneers are crafted for lifelike translucency, surface texture and shade integration. Every case is evaluated for preparation, material thickness and the intended smile design.",
     "intro": "Layered and pressed veneers are crafted for lifelike translucency, surface texture and shade integration. Every case is evaluated for preparation, material thickness and the intended smile design.",
     "specs": [
@@ -314,7 +314,7 @@ export const SERVICES: Service[] = [
     "title": "Zirconia Crowns",
     "heroHtml": "Strength shaped with <em>precision.</em>",
     "art": "crown",
-    "image": "/images/products/crown-bridge.png",
+    "image": "/images/products/zirconia-crowns.jpg",
     "cardDesc": "High-strength crowns with precise margins and monolithic or layered finishing.",
     "intro": "High-strength monolithic and layered zirconia crowns are designed for dependable margins, controlled occlusion and a natural finish. Material selection is matched to the restorative zone and clinical demand.",
     "specs": [
@@ -398,7 +398,7 @@ export const SERVICES: Service[] = [
     "art": "bridge",
     "image": "/images/products/full-arch.jpg",
     "cardDesc": "Coordinated full-arch zirconia and PMMA workflows from records to approval.",
-    "intro": "Full-arch hybrid restorations are planned from approved records, restorative space and implant positions. Our team coordinates design checkpoints before the case moves into final production.",
+    "intro": "Full-arch restorations are planned from approved records, restorative space and implant positions. Our team coordinates design checkpoints before the case moves into final production.",
     "specs": [
       [
         "Turnaround",
@@ -437,7 +437,7 @@ export const SERVICES: Service[] = [
     "title": "e.max Restorations",
     "heroHtml": "Translucency with <em>purpose.</em>",
     "art": "veneer",
-    "image": "/images/products/crown-bridge.png",
+    "image": "/images/products/emax-restorations.jpg",
     "cardDesc": "Lifelike lithium-disilicate veneers, inlays, onlays and selected crowns.",
     "intro": "Lithium-disilicate restorations balance strength with lifelike light transmission for veneers, inlays, onlays and selected crowns. Each case is finished to the prescribed shade and surface character.",
     "specs": [
@@ -478,7 +478,7 @@ export const SERVICES: Service[] = [
     "title": "PFM Crowns",
     "heroHtml": "Proven strength. <em>Refined porcelain.</em>",
     "art": "crown",
-    "image": "/images/products/crown-bridge.png",
+    "image": "/images/products/pfm-crowns.jpg",
     "cardDesc": "A proven metal-ceramic solution for durable crowns and bridges.",
     "intro": "Porcelain-fused-to-metal crowns combine a durable substructure with hand-finished porcelain. They remain a practical choice where strength, conventional preparation and shade control must work together.",
     "specs": [
@@ -601,7 +601,7 @@ export const SERVICES: Service[] = [
     "title": "Zirconia Hybrid Custom Abutment",
     "heroHtml": "Titanium support. <em>Zirconia emergence.</em>",
     "art": "implant",
-    "image": "/images/products/implant-restorations.png",
+    "image": "/images/products/zirconia-hybrid-custom-abutment.jpg",
     "cardDesc": "Titanium connection strength with a customized zirconia emergence profile.",
     "intro": "A titanium interface provides connection strength while a customized zirconia portion supports esthetics through the tissue zone. The design is reviewed for clearance, emergence and restorative contour.",
     "specs": [
@@ -683,7 +683,7 @@ export const SERVICES: Service[] = [
     "title": "Titanium Custom Abutments",
     "heroHtml": "Custom support from the <em>implant up.</em>",
     "art": "implant",
-    "image": "/images/products/implant-restorations.png",
+    "image": "/images/products/titanium-custom-abutments.jpg",
     "cardDesc": "Patient-specific implant foundations shaped for tissue and restorative space.",
     "intro": "Patient-specific titanium abutments are designed around implant position, tissue profile and restorative space to create a stable, clean foundation for the final restoration.",
     "specs": [
@@ -724,7 +724,7 @@ export const SERVICES: Service[] = [
     "title": "Full-Contour Zirconia",
     "heroHtml": "Full strength. <em>Clean contour.</em>",
     "art": "crown",
-    "image": "/images/products/crown-bridge.png",
+    "image": "/images/products/full-contour-zirconia.jpg",
     "cardDesc": "Monolithic strength with controlled anatomy and polished contacts.",
     "intro": "Monolithic zirconia restorations provide high fracture resistance with controlled anatomy and polished antagonist contact areas—well suited to demanding posterior indications.",
     "specs": [
@@ -929,7 +929,7 @@ export const SERVICES: Service[] = [
     "title": "Screw-Retained Zirconia Bridge",
     "heroHtml": "Retrievable strength for the <em>full arch.</em>",
     "art": "bridge",
-    "image": "/images/products/full-arch-solutions.png",
+    "image": "/images/products/screw-retained-zirconia-bridge.jpg",
     "cardDesc": "A strong, retrievable zirconia solution for full-arch implant cases.",
     "intro": "A full-contour zirconia bridge is designed around verified implant positions, restorative space and screw access for a strong, retrievable full-arch solution.",
     "specs": [
@@ -970,7 +970,7 @@ export const SERVICES: Service[] = [
     "title": "Screw-Retained PMMA Bridge",
     "heroHtml": "A confident provisional <em>for the full arch.</em>",
     "art": "bridge",
-    "image": "/images/products/full-arch-solutions.png",
+    "image": "/images/products/screw-retained-pmma-bridge.png",
     "cardDesc": "Efficient full-arch provisional and prototype restorations.",
     "intro": "Milled PMMA bridges provide an efficient fixed provisional for immediate-load and prototype workflows, allowing the restorative design to be evaluated before finalization.",
     "specs": [
@@ -998,6 +998,86 @@ export const SERVICES: Service[] = [
       "Quality-control review completed before delivery",
       "Major scanner workflows and open files accepted",
       "Case-specific technical support from the Laguna team"
+    ],
+    "faq": []
+  },
+  {
+    "slug": "implant-bridges",
+    "code": "IB · 35",
+    "category": "Crown & Bridge",
+    "categories": [
+      "implant",
+      "fixed"
+    ],
+    "title": "Implant Bridges",
+    "heroHtml": "Implant-supported multi-unit <em>bridges.</em>",
+    "art": "bridge",
+    "image": "/images/products/implant-bridges.jpg",
+    "cardDesc": "Multi-unit implant-supported bridges engineered for strength, fit, and natural tissue contours.",
+    "intro": "Implant bridges provide fixed multi-unit stability anchored directly to implant platforms or titanium abutments, offering long-term strength and aesthetic integration.",
+    "specs": [
+      [
+        "Turnaround",
+        "8–12 Days in lab"
+      ],
+      [
+        "Workflow",
+        "Digital / Traditional"
+      ],
+      [
+        "Materials",
+        "Zirconia / PFM / Ti"
+      ],
+      [
+        "Options",
+        "Screw or Cement Retained"
+      ]
+    ],
+    "included": [
+      "Design reviewed against submitted prescription and implant plan",
+      "Digital and traditional case submissions supported",
+      "Compatible with major implant platform interfaces",
+      "Quality-control review completed before delivery",
+      "Technical guidance available prior to production"
+    ],
+    "faq": []
+  },
+  {
+    "slug": "maryland-bridges",
+    "code": "MB · 36",
+    "category": "Crown & Bridge",
+    "categories": [
+      "fixed"
+    ],
+    "title": "Maryland Bridges",
+    "heroHtml": "Resin-bonded <em>minimal preparation bridges.</em>",
+    "art": "bridge",
+    "image": "/images/products/maryland-bridges.jpg",
+    "cardDesc": "Resin-bonded fixed partial dentures with metal or ceramic wing frameworks for conservative tooth replacement.",
+    "intro": "Maryland bridges offer a conservative, minimally invasive solution for missing teeth using retentive metal or ceramic wings bonded to adjacent abutment teeth.",
+    "specs": [
+      [
+        "Turnaround",
+        "6–8 Days in lab"
+      ],
+      [
+        "Workflow",
+        "Digital / Traditional"
+      ],
+      [
+        "Materials",
+        "Alloy / Zirconia / e.max"
+      ],
+      [
+        "Options",
+        "Single or Double Wing"
+      ]
+    ],
+    "included": [
+      "Retentive wing framework design for optimal adhesive bond",
+      "Conservative preparation workflow support",
+      "High esthetic pontic design",
+      "Quality-control review before shipment"
     ],
     "faq": []
   },

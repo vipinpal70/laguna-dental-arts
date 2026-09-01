@@ -17,7 +17,7 @@ export type ServiceLink = {
 };
 
 export const SERVICE_LINKS: ServiceLink[] = [
-  { title: "Crown & Bridge", desc: "Zirconia, e.max, PFM & full-contour", href: "/services/crowns", icon: "crown" },
+  { title: "Crowns", desc: "Zirconia, e.max, PFM & full-contour", href: "/services/crowns", icon: "crown" },
   { title: "Full-Arch Solutions", desc: "All-on-X hybrids & zirconia bridges", href: "/services/full-arch", icon: "bridge" },
   { title: "Night Guards & Appliances", desc: "Splints, retainers & ortho appliances", href: "/services/night-guards", icon: "nightguard" },
   { title: "Implant Restorations", desc: "Custom abutments & screw-retained", href: "/services/implants", icon: "implant" },

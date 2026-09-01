@@ -9,10 +9,10 @@ import { CtaBand } from "@/components/ui/CtaBand";
 
 const PRODUCTS = [
   {
-    key: "crown-bridge",
+    key: "crowns",
     categories: ["fixed"],
     image: "/images/products/crown-bridge.png",
-    title: "Crown & Bridge",
+    title: "Crown",
     desc: "Precise-margin zirconia, e.max, and PFM restorations.",
     href: "/services/crowns",
     linkLabel: "Explore crown & bridge",
