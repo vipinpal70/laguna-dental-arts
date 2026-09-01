@@ -22,8 +22,7 @@ export const SERVICES: Service[] = [
     "code": "CRWN · 01",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Crowns",
     "heroHtml": "Precision-milled <em>crowns.</em>",
@@ -64,8 +63,7 @@ export const SERVICES: Service[] = [
     "code": "BRDG · 02",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Bridges",
     "heroHtml": "Engineered spans. <em>Predictable fit.</em>",
@@ -106,8 +104,7 @@ export const SERVICES: Service[] = [
     "code": "IMPL · 03",
     "category": "Implant Restorations",
     "categories": [
-      "fixed",
-      "digital"
+      "implant"
     ],
     "title": "Implant Restorations",
     "heroHtml": "Built around the <em>implant.</em>",
@@ -148,8 +145,7 @@ export const SERVICES: Service[] = [
     "code": "VNR · 04",
     "category": "Cosmetic Ceramics",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Veneers",
     "heroHtml": "Thin ceramics. <em>Natural light.</em>",
@@ -190,13 +186,12 @@ export const SERVICES: Service[] = [
     "code": "DNTR · 05",
     "category": "Removables",
     "categories": [
-      "fixed",
       "digital"
     ],
     "title": "Digital Dentures",
     "heroHtml": "Digital dentures. <br /><em>Repeatable fit.</em>",
     "art": "denture",
-    "image": "/images/products/removables-partials.png",
+    "image": "/images/products/digital-denture.jpg",
     "cardDesc": "Full dentures, partial frameworks and implant overdentures are designed for balanced function, natural tooth arrangement and an archived workflow that makes future service simpler.",
     "intro": "Full dentures, partial frameworks and implant overdentures are designed for balanced function, natural tooth arrangement and an archived workflow that makes future service simpler.",
     "specs": [
@@ -232,13 +227,12 @@ export const SERVICES: Service[] = [
     "code": "GRD · 06",
     "category": "Guards & Appliances",
     "categories": [
-      "removable",
       "digital"
     ],
     "title": "Night Guards",
     "heroHtml": "Protection designed for <em>comfort.</em>",
     "art": "nightguard",
-    "image": "/images/products/night-guards.png",
+    "image": "/images/products/hard-acrylic-night-guards.jpg",
     "cardDesc": "Hard, soft and dual-laminate protection finished for patient comfort.",
     "intro": "Hard, soft and dual-laminate guards are fabricated from accurate digital or traditional records, with thoughtful occlusal refinement and polished edges for patient comfort.",
     "specs": [
@@ -274,13 +268,12 @@ export const SERVICES: Service[] = [
     "code": "ORTHO · 07",
     "category": "Orthodontic Appliances",
     "categories": [
-      "fixed",
       "digital"
     ],
     "title": "Orthodontics",
     "heroHtml": "Digital appliances made to <em>move.</em>",
     "art": "ortho",
-    "image": "/images/products/guides-models.png",
+    "image": "/images/products/orthodontics-hawley.jpg",
     "cardDesc": "Clear retainers, aligner-related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
     "intro": "Clear retainers, aligner-related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
     "specs": [
@@ -316,8 +309,7 @@ export const SERVICES: Service[] = [
     "code": "CRWN · 09",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Zirconia Crowns",
     "heroHtml": "Strength shaped with <em>precision.</em>",
@@ -358,8 +350,7 @@ export const SERVICES: Service[] = [
     "code": "ARCH · 10",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "All-on-X Hybrids",
     "heroHtml": "One arch. <em>One coordinated plan.</em>",
@@ -400,8 +391,7 @@ export const SERVICES: Service[] = [
     "code": "EMAX · 11",
     "category": "Ceramics",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "e.max Restorations",
     "heroHtml": "Translucency with <em>purpose.</em>",
@@ -483,7 +473,6 @@ export const SERVICES: Service[] = [
     "code": "GUIDE · 13",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
       "digital"
     ],
     "title": "Surgical Guides",
@@ -566,8 +555,7 @@ export const SERVICES: Service[] = [
     "code": "ZHA · 15",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Zirconia Hybrid Custom Abutment",
     "heroHtml": "Titanium support. <em>Zirconia emergence.</em>",
@@ -608,7 +596,6 @@ export const SERVICES: Service[] = [
     "code": "WAX · 16",
     "category": "Models & Planning",
     "categories": [
-      "fixed",
       "digital"
     ],
     "title": "Diagnostic Wax-Up",
@@ -650,8 +637,7 @@ export const SERVICES: Service[] = [
     "code": "TCA · 17",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Titanium Custom Abutments",
     "heroHtml": "Custom support from the <em>implant up.</em>",
@@ -692,8 +678,7 @@ export const SERVICES: Service[] = [
     "code": "FCZ · 18",
     "category": "Ceramics",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Full-Contour Zirconia",
     "heroHtml": "Full strength. <em>Clean contour.</em>",
@@ -734,13 +719,12 @@ export const SERVICES: Service[] = [
     "code": "AD · 19",
     "category": "Removables",
     "categories": [
-      "removable",
-      "digital"
+      "removable"
     ],
     "title": "Acrylic Denture",
     "heroHtml": "A complete smile, <em>built to function.</em>",
     "art": "denture",
-    "image": "/images/products/removables-partials.png",
+    "image": "/images/products/immediate-dentures.jpg",
     "cardDesc": "Complete dentures designed for balanced function and natural arrangement.",
     "intro": "Complete acrylic dentures are designed for balanced occlusion, natural arrangement and comfortable borders using either a digital or conventional clinical workflow.",
     "specs": [
@@ -781,7 +765,7 @@ export const SERVICES: Service[] = [
     "title": "Acrylic Partial",
     "heroHtml": "A practical partial with <em>thoughtful fit.</em>",
     "art": "denture",
-    "image": "/images/products/removables-partials.png",
+    "image": "/images/products/acrylic-denture-models.jpg",
     "cardDesc": "A practical removable option for transitional or definitive indications.",
     "intro": "Acrylic partial dentures provide a serviceable removable option for transitional or definitive indications. Tooth position, clasping and tissue support are planned from the prescription.",
     "specs": [
@@ -817,8 +801,7 @@ export const SERVICES: Service[] = [
     "code": "PMF · 21",
     "category": "Removables",
     "categories": [
-      "removable",
-      "digital"
+      "removable"
     ],
     "title": "Partial Metal Framework",
     "heroHtml": "Rigid support. <em>Refined framework.</em>",
@@ -859,8 +842,7 @@ export const SERVICES: Service[] = [
     "code": "TEMP · 22",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Temporaries",
     "heroHtml": "Interim restorations, <em>clinically ready.</em>",
@@ -901,8 +883,7 @@ export const SERVICES: Service[] = [
     "code": "SRZ · 23",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Screw-Retained Zirconia Bridge",
     "heroHtml": "Retrievable strength for the <em>full arch.</em>",
@@ -943,8 +924,7 @@ export const SERVICES: Service[] = [
     "code": "SRP · 24",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Screw-Retained PMMA Bridge",
     "heroHtml": "A confident provisional <em>for the full arch.</em>",
@@ -985,8 +965,7 @@ export const SERVICES: Service[] = [
     "code": "IAD · 25",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "removable"
+      "implant"
     ],
     "title": "Implant Acrylic Denture",
     "heroHtml": "Removable stability, <em>implant supported.</em>",
@@ -1068,8 +1047,7 @@ export const SERVICES: Service[] = [
     "code": "SCAC · 28",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Screwmentable Crown & Abutment",
     "heroHtml": "Two-piece control with <em>retrievable access.</em>",
@@ -1110,8 +1088,7 @@ export const SERVICES: Service[] = [
     "code": "ZSC · 29",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Zirconia Screw-Retained Crown with Ti-Base",
     "heroHtml": "Zirconia esthetics on a <em>titanium base.</em>",
@@ -1193,8 +1170,7 @@ export const SERVICES: Service[] = [
     "code": "ZH · 31",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Zirconia Hybrid",
     "heroHtml": "A durable arch with <em>natural presence.</em>",
@@ -1235,8 +1211,7 @@ export const SERVICES: Service[] = [
     "code": "SRB · 32",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Screw-Retained Bridge",
     "heroHtml": "Fixed function with <em>clinical retrievability.</em>",
@@ -1277,8 +1252,7 @@ export const SERVICES: Service[] = [
     "code": "TB · 33",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed",
-      "digital"
+      "fixed"
     ],
     "title": "Temporary Bridge",
     "heroHtml": "Protect the plan with a <em>strong provisional.</em>",
@@ -1319,8 +1293,7 @@ export const SERVICES: Service[] = [
     "code": "SCR · 34",
     "category": "Implant Solutions",
     "categories": [
-      "implant",
-      "digital"
+      "implant"
     ],
     "title": "Screwmentable Restoration",
     "heroHtml": "A custom foundation with <em>retrievable design.</em>",

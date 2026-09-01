@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / About</div>
           <span className="eyebrow reveal">Our Story</span>
           <h1 className="display reveal">A California laboratory obsessed with fit.</h1>
-          <p className="phero__sub reveal">For over 25 years we&apos;ve done one thing: make restorations that dentists can seat with confidence. Here&apos;s how a small Elk Grove studio became a modern digital manufacturer.</p>
+          <p className="phero__sub reveal">For over 25 years, dental restorations have been our focus. Here&apos;s what that experience has taught us.</p>
         </div>
       </section>
 
@@ -40,8 +40,8 @@ export default function AboutPage() {
           <div className="reveal">
             <span className="eyebrow">Est. 1998</span>
             <h2 className="display" style={{ marginTop: 18 }}>Founded by ceramists, run like a manufacturer.</h2>
-            <p className="lead" style={{ marginTop: 20 }}>Laguna Dental Arts began at a single bench in Elk Grove, where our founders set an uncompromising standard for marginal fit and shade. As digital dentistry matured, we invested early  in scanners, milling, printing and a case-management system that treats every restoration as a traceable medical device.</p>
-            <p style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 42,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools changed; the obsession didn&apos;t.</p>
+            <p className="lead" style={{ marginTop: 20 }}>Laguna Dental Arts began at a single bench in Elk Grove, where our founders set an uncompromising standard for marginal fit, shade, and restorative quality. As dentistry evolved, we expanded our capabilities across both traditional and digital workflows, investing in scanners, milling, printing, and case-management systems that keep every restoration traceable.</p>
+            <p style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 12,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools have evolved. The obsession hasn&apos;t.</p>
           </div>
         </div>
       </section>

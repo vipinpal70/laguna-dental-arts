@@ -431,8 +431,7 @@ export function TermsClient() {
                     <p style={{ marginTop: 8 }}>
                       <strong>Email:</strong> <a href="mailto:dev@lagunadentalarts.com" style={{ color: "var(--blue)" }}>dev@lagunadentalarts.com</a><br />
                       <strong>Phone:</strong> <a href="tel:+19166881333" style={{ color: "var(--blue)" }}>(916) 688-1333</a><br />
-                      <strong>Address:</strong> 9152 Elkmont Way, Elk Grove, CA 95624<br />
-                      <strong>Business Hours:</strong> Monday – Friday, 8:00 AM – 5:00 PM PST
+                      <strong>Address:</strong> 9152 Elkmont Way, Elk Grove, CA 95624
                     </p>
                   </div>
                   <p style={{ fontSize: "0.88rem", color: "var(--ink-faint)", marginTop: 14 }}>

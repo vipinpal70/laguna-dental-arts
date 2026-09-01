@@ -84,7 +84,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 Download Rx Form
               </a>
             </div>
-            <p className="pd-help">Questions? Call us at <strong>{SITE.phone}</strong> — 7 days a week.</p>
+            <p className="pd-help">Questions? Call us at <strong>{SITE.phone}</strong></p>
 
             <div className="pd-faq">
               <h3>Frequently asked questions</h3>

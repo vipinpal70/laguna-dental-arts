@@ -30,15 +30,9 @@ export default function PortalPage() {
               <h1 className="display" style={{ marginTop: 18 }}>Your cases, <br/> in real time.</h1>
               <p className="phero__sub">Submit cases, track every unit from design to delivery, download prescriptions and invoices, and message your case team — all in one secure place.</p>
               <div className="hhero-ctas" style={{ marginTop: 32 }}>
-                <a
-                  className="btn btn--lg btn--light"
-                  href="https://lagunadentalarts.absevolutionwebservices.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon name="lock" size={16} /> Sign in to the portal
-                </a>
-                <Link className="btn btn--lg btn--outline-light" href="/contact">Request access</Link>
+                <Link className="btn btn--lg btn--light" href="/contact">
+                  Request access <Icon name="arrow" size={16} strokeWidth={2.4} />
+                </Link>
               </div>
             </div>
             <div className="reveal">
@@ -46,29 +40,42 @@ export default function PortalPage() {
                 <div className="portal-mock__bar">
                   <i /><i /><i />
                   <span className="portal-mock__url">
-                    portal.lagunadentalarts.com
+                    lagunadentalarts.absevolutionwebservices.com
                   </span>
                 </div>
                 <div className="portal-mock__body">
                   <div className="portal-mock__head">
-                    <b>Active cases</b>
-                    <span className="tick" style={{ color: "var(--blue)" }}>4 IN PRODUCTION</span>
+                    <b>Sign In to Portal</b>
+                    <span className="tick" style={{ color: "var(--blue)" }}>SECURE ACCESS</span>
                   </div>
-                  <div className="portal-row">
-                    <span className="portal-row__ic"><ProductIcon name="crown" style={{ width: 22, height: 16 }} /></span>
-                    <div className="portal-row__meta"><b>#LDA-24817 · Zirconia crown</b><span>STAGE · MILLING</span></div>
-                    <span className="portal-row__bar"><i style={{ width: "70%" }} /></span>
-                  </div>
-                  <div className="portal-row">
-                    <span className="portal-row__ic"><ProductIcon name="implant" style={{ width: 22, height: 16 }} /></span>
-                    <div className="portal-row__meta"><b>#LDA-24802 · Custom abutment</b><span>STAGE · QUALITY CHECK</span></div>
-                    <span className="portal-row__bar"><i style={{ width: "90%" }} /></span>
-                  </div>
-                  <div className="portal-row">
-                    <span className="portal-row__ic done"><Icon name="truck" size={20} /></span>
-                    <div className="portal-row__meta done"><b>#LDA-24790 · Veneers ×6</b><span>SHIPPED · ARRIVES TOMORROW</span></div>
-                    <span className="portal-row__bar done"><i style={{ width: "100%" }} /></span>
-                  </div>
+                  <form
+                    className="portal-form"
+                    action="https://lagunadentalarts.absevolutionwebservices.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="portal-form__field">
+                      <label htmlFor="portal-username">Username or Email</label>
+                      <input
+                        id="portal-username"
+                        type="text"
+                        name="username"
+                        placeholder="Enter your username or email"
+                      />
+                    </div>
+                    <div className="portal-form__field">
+                      <label htmlFor="portal-password">Password</label>
+                      <input
+                        id="portal-password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                      />
+                    </div>
+                    <button type="submit" className="portal-form__submit">
+                      Sign In <Icon name="arrow" size={16} strokeWidth={2.4} />
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>

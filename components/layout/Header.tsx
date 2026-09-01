@@ -106,9 +106,9 @@ export function Header() {
                 <Icon name="chev" size={11} strokeWidth={2.4} className="chev" />
               </Link>
               <div className="mega" role="menu">
-                <Link className="mega__all" href="/services">
+                <Link className="mega__all bg-blue-500/20" href="/services">
                   <span>
-                    <b>All Services</b>
+                    <b className="text-blue-500">All Services</b>
                     <small>Explore our complete lab services</small>
                   </span>
                 </Link>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Compass, Layers, MessageSquare } from "lucide-react";
 import { Icon } from "@/components/icons/Icon";
 import { StatCounter } from "@/components/ui/StatCounter";
-import { CategoryFilterGrid } from "@/components/ui/CategoryFilterGrid";
 import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -12,7 +11,7 @@ const PRODUCTS = [
   {
     key: "crown-bridge",
     categories: ["fixed"],
-    image: "/images/products/Crown.jpg",
+    image: "/images/products/crown-bridge.png",
     title: "Crown & Bridge",
     desc: "Precise-margin zirconia, e.max, and PFM restorations.",
     href: "/services/crowns",
@@ -21,7 +20,7 @@ const PRODUCTS = [
   {
     key: "implants",
     categories: ["implant", "fixed"],
-    image: "/images/products/implant_supported.jpg",
+    image: "/images/products/implant-restorations.png",
     title: "Implant Restorations",
     desc: "Custom abutments to screw-retained crowns, built to your plan.",
     href: "/services/implants",
@@ -30,7 +29,7 @@ const PRODUCTS = [
   {
     key: "full-arch",
     categories: ["implant", "fixed"],
-    image: "/images/products/Bridges.jpg",
+    image: "/images/products/full-arch-solutions.png",
     title: "Full-Arch Solutions",
     desc: "All-on-X hybrids and screw-retained zirconia, planned to delivery.",
     href: "/services/bridges",
@@ -39,7 +38,7 @@ const PRODUCTS = [
   {
     key: "removables",
     categories: ["removable"],
-    image: "/images/products/removables.jpg",
+    image: "/images/products/digital-denture.jpg",
     title: "Removables & Partials",
     desc: "Dentures, partials, and flexible frameworks digital or traditional.",
     href: "/services/dentures",
@@ -48,7 +47,7 @@ const PRODUCTS = [
   {
     key: "night-guards",
     categories: ["removable"],
-    image: "/images/products/night-guards.png",
+    image: "/images/products/hard-acrylic-night-guards.jpg",
     title: "Night Guards & Appliances",
     desc: "Splints, retainers, and orthodontic appliances, made to spec.",
     href: "/services/night-guards",
@@ -57,7 +56,7 @@ const PRODUCTS = [
   {
     key: "guides-models",
     categories: ["digital", "digital-guides"],
-    image: "/images/products/guides-models.png",
+    image: "/images/products/orthodontics-hawley.jpg",
     title: "Guides, Models & Wax-Ups",
     desc: "Surgical guides, printed models, and diagnostic wax-ups.",
     href: "/services",
@@ -181,53 +180,36 @@ export default function HomePage() {
             <div className="stat"><StatCounter to={35} suffix="+"/><div className="stat__label">Years in business</div></div>
             <div className="stat"><StatCounter to={1} suffix="M+" /><div className="stat__label">Cases delivered</div></div>
           </div>
-          <p className="stat-note">Figures describe Laguna Dental Arts&apos; service scope and process. Turnaround and case specifics vary contact the lab for details.</p>
         </div>
       </section>
 
       {/* products */}
       <section className="section section--tint" id="products">
         <div className="container">
-          <div className="shead reveal" style={{ maxWidth: 560 }}>
-            <span className="eyebrow">Restorative solutions</span>
-            <h2 className="display">Built around the cases you see every day</h2>
-            <p>Filter by category, then talk with our team when a case needs technical guidance.</p>
+          <div className="shead-row reveal">
+            <div className="shead" style={{ maxWidth: 560 }}>
+              <span className="eyebrow">Restorative solutions</span>
+              <h2 className="display">Built around the cases you see every day</h2>
+              <p>Explore our full-service restorative menu, or talk with our team when a case needs technical guidance.</p>
+            </div>
+            <Link className="btn" href="/services">
+              View All <Icon name="arrow" size={16} strokeWidth={2.4} />
+            </Link>
           </div>
-          <CategoryFilterGrid
-            ariaLabel="Filter products"
-            gridClassName="prodgrid prodgrid--3 prodgrid--keep"
-            defaultFilter="all"
-            filters={[
-              { key: "all", label: "All" },
-              { key: "fixed", label: "Fixed" },
-              { key: "implant", label: "Implant" },
-              { key: "removable", label: "Removable" },
-              { key: "digital", label: "Digital" },
-            ]}
-            rightElement={
-              <Link className="btn" href="/services">
-                View All <Icon name="arrow" size={16} strokeWidth={2.4} />
+          <div className="prodgrid prodgrid--3 prodgrid--keep reveal">
+            {PRODUCTS.map((p) => (
+              <Link className="card pcard" href={p.href} key={p.key}>
+                <div className="pcard__media">
+                  <Image src={p.image} alt={p.title} width={600} height={450} />
+                </div>
+                <div className="pcard__body">
+                  <h3>{p.title}</h3>
+                  <p>{p.desc}</p>
+                  <span className="pcard__link">{p.linkLabel} <Icon name="arrow" size={15} strokeWidth={2.4} /></span>
+                </div>
               </Link>
-            }
-            items={PRODUCTS.map((p) => ({
-              key: p.key,
-              categories: p.categories,
-              title: p.title,
-              desc: p.desc,
-              node: (
-                <Link className="card pcard" href={p.href}>
-                  <div className="pcard__media">
-                    <Image src={p.image} alt={p.title} width={600} height={450} />
-                  </div>
-                  <div className="pcard__body">
-                    <h3>{p.title}</h3>
-                    <p>{p.desc}</p>
-                    <span className="pcard__link">{p.linkLabel} <Icon name="arrow" size={15} strokeWidth={2.4} /></span>
-                  </div>
-                </Link>
-              ),
-            }))}
-          />
+            ))}
+          </div>
         </div>
       </section>
 
