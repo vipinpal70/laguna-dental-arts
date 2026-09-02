@@ -36,7 +36,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Lab Services</div>
           <span className="eyebrow reveal">Lab Services</span>
-          <h1 className="display reveal">Everything your practice sends out, made in one lab.</h1>
+          <h1 className="display reveal">Everything your practice sends us, made in one lab.</h1>
           <p className="phero__sub reveal">Fixed, removable, cosmetic and appliance work engineered around fit, function and a natural finish. Choose a service to explore materials, workflow and downloads.</p>
         </div>
       </section>
@@ -48,6 +48,7 @@ export default function ServicesPage() {
             ariaLabel="Filter lab services"
             filters={[
               { key: "all", label: "All" },
+              { key: "crown", label: "Crown" },
               { key: "fixed", label: "Fixed" },
               { key: "implant", label: "Implant" },
               { key: "removable", label: "Removable" },

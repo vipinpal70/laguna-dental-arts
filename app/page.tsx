@@ -9,7 +9,7 @@ import { CtaBand } from "@/components/ui/CtaBand";
 
 const PRODUCTS = [
   {
-    key: "crowns",
+    key: "crown",
     categories: ["fixed"],
     image: "/images/products/crown_new.jpeg",
     title: "Crown",

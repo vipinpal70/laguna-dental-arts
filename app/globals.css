@@ -2120,14 +2120,12 @@ h3.display {
   display: none !important;
 }
 
-.service-filter-grid[data-active-filter="fixed"] .pcard,
-.service-filter-grid[data-active-filter="implant"] .pcard,
-.service-filter-grid[data-active-filter="removable"] .pcard,
-.service-filter-grid[data-active-filter="digital"] .pcard {
+.service-filter-grid:not([data-active-filter="all"]) .pcard {
   display: none;
 }
 
 .service-filter-grid[data-active-filter="fixed"] .pcard[data-categories~="fixed"],
+.service-filter-grid[data-active-filter="crown"] .pcard[data-categories~="crown"],
 .service-filter-grid[data-active-filter="implant"] .pcard[data-categories~="implant"],
 .service-filter-grid[data-active-filter="removable"] .pcard[data-categories~="removable"],
 .service-filter-grid[data-active-filter="digital"] .pcard[data-categories~="digital"] {

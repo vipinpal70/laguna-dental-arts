@@ -22,10 +22,11 @@ export const SERVICES: Service[] = [
     "code": "CRWN · 01",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
-    "title": "Crowns",
-    "heroHtml": "Precision-milled <em>crowns.</em>",
+    "title": "Crown",
+    "heroHtml": "Precision-milled <em>crown.</em>",
     "art": "crown",
     "image": "/images/products/crown-bridge.png",
     "cardDesc": "Our full-contour and layered crowns are designed from premium zirconia, lithium disilicate and PFM systems. Each restoration is milled or pressed, finished by experienced ceramists and verified before delivery.",
@@ -186,7 +187,8 @@ export const SERVICES: Service[] = [
     "code": "DNTR · 05",
     "category": "Removables",
     "categories": [
-      "digital"
+      "digital",
+      "removable"
     ],
     "title": "Digital Dentures",
     "heroHtml": "Digital dentures. <br /><em>Repeatable fit.</em>",
@@ -274,7 +276,7 @@ export const SERVICES: Service[] = [
     "heroHtml": "Digital appliances made to <em>move.</em>",
     "art": "ortho",
     "image": "/images/products/orthodontics-hawley.jpg",
-    "cardDesc": "Clear retainers, aligner-related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
+    "cardDesc": "Clear retainers, related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
     "intro": "Clear retainers, aligner-related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
     "specs": [
       [
@@ -309,7 +311,8 @@ export const SERVICES: Service[] = [
     "code": "CRWN · 09",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
     "title": "Zirconia Crowns",
     "heroHtml": "Strength shaped with <em>precision.</em>",
@@ -432,7 +435,8 @@ export const SERVICES: Service[] = [
     "code": "EMAX · 11",
     "category": "Ceramics",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
     "title": "e.max Restorations",
     "heroHtml": "Translucency with <em>purpose.</em>",
@@ -473,7 +477,8 @@ export const SERVICES: Service[] = [
     "code": "PFM · 12",
     "category": "Ceramics",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
     "title": "PFM Crowns",
     "heroHtml": "Proven strength. <em>Refined porcelain.</em>",
@@ -550,88 +555,88 @@ export const SERVICES: Service[] = [
     ],
     "faq": []
   },
-  {
-    "slug": "printed-models-dies",
-    "code": "MODEL · 14",
-    "category": "Digital Dentistry",
-    "categories": [
-      "digital"
-    ],
-    "title": "Printed Models & Dies",
-    "heroHtml": "Digital records made <em>tangible.</em>",
-    "art": "ortho",
-    "image": "/images/products/guides-models.png",
-    "cardDesc": "Accurate printed models and removable dies for restorative workflows.",
-    "intro": "High-resolution printed models and removable dies support restorative design, appliance fabrication and diagnostic communication. Files are prepared for dimensional stability and clear margins.",
-    "specs": [
-      [
-        "Turnaround",
-        "3–5 Days in lab"
-      ],
-      [
-        "Workflow",
-        "Digital / Traditional"
-      ],
-      [
-        "Materials",
-        "Dental Model Resin"
-      ],
-      [
-        "Options",
-        "Solid / Sectioned / Die"
-      ]
-    ],
-    "included": [
-      "Design reviewed against the submitted prescription and records",
-      "Digital and traditional case submissions supported",
-      "Material and workflow guidance available before production",
-      "Quality-control review completed before delivery",
-      "Major scanner workflows and open files accepted",
-      "Case-specific technical support from the Laguna team"
-    ],
-    "faq": []
-  },
-  {
-    "slug": "zirconia-hybrid-custom-abutment",
-    "code": "ZHA · 15",
-    "category": "Implant Solutions",
-    "categories": [
-      "implant"
-    ],
-    "title": "Zirconia Hybrid Custom Abutment",
-    "heroHtml": "Titanium support. <em>Zirconia emergence.</em>",
-    "art": "implant",
-    "image": "/images/products/zirconia-hybrid-custom-abutment.jpg",
-    "cardDesc": "Titanium connection strength with a customized zirconia emergence profile.",
-    "intro": "A titanium interface provides connection strength while a customized zirconia portion supports esthetics through the tissue zone. The design is reviewed for clearance, emergence and restorative contour.",
-    "specs": [
-      [
-        "Turnaround",
-        "10–14 Days in lab"
-      ],
-      [
-        "Workflow",
-        "Digital / Traditional"
-      ],
-      [
-        "Materials",
-        "Zirconia / Titanium"
-      ],
-      [
-        "Options",
-        "Custom Emergence"
-      ]
-    ],
-    "included": [
-      "Design reviewed against the submitted prescription and records",
-      "Digital and traditional case submissions supported",
-      "Material and workflow guidance available before production",
-      "Quality-control review completed before delivery",
-      "Major scanner workflows and open files accepted",
-      "Case-specific technical support from the Laguna team"
-    ],
-    "faq": []
-  },
+  // {
+  //   "slug": "printed-models-dies",
+  //   "code": "MODEL · 14",
+  //   "category": "Digital Dentistry",
+  //   "categories": [
+  //     "digital"
+  //   ],
+  //   "title": "Printed Models & Dies",
+  //   "heroHtml": "Digital records made <em>tangible.</em>",
+  //   "art": "ortho",
+  //   "image": "/images/products/guides-models.png",
+  //   "cardDesc": "Accurate printed models and removable dies for restorative workflows.",
+  //   "intro": "High-resolution printed models and removable dies support restorative design, appliance fabrication and diagnostic communication. Files are prepared for dimensional stability and clear margins.",
+  //   "specs": [
+  //     [
+  //       "Turnaround",
+  //       "3–5 Days in lab"
+  //     ],
+  //     [
+  //       "Workflow",
+  //       "Digital / Traditional"
+  //     ],
+  //     [
+  //       "Materials",
+  //       "Dental Model Resin"
+  //     ],
+  //     [
+  //       "Options",
+  //       "Solid / Sectioned / Die"
+  //     ]
+  //   ],
+  //   "included": [
+  //     "Design reviewed against the submitted prescription and records",
+  //     "Digital and traditional case submissions supported",
+  //     "Material and workflow guidance available before production",
+  //     "Quality-control review completed before delivery",
+  //     "Major scanner workflows and open files accepted",
+  //     "Case-specific technical support from the Laguna team"
+  //   ],
+  //   "faq": []
+  // },
+  // {
+  //   "slug": "zirconia-hybrid-custom-abutment",
+  //   "code": "ZHA · 15",
+  //   "category": "Implant Solutions",
+  //   "categories": [
+  //     "implant"
+  //   ],
+  //   "title": "Zirconia Hybrid Custom Abutment",
+  //   "heroHtml": "Titanium support. <em>Zirconia emergence.</em>",
+  //   "art": "implant",
+  //   "image": "/images/products/zirconia-hybrid-custom-abutment.jpg",
+  //   "cardDesc": "Titanium connection strength with a customized zirconia emergence profile.",
+  //   "intro": "A titanium interface provides connection strength while a customized zirconia portion supports esthetics through the tissue zone. The design is reviewed for clearance, emergence and restorative contour.",
+  //   "specs": [
+  //     [
+  //       "Turnaround",
+  //       "10–14 Days in lab"
+  //     ],
+  //     [
+  //       "Workflow",
+  //       "Digital / Traditional"
+  //     ],
+  //     [
+  //       "Materials",
+  //       "Zirconia / Titanium"
+  //     ],
+  //     [
+  //       "Options",
+  //       "Custom Emergence"
+  //     ]
+  //   ],
+  //   "included": [
+  //     "Design reviewed against the submitted prescription and records",
+  //     "Digital and traditional case submissions supported",
+  //     "Material and workflow guidance available before production",
+  //     "Quality-control review completed before delivery",
+  //     "Major scanner workflows and open files accepted",
+  //     "Case-specific technical support from the Laguna team"
+  //   ],
+  //   "faq": []
+  // },
   {
     "slug": "wax-up",
     "code": "WAX · 16",
@@ -719,7 +724,8 @@ export const SERVICES: Service[] = [
     "code": "FCZ · 18",
     "category": "Ceramics",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
     "title": "Full-Contour Zirconia",
     "heroHtml": "Full strength. <em>Clean contour.</em>",
@@ -883,7 +889,8 @@ export const SERVICES: Service[] = [
     "code": "TEMP · 22",
     "category": "Crown & Bridge",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
     "title": "Temporaries",
     "heroHtml": "Interim restorations, <em>clinically ready.</em>",
@@ -1127,7 +1134,8 @@ export const SERVICES: Service[] = [
     "code": "PFZ · 26",
     "category": "Ceramics",
     "categories": [
-      "fixed"
+      "fixed",
+      "crown"
     ],
     "title": "Porcelain Fused to Zirconia",
     "heroHtml": "Zirconia support. <em>Layered character.</em>",
@@ -1168,7 +1176,8 @@ export const SERVICES: Service[] = [
     "code": "SCAC · 28",
     "category": "Implant Solutions",
     "categories": [
-      "implant"
+      "implant",
+      "crown"
     ],
     "title": "Screwmentable Crown & Abutment",
     "heroHtml": "Two-piece control with <em>retrievable access.</em>",
@@ -1209,7 +1218,8 @@ export const SERVICES: Service[] = [
     "code": "ZSC · 29",
     "category": "Implant Solutions",
     "categories": [
-      "implant"
+      "implant",
+      "crown"
     ],
     "title": "Zirconia Screw-Retained Crown with Ti-Base",
     "heroHtml": "Zirconia esthetics on a <em>titanium base.</em>",
@@ -1414,7 +1424,8 @@ export const SERVICES: Service[] = [
     "code": "SCR · 34",
     "category": "Implant Solutions",
     "categories": [
-      "implant"
+      "implant",
+      "crown"
     ],
     "title": "Screwmentable Restoration",
     "heroHtml": "A custom foundation with <em>retrievable design.</em>",
@@ -1457,8 +1468,9 @@ export function getService(slug: string) {
 }
 
 export function buildServiceFaq(service: Service) {
+  const article = /^[aeiou]/i.test(service.title) ? "an" : "a";
   return [
-    { q: `What records should I send for a ${service.title} case?`, a: "Send a completed prescription, the final digital scan or impression, opposing arch, bite record and all relevant photographs or component details. Complete records help us confirm the design before production." },
+    { q: `What records should I send for ${article} ${service.title} case?`, a: "Send a completed prescription, the final digital scan or impression, opposing arch, bite record and all relevant photographs or component details. Complete records help us confirm the design before production." },
     { q: `Do you accept digital scans for ${service.title}?`, a: "Yes. We accept major intraoral scanner workflows as well as open STL and PLY files. Contact our team if you need help connecting your scanner or transferring a case." },
     { q: `What is the typical turnaround time for ${service.title}?`, a: `The standard estimate for this product is ${service.specs[0][1]}. Timing can vary with complexity, material, records and approval requirements, so confirm the current schedule when submitting.` },
     { q: "Can your team help me select the right material or design?", a: "Yes. Include the clinical indication, restorative space, esthetic goals and occlusal considerations with the case. Our technical team can review the options before production begins." },

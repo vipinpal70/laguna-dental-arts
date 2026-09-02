@@ -41,7 +41,7 @@ export default function AboutPage() {
             <span className="eyebrow">Est. 1998</span>
             <h2 className="display" style={{ marginTop: 18 }}>Founded by ceramists, run like a manufacturer.</h2>
             <p className="lead" style={{ marginTop: 20 }}>Laguna Dental Arts began at a single bench in Elk Grove, where our founders set an uncompromising standard for marginal fit, shade, and restorative quality. As dentistry evolved, we expanded our capabilities across both traditional and digital workflows, investing in scanners, milling, printing, and case-management systems that keep every restoration traceable.</p>
-            <p style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 12,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools have evolved. The obsession hasn&apos;t.</p>
+            <p className="lead" style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 12,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools have evolved. The obsession hasn&apos;t.</p>
           </div>
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="reveal">
             <span className="eyebrow">Technology</span>
             <h2 className="display" style={{ marginTop: 18 }}>A fully digital pipeline, under one roof.</h2>
-            <p className="lead" style={{ marginTop: 20 }}>Scanning, CAD design, 5-axis milling, DLP printing and hand-layering all live in the same building  connected by one case system. Nothing is re-keyed, nothing is outsourced, and every step is logged against the case for full traceability.</p>
+            <p className="lead" style={{ marginTop: 20 }}>Scanning, CAD design, 5-axis milling, DLP printing and hand-layering all live in the same building  connected by one case system. Nothing is re-keyed, and every step is logged against the case for full traceability.</p>
             <Link className="textlink" style={{ marginTop: 26, display: "inline-flex" }} href="/services">
               See what we make <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
             </Link>
