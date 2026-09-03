@@ -103,16 +103,16 @@ export const SERVICES: Service[] = [
   {
     "slug": "implants",
     "code": "IMPL · 03",
-    "category": "Implant Restorations",
+    "category": "Implant Restoration",
     "categories": [
       "implant"
     ],
-    "title": "Implant Restorations",
+    "title": "Implant Restoration",
     "heroHtml": "Built around the <em>implant.</em>",
     "art": "implant",
     "image": "/images/products/implant-restorations.png",
-    "cardDesc": "Custom abutments, screw-retained crowns and full-arch implant restorations are planned around the restorative space, tissue architecture and approved implant components.",
-    "intro": "Custom abutments, screw-retained crowns and full-arch implant restorations are planned around the restorative space, tissue architecture and approved implant components.",
+    "cardDesc": "Custom abutments, screw-retained crowns and full-arch implant restoration are planned around the restorative space, tissue architecture and approved implant components.",
+    "intro": "Custom abutments, screw-retained crowns and full-arch implant restoration are planned around the restorative space, tissue architecture and approved implant components.",
     "specs": [
       [
         "Turnaround",
@@ -277,7 +277,7 @@ export const SERVICES: Service[] = [
     "art": "ortho",
     "image": "/images/products/orthodontics-hawley.jpg",
     "cardDesc": "Clear retainers, related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
-    "intro": "Clear retainers, aligner-related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
+    "intro": "Retainers, indirect bonding trays and custom orthodontic appliances are produced from precise digital records for a predictable fit and an efficient clinical workflow.",
     "specs": [
       [
         "Turnaround",

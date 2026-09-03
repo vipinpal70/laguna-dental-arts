@@ -93,9 +93,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             <div className="pd-scanners">
               <h3>COMPATIBLE WITH ALL SCANNERS</h3>
-              <div className="pd-chips">
+              {/* <div className="pd-chips">
                 {SCANNERS.map((s) => <span className="pd-chip" key={s}>{s}</span>)}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -2,10 +2,10 @@ export const SITE = {
   name: "Laguna Dental Arts",
   phone: "+1 (916) 688-1333",
   phoneHref: "tel:+19166881333",
-  email: "cases@lagunadentalarts.com",
+  email: "rx-photos@lagunadentalarts.com",
   addressLine1: "9152 Elkmont Way",
   addressLine2: "Elk Grove, CA 95624",
-  hours: "Monday–Friday · 7:00–18:00 PT",
+  // hours: "Monday–Friday · 7:00–18:00 PT",
   hoursNote: "Case pickups until 17:00 PT",
 };
 
@@ -20,7 +20,7 @@ export const SERVICE_LINKS: ServiceLink[] = [
   { title: "Crowns", desc: "Zirconia, e.max, PFM & full-contour", href: "/services/crowns", icon: "crown" },
   { title: "Full-Arch Solutions", desc: "All-on-X hybrids & zirconia", href: "/services/full-arch", icon: "bridge" },
   { title: "Night Guards & Appliances", desc: "Splints, retainers & ortho appliances", href: "/services/night-guards", icon: "nightguard" },
-  { title: "Implant Restorations", desc: "Custom abutments & screw-retained", href: "/services/implants", icon: "implant" },
+  { title: "Implant Restoration", desc: "Custom abutments & screw-retained", href: "/services/implants", icon: "implant" },
   { title: "Removables & Partials", desc: "Dentures, frameworks & flexibles", href: "/services/dentures", icon: "denture" },
   { title: "Guides, Models & Wax-Ups", desc: "Surgical guides & digital planning", href: "/services", icon: "ortho" },
 ];
