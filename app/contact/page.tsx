@@ -17,7 +17,7 @@ export default function ContactPage() {
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Contact</div>
           <span className="eyebrow reveal">Contact</span>
           <h1 className="display reveal">Let&apos;s talk about your cases.</h1>
-          <p className="phero__sub reveal">Become a partner, request a pickup, or ask a clinical question. Real people, based in Elk Grove, usually reply the same business day.</p>
+          <p className="phero__sub reveal">Become a partner, request a pickup, or ask a clinical question. Our Elk Grove dental lab keeps communication direct, and your technician is available seven days a week.</p>
         </div>
       </section>
 
