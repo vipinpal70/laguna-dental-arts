@@ -11,7 +11,7 @@ const PRODUCTS = [
   {
     key: "crown",
     categories: ["fixed"],
-    image: "/images/products/crown_new.jpeg",
+    image: "/assets/LDA_product_images/dental-crown.png",
     title: "Crown",
     desc: "Precise-margin zirconia, e.max, and PFM restorations.",
     href: "/services/crowns",
@@ -20,7 +20,7 @@ const PRODUCTS = [
   {
     key: "implants",
     categories: ["implant", "fixed"],
-    image: "/images/products/implant-restorations.png",
+    image: "/assets/LDA_product_images/implant-restoration.png",
     title: "Implant Restorations",
     desc: "Custom abutments to screw-retained crowns, built to your plan.",
     href: "/services/implants",
@@ -29,7 +29,7 @@ const PRODUCTS = [
   {
     key: "full-arch",
     categories: ["implant", "fixed"],
-    image: "/images/products/full-arch.jpg",
+    image: "/assets/LDA_product_images/full-arch.png",
     title: "Full-Arch Solutions",
     desc: "All-on-X hybrids and screw-retained zirconia, planned to delivery.",
     href: "/services/full-arch",
@@ -38,7 +38,7 @@ const PRODUCTS = [
   {
     key: "removables",
     categories: ["removable"],
-    image: "/images/products/digital-denture.jpg",
+    image: "/assets/LDA_product_images/Denture.jpeg",
     title: "Removables & Partials",
     desc: "Dentures, partials, and flexible frameworks digital or traditional.",
     href: "/services/dentures",
@@ -47,7 +47,7 @@ const PRODUCTS = [
   {
     key: "night-guards",
     categories: ["removable"],
-    image: "/images/products/hard-acrylic-night-guards.jpg",
+    image: "/assets/LDA_product_images/night-guards.jpeg",
     title: "Night Guards & Appliances",
     desc: "Splints, retainers, and orthodontic appliances, made to spec.",
     href: "/services/night-guards",
@@ -56,7 +56,7 @@ const PRODUCTS = [
   {
     key: "guides-models",
     categories: ["digital", "digital-guides"],
-    image: "/images/products/orthodontics-hawley.jpg",
+    image: "/assets/LDA_product_images/surgical-guide.png",
     title: "Guides, Models & Wax-Ups",
     desc: "Surgical guides, printed models, and diagnostic wax-ups.",
     href: "/services",
