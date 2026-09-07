@@ -70,13 +70,19 @@ export function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <span>© 2026 LAGUNA DENTAL ARTS · ISO 13485 · FDA REGISTERED</span>
-          <span>
-            <Link href="/privacy" style={{ transition: "color 0.2s" }}>PRIVACY</Link>
+          <span className="footer__bottom-left">© 2026 LAGUNA DENTAL ARTS · ISO 13485 · FDA REGISTERED</span>
+          <span className="footer__bottom-center">
+            <Link href="/privacy">PRIVACY</Link>
             {" · "}
-            <Link href="/terms" style={{ transition: "color 0.2s" }}>TERMS</Link>
+            <Link href="/terms">TERMS</Link>
             {" · "}
-            <Link href="/privacy#hipaa" style={{ transition: "color 0.2s" }}>HIPAA</Link>
+            <Link href="/privacy#hipaa">HIPAA</Link>
+          </span>
+          <span className="footer__bottom-right">
+            Marketing Partner -{" "}
+            <a href="https://Vuilive.com" target="_blank" rel="noopener noreferrer">
+              VUI Live Pvt. Ltd.
+            </a>
           </span>
         </div>
       </div>

@@ -90,7 +90,7 @@ export function Header() {
 
           <nav className="nav__menu" aria-label="Primary">
 
-            {/* Lab Services */}
+            {/* 1. Lab Services */}
             <div
               className={`nav__item${servicesOpen ? " open" : ""}`}
               onMouseEnter={openServices}
@@ -122,7 +122,23 @@ export function Header() {
                 ))}
               </div>
             </div>
-            {/* Quick Links*/}
+
+            {/* 2. About Us */}
+            <Link className={`nav__link${isActive("/about") ? " is-active" : ""}`} href="/about">
+              About Us
+            </Link>
+
+            {/* 3. Dental Portal */}
+            <Link className={`nav__link${isActive("/portal") ? " is-active" : ""}`} href="/portal">
+              Dental Portal
+            </Link>
+
+            {/* 4. Insights */}
+            <Link className={`nav__link${isActive("/insights") ? " is-active" : ""}`} href="/insights">
+              Insights
+            </Link>
+
+            {/* 5. Quick Links */}
             <div
               className={`nav__item${quickLinksOpen ? " open" : ""}`}
               onMouseEnter={openQuickLinks}
@@ -131,7 +147,7 @@ export function Header() {
               <button
                 type="button"
                 className={`nav__link${
-                  isActive("/shipping-label") || isActive("/track-case") ? " is-active" : ""
+                  isActive("/downloads") || isActive("/shipping-label") || isActive("/track-case") ? " is-active" : ""
                 }`}
                 aria-haspopup="true"
                 aria-expanded={quickLinksOpen}
@@ -149,32 +165,13 @@ export function Header() {
                     <span>Print or save digital Rx sheet</span>
                   </span>
                 </Link>
-                {/* <Link className="mega__item" href="/shipping-label">
-                  <span className="mega__txt">
-                    <b>Shipping Label</b>
-                    <span>Generate & print prepaid label</span>
-                  </span>
-                </Link> */}
-                {/* <Link className="mega__item" href="/track-case">
-                  <span className="mega__txt">
-                    <b>Track Case</b>
-                    <span>Real-time status of your lab case</span>
-                  </span>
-                </Link> */}
               </div>
             </div>
-            
-            {/* Insight, Dental portal, Contact, Training */}
-            {NAV_LINKS.map((l) => (
-              <Link key={l.href} className={`nav__link${isActive(l.href) ? " is-active" : ""}`} href={l.href}>
-                {l.label}
-              </Link>
-            ))}
-            
-            {/* About */}
-            {/* <Link className={`nav__link${isActive("/about") ? " is-active" : ""}`} href="/about">
-              About Us
-            </Link> */}
+
+            {/* 6. Contact Us */}
+            <Link className={`nav__link${isActive("/contact") ? " is-active" : ""}`} href="/contact">
+              Contact Us
+            </Link>
           </nav>
 
           <div className="nav__actions">
@@ -198,9 +195,8 @@ export function Header() {
           <Icon name="close" size={18} />
         </button>
         <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
-        <Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
 
-        {/* Lab Services Accordion Dropdown */}
+        {/* 1. Lab Services Accordion */}
         <div className="mnav__acc">
           <button
             type="button"
@@ -225,7 +221,16 @@ export function Header() {
           )}
         </div>
 
-        {/* Quick Links Accordion Dropdown */}
+        {/* 2. About Us */}
+        <Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
+
+        {/* 3. Dental Portal */}
+        <Link href="/portal" onClick={() => setMobileOpen(false)}>Dental Portal</Link>
+
+        {/* 4. Insights */}
+        <Link href="/insights" onClick={() => setMobileOpen(false)}>Insights</Link>
+
+        {/* 5. Quick Links Accordion */}
         <div className="mnav__acc">
           <button
             type="button"
@@ -241,19 +246,12 @@ export function Header() {
               <Link href="/downloads" onClick={() => setMobileOpen(false)}>
                 Download Rx Form
               </Link>
-              {/* <Link href="/shipping-label" onClick={() => setMobileOpen(false)}>
-                Shipping Label
-              </Link>
-              <Link href="/track-case" onClick={() => setMobileOpen(false)}>
-                Track Case
-              </Link> */}
             </div>
           )}
         </div>
 
-        <Link href="/insights" onClick={() => setMobileOpen(false)}>Insights</Link>
-        <Link href="/portal" onClick={() => setMobileOpen(false)}>Dental Portal</Link>
-        <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+        {/* 6. Contact Us */}
+        <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact Us</Link>
         <div className="mnav__actions">
           <a className="btn btn--outline-light btn--full" href={SITE.phoneHref}>
             <Icon name="phone" size={16} /> {SITE.phone}

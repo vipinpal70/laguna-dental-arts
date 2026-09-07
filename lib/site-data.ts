@@ -26,10 +26,10 @@ export const SERVICE_LINKS: ServiceLink[] = [
 ];
 
 export const NAV_LINKS = [
-  { label: "Insights", href: "/insights" },
-  { label: "Dental Portal", href: "/portal" },
   { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Dental Portal", href: "/portal" },
+  { label: "Insights", href: "/insights" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export const FOOTER_LAB_SERVICES = [
