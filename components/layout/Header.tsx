@@ -241,12 +241,12 @@ export function Header() {
               <Link href="/downloads" onClick={() => setMobileOpen(false)}>
                 Download Rx Form
               </Link>
-              <Link href="/shipping-label" onClick={() => setMobileOpen(false)}>
+              {/* <Link href="/shipping-label" onClick={() => setMobileOpen(false)}>
                 Shipping Label
               </Link>
               <Link href="/track-case" onClick={() => setMobileOpen(false)}>
                 Track Case
-              </Link>
+              </Link> */}
             </div>
           )}
         </div>

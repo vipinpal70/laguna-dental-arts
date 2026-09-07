@@ -55,12 +55,12 @@ export default function PortalPage() {
                     rel="noopener noreferrer"
                   >
                     <div className="portal-form__field">
-                      <label htmlFor="portal-username">Username or Email</label>
+                      <label htmlFor="portal-username">Username</label>
                       <input
                         id="portal-username"
                         type="text"
                         name="username"
-                        placeholder="Enter your username or email"
+                        placeholder="Enter your username"
                       />
                     </div>
                     <div className="portal-form__field">
