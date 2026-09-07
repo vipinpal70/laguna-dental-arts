@@ -15,7 +15,7 @@ export type FilterableItem = {
 export function CategoryFilterGrid({
   filters,
   items,
-  gridClassName = "prodgrid prodgrid--3",
+  gridClassName = "prodgrid prodgrid--3 prodgrid--keep",
   defaultFilter = "all",
   ariaLabel,
   showSearch,

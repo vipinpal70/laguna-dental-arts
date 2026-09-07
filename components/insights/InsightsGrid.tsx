@@ -11,7 +11,7 @@ export function InsightsGrid({ articles }: { articles: InsightArticle[] }) {
     <CategoryFilterGrid
       ariaLabel="Filter insights by category"
       filters={INSIGHT_CATEGORIES}
-      gridClassName="prodgrid prodgrid--3"
+      gridClassName="prodgrid prodgrid--3 prodgrid--keep"
       showSearch
       searchPlaceholder="Search insights"
       items={articles.map((a) => ({

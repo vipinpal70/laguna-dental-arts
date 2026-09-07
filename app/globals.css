@@ -995,7 +995,30 @@ h3.display {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .hhero-ctas {
+    margin-top: 24px;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .hhero-ctas .btn,
+  .hhero-ctas .btn--lg {
+    min-height: 44px;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    gap: 7px;
+    white-space: nowrap;
+  }
+
+  .hhero-ctas .btn svg {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .strip {
@@ -2082,17 +2105,20 @@ h3.display {
   display: block;
 }
 
-@media (max-width: 1080px) {
-  .prodgrid {
+@media (max-width: 960px) {
+  .prodgrid,
+  .prodgrid--3 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 }
 
-@media (max-width: 560px) {
-
+@media (max-width: 640px) {
   .prodgrid,
   .prodgrid--3 {
     grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
   }
 }
 
@@ -2178,21 +2204,33 @@ h3.display {
 
   .filter-group {
     display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 8px !important;
     width: 100% !important;
+    max-width: 100% !important;
+    padding-bottom: 4px !important;
+  }
+
+  .filter-group::-webkit-scrollbar {
+    display: none;
   }
 
   .filter-btn {
-    padding: 5px 11px !important;
-    font-size: 0.75rem !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    padding: 6px 14px !important;
+    font-size: 0.78rem !important;
     border-radius: 16px !important;
   }
 
   .filter-bar__right {
     margin-left: 0 !important;
-    width: auto !important;
-    align-self: flex-start !important;
+    width: 100% !important;
+    align-self: stretch !important;
   }
 
   .filter-bar__right .btn {
@@ -3426,12 +3464,38 @@ h3.display {
 @media (max-width: 900px) {
   .pd-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .pd-visual {
     position: relative;
     top: auto;
-    min-height: 400px;
+    min-height: unset;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+  }
+
+  .pd-visual img {
+    width: 100%;
+    height: 100%;
+    max-height: unset;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--r-xl);
+    box-shadow: none;
+  }
+
+  .pd-visual svg {
+    width: 60%;
+    height: 60%;
+    max-height: unset;
   }
 }
 

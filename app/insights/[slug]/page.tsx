@@ -134,7 +134,7 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
               <span className="eyebrow">More from Laguna</span>
               <h2 className="display">Related insights & articles</h2>
             </div>
-            <div className="prodgrid prodgrid--3 reveal">
+            <div className="prodgrid prodgrid--3 prodgrid--keep reveal">
               {related.map((item) => (
                 <Link key={item.slug} className="card pcard" href={`/insights/${item.slug}`}>
                   <div className="pcard__media" style={{ overflow: "hidden", position: "relative", height: 200 }}>
