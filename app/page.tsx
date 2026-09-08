@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="container">
             <h1 className="reveal">Your full-service <span className="mark">dental lab partner</span></h1>
             <div className="hhero-ctas reveal">
-              <Link className="btn btn--lg btn--light" href="https://lagunadentalarts.fly.dev/digital-upload">
+              <Link className="btn btn--lg btn--light" href="https://upload.lagunadentalarts.com/">
                 Digital Upload <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
               </Link>
               <Link className="btn btn--lg btn--outline-light" href="/services">Explore Services</Link>
