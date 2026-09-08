@@ -1086,17 +1086,15 @@ h3.display {
        the track width is an exact 2x of one item set — translateX(-50%)
        then lands precisely on the repeat and the loop has no seam jump. */
     gap: 0;
-    animation: stripMarquee 18s linear infinite;
+    /* !important so the global prefers-reduced-motion reset (which forces
+       animation-duration: 0.001ms) can't collapse this into a strobe — the
+       ticker is core to this section, so it always runs at a steady speed. */
+    animation: stripMarquee 18s linear infinite !important;
     will-change: transform;
   }
 
   .strip-track span {
     margin-right: 32px;
-  }
-
-  .strip-inner:hover .strip-track,
-  .strip-inner:active .strip-track {
-    animation-play-state: paused;
   }
 }
 
@@ -3906,23 +3904,9 @@ h3.display {
     transform: none;
   }
 
-  /* Kill the mobile ticker outright instead of letting a 0.001ms
-     infinite animation strobe the layout; wrap the items instead. */
-  .strip-track {
-    animation: none !important;
-    width: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 20px;
-  }
-
-  .strip-track span {
-    margin-right: 0;
-  }
-
-  .strip-track span:nth-child(n+6) {
-    display: none;
-  }
+  /* The mobile info ticker keeps scrolling — its speed is pinned with
+     !important on .strip-track so the animation-duration override above
+     can't turn it into a strobe. */
 }
 
 /* =====================================================================
