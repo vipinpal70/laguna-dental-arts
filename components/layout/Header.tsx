@@ -175,7 +175,7 @@ export function Header() {
           </nav>
 
           <div className="nav__actions">
-            <Link className="btn btn--send" href="https://lagunadentalarts.absevolutionwebservices.com">
+            <Link className="btn btn--send" href="https://lagunadentalarts.fly.dev/digital-upload">
               Digital Upload <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
             </Link>
             <button
