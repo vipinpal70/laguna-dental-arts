@@ -88,9 +88,9 @@ const WORKFLOW = [
 ];
 
 const TESTIMONIALS = [
-  { initials: "RM", name: "Dr. R. Martinez, DDS", role: "Sample placeholder · replace with approved quote", quote: "The communication is what sets Laguna apart. When a full-arch case needs a design decision, someone who actually understands the workflow calls me not a ticketing system." },
-  { initials: "SP", name: "Dr. S. Patel, DMD", role: "Sample placeholder · replace with approved quote", quote: "Consistent margins, natural esthetics, and a team that flags missing records before production. My crown & bridge cases come back predictable, case after case." },
-  { initials: "JC", name: "Dr. J. Cho, DDS", role: "Sample placeholder · replace with approved quote", quote: "Daily pickup keeps our schedule tight, and the digital workflow made switching from impressions painless. It genuinely feels like an extension of our practice." },
+  { initials: "DP", name: "Diablo Periodontics", role: "Dental Practice", quote: "Our office has been working with Laguna Dental Lab for a number of years, we are always satisfies with the outcomes of their surgical guides, Kee is especially helpful and always goes above and beyond for us. Thanks for all your hard work- Diablo Periodontics" },
+  { initials: "BD", name: "Binh Dao, DDS", role: "Dentist", quote: "I'm a dentist in Roseville, CA and we have been using Laguna Dental Arts as our lab for a few years now. Whether it's a single posterior unit, same day stayplate, an implant supported hybrid or a full mouth porcelain rehab, Laguna has you covered. Titanium bars, custom abutments, PMMA and even implant planning and guides, whatever you need, they will help." },
+  { initials: "D", name: "Daniel", role: "Dentist", quote: "I have use Laguna Dental Arts for the past 9 years, It is by far the best lab to work with in the area, Chris is a pleasure to work with and is extremely knowledgeable about the latest technological trends in implant dentistry." },
 ];
 
 const FAQ = [
