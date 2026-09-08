@@ -177,7 +177,7 @@ export default function HomePage() {
             <h2 className="display">Capability you can plan around</h2>
           </div>
           <div className="stat-grid stat-grid--light stat-grid--2 reveal">
-            <div className="stat"><StatCounter to={35} suffix="+"/><div className="stat__label">Years in business</div></div>
+            <div className="stat"><StatCounter to={35} suffix="+" /><div className="stat__label">Years in business</div></div>
             <div className="stat"><StatCounter to={1} suffix="M+" /><div className="stat__label">Cases delivered</div></div>
           </div>
         </div>
