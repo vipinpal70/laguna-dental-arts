@@ -175,8 +175,8 @@ export function Header() {
           </nav>
 
           <div className="nav__actions">
-            <Link className="btn btn--send" href="/portal">
-              Send a Case <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
+            <Link className="btn btn--send" href="https://lagunadentalarts.absevolutionwebservices.com">
+              Digital Upload <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
             </Link>
             <button
               className="nav__burger"

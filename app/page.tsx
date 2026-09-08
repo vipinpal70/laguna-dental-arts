@@ -123,8 +123,8 @@ export default function HomePage() {
           <div className="container">
             <h1 className="reveal">Your full-service <span className="mark">dental lab partner</span></h1>
             <div className="hhero-ctas reveal">
-              <Link className="btn btn--lg btn--light" href="/portal">
-                Send a Case <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
+              <Link className="btn btn--lg btn--light" href="https://lagunadentalarts.absevolutionwebservices.com">
+                Digital Upload <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
               </Link>
               <Link className="btn btn--lg btn--outline-light" href="/services">Explore Services</Link>
             </div>
