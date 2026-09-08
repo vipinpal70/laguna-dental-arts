@@ -130,7 +130,7 @@ export function Header() {
 
             {/* 3. Dental Portal */}
             <Link className={`nav__link${isActive("/portal") ? " is-active" : ""}`} href="/portal">
-              Dental Portal
+              Doctor Portal
             </Link>
 
             {/* 4. Insights */}

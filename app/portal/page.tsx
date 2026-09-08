@@ -32,7 +32,7 @@ export default function PortalPage() {
               <p className="phero__sub">Submit cases, track every unit from design to delivery, download prescriptions and invoices, and message your case team — all in one secure place.</p>
               <div className="hhero-ctas" style={{ marginTop: 32 }}>
                 <Link className="btn btn--lg btn--light" href="https://lagunadentalarts.absevolutionwebservices.com/">
-                  Sign In <User size={16} />
+                  Digital Upload <User size={16} />
                 </Link>
                 <Link className="btn btn--lg btn--light" href="/contact">
                   Request access <Icon name="arrow" size={16} strokeWidth={2.4} />
