@@ -88,9 +88,30 @@ const WORKFLOW = [
 ];
 
 const TESTIMONIALS = [
-  { initials: "DP", name: "Diablo Periodontics", role: "Dental Practice", quote: "Our office has been working with Laguna Dental Lab for a number of years, we are always satisfies with the outcomes of their surgical guides, Kee is especially helpful and always goes above and beyond for us. Thanks for all your hard work- Diablo Periodontics" },
-  { initials: "BD", name: "Binh Dao, DDS", role: "Dentist", quote: "I'm a dentist in Roseville, CA and we have been using Laguna Dental Arts as our lab for a few years now. Whether it's a single posterior unit, same day stayplate, an implant supported hybrid or a full mouth porcelain rehab, Laguna has you covered. Titanium bars, custom abutments, PMMA and even implant planning and guides, whatever you need, they will help." },
-  { initials: "D", name: "Daniel", role: "Dentist", quote: "I have use Laguna Dental Arts for the past 9 years, It is by far the best lab to work with in the area, Chris is a pleasure to work with and is extremely knowledgeable about the latest technological trends in implant dentistry." },
+    {
+    initials: "D",
+    name: "Daniel",
+    role: "Dentist",
+    image: "/images/testimonials/daniel.jpg",
+    quote:
+      "I have use Laguna Dental Arts for the past 9 years, It is by far the best lab to work with in the area, Chris is a pleasure to work with and is extremely knowledgeable about the latest technological trends in implant dentistry.",
+  },
+    {
+    initials: "BD",
+    name: "Binh Dao, DDS",
+    role: "Dentist",
+    image: "/images/testimonials/binh-dao.jpg",
+    quote:
+      "I'm a dentist in Roseville, CA and we have been using Laguna Dental Arts as our lab for a few years now. Whether it's a single posterior unit, same day stayplate, an implant supported hybrid or a full mouth porcelain rehab, Laguna has you covered. Titanium bars, custom abutments, PMMA and even implant planning and guides, whatever you need, they will help.",
+  },
+  {
+    initials: "DP",
+    name: "Diablo Periodontics",
+    role: "Dental Practice",
+    image: "/images/testimonials/diablo-periodontics.png",
+    quote:
+      "Our office has been working with Laguna Dental Lab for a number of years, we are always satisfies with the outcomes of their surgical guides, Kee is especially helpful and always goes above and beyond for us. Thanks for all your hard work- Diablo Periodontics",
+  },
 ];
 
 const FAQ = [

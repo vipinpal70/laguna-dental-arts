@@ -1,8 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
-export type Testimonial = { quote: string; name: string; role: string; initials: string };
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  initials?: string;
+  image?: string;
+};
 
 export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
   const [index, setIndex] = useState(0);
@@ -27,7 +34,19 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
         {items.map((t) => (
           <div className="tslide" key={t.name}>
             <div className="card tcard-inner">
-              <div className="tcard__av">{t.initials}</div>
+              <div className="tcard__av">
+                {t.image ? (
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    width={88}
+                    height={88}
+                    className="tcard__img"
+                  />
+                ) : (
+                  t.initials
+                )}
+              </div>
               <div>
                 <div className="tcard__stars">★★★★★</div>
                 <p className="tcard__quote">{t.quote}</p>

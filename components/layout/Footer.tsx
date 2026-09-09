@@ -55,7 +55,15 @@ export function Footer() {
             <h5>Company</h5>
             <ul>
               {FOOTER_COMPANY.map((l) => (
-                <li key={l.label}><Link href={l.href}>{l.label}</Link></li>
+                <li key={l.label}>
+                  {l.download ? (
+                    <a href={l.href} download={l.download}>
+                      {l.label}
+                    </a>
+                  ) : (
+                    <Link href={l.href}>{l.label}</Link>
+                  )}
+                </li>
               ))}
             </ul>
           </div>

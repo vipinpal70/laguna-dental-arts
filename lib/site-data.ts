@@ -48,11 +48,21 @@ export const SOCIAL_LINKS = [
   { name: "youtube", label: "YouTube", href: "https://www.youtube.com/@LagunaDentalArts" },
 ];
 
-export const FOOTER_COMPANY = [
+export type FooterLink = {
+  label: string;
+  href: string;
+  download?: string;
+};
+
+export const FOOTER_COMPANY: FooterLink[] = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
-  { label: "Customer Portal", href: "/portal" },
-  { label: "Downloads & Rx Slips", href: "/downloads" },
+  { label: "Doctor Portal", href: "/portal" },
+  {
+    label: "Download Rx Form",
+    href: "/downloads/Laguna_Dental_Arts_Lab_Slip.pdf",
+    download: "Laguna_Dental_Arts_Lab_Slip.pdf",
+  },
   { label: "Contact", href: "/contact" },
   { label: "Become a Partner", href: "/contact" },
   { label: "Terms & Conditions", href: "/terms" },
