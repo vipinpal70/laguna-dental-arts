@@ -41,7 +41,7 @@ export default function AboutPage() {
             <span className="eyebrow">Est. 1998</span>
             <h2 className="display" style={{ marginTop: 18 }}>Founded by ceramists, run like a manufacturer.</h2>
             <p className="lead" style={{ marginTop: 20 }}>Laguna Dental Arts began at a single bench in Elk Grove, where our founders set an uncompromising standard for marginal fit, shade, and restorative quality. As dentistry evolved, we expanded our capabilities across both traditional and digital workflows, investing in scanners, milling, printing, and case-management systems that keep every restoration traceable.</p>
-            <p className="lead" style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 12,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools have evolved. The obsession hasn&apos;t.</p>
+            {/* <p className="lead" style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 12,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools have evolved. The obsession hasn&apos;t.</p> */}
           </div>
         </div>
       </section>
