@@ -20,21 +20,16 @@ export function Header() {
   const pathname = usePathname();
   const [isSolid, setIsSolid] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [quickLinksOpen, setQuickLinksOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileQuickLinksOpen, setMobileQuickLinksOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const quickLinksTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [prevPathname, setPrevPathname] = useState(pathname);
   if (pathname !== prevPathname) {  
     setPrevPathname(pathname);
     setMobileOpen(false);
     setServicesOpen(false);
-    setQuickLinksOpen(false);
     setMobileServicesOpen(false);
-    setMobileQuickLinksOpen(false);
   }
 
   useEffect(() => {
@@ -54,14 +49,6 @@ export function Header() {
   };
   const closeServices = () => {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 140);
-  };
-
-  const openQuickLinks = () => {
-    if (quickLinksTimer.current) clearTimeout(quickLinksTimer.current);
-    setQuickLinksOpen(true);
-  };
-  const closeQuickLinks = () => {
-    quickLinksTimer.current = setTimeout(() => setQuickLinksOpen(false), 140);
   };
 
   const isActive = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(href));
@@ -138,35 +125,14 @@ export function Header() {
               Insights
             </Link>
 
-            {/* 5. Quick Links */}
-            <div
-              className={`nav__item${quickLinksOpen ? " open" : ""}`}
-              onMouseEnter={openQuickLinks}
-              onMouseLeave={closeQuickLinks}
+            {/* 5. Download Rx Form */}
+            <a
+              className="nav__link"
+              href="/downloads/Laguna_Dental_Arts_Lab_Slip.pdf"
+              download="Laguna_Dental_Arts_Lab_Slip.pdf"
             >
-              <button
-                type="button"
-                className={`nav__link${
-                  isActive("/downloads") || isActive("/shipping-label") || isActive("/track-case") ? " is-active" : ""
-                }`}
-                aria-haspopup="true"
-                aria-expanded={quickLinksOpen}
-              >
-                Quick Links
-                <Icon name="chev" size={11} strokeWidth={2.4} className="chev" />
-              </button>
-              <div className="mega mega--quick" role="menu">
-                <Link
-                  className="mega__item"
-                  href="/downloads"
-                >
-                  <span className="mega__txt">
-                    <b>Download Rx Form</b>
-                    <span>Print or save digital Rx sheet</span>
-                  </span>
-                </Link>
-              </div>
-            </div>
+              Download Rx Form
+            </a>
 
             {/* 6. Contact Us */}
             <Link className={`nav__link${isActive("/contact") ? " is-active" : ""}`} href="/contact">
@@ -230,25 +196,14 @@ export function Header() {
         {/* 4. Insights */}
         <Link href="/insights" onClick={() => setMobileOpen(false)}>Insights</Link>
 
-        {/* 5. Quick Links Accordion */}
-        <div className="mnav__acc">
-          <button
-            type="button"
-            className={`mnav__acc-trigger${mobileQuickLinksOpen ? " is-open" : ""}`}
-            onClick={() => setMobileQuickLinksOpen(!mobileQuickLinksOpen)}
-            aria-expanded={mobileQuickLinksOpen}
-          >
-            <span>Quick Links</span>
-            <Icon name="chev" size={12} strokeWidth={2.4} className={`chev${mobileQuickLinksOpen ? " is-open" : ""}`} />
-          </button>
-          {mobileQuickLinksOpen && (
-            <div className="sub">
-              <Link href="/downloads" onClick={() => setMobileOpen(false)}>
-                Download Rx Form
-              </Link>
-            </div>
-          )}
-        </div>
+        {/* 5. Download Rx Form */}
+        <a
+          href="/downloads/Laguna_Dental_Arts_Lab_Slip.pdf"
+          download="Laguna_Dental_Arts_Lab_Slip.pdf"
+          onClick={() => setMobileOpen(false)}
+        >
+          Download Rx Form
+        </a>
 
         {/* 6. Contact Us */}
         <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact Us</Link>
