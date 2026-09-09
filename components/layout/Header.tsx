@@ -116,7 +116,12 @@ export function Header() {
             </Link>
 
             {/* 3. Dental Portal */}
-            <Link className={`nav__link${isActive("/portal") ? " is-active" : ""}`} href="/portal">
+            <Link
+              className={`nav__link${isActive("https://lagunadentalarts.absevolutionwebservices.com") ? " is-active" : ""}`}
+              href="https://lagunadentalarts.absevolutionwebservices.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Doctor Portal
             </Link>
 
@@ -191,7 +196,7 @@ export function Header() {
         <Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
 
         {/* 3. Dental Portal */}
-        <Link href="/portal" onClick={() => setMobileOpen(false)}>Dental Portal</Link>
+        <Link href="https://lagunadentalarts.absevolutionwebservices.com" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>Doctor Portal</Link>
 
         {/* 4. Insights */}
         <Link href="/insights" onClick={() => setMobileOpen(false)}>Insights</Link>
@@ -211,7 +216,7 @@ export function Header() {
           <a className="btn btn--outline-light btn--full" href={SITE.phoneHref}>
             <Icon name="phone" size={16} /> {SITE.phone}
           </a>
-          <Link className="btn btn--light btn--full" href="/portal" onClick={() => setMobileOpen(false)}>
+          <Link className="btn btn--light btn--full" href="https://lagunadentalarts.absevolutionwebservices.com" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
             Send a Case
           </Link>
         </div>
