@@ -32,6 +32,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const navItems = [
     { name: 'Insights & Articles', href: '/admin/insights' },
     { name: 'Customer Stories', href: '/admin/customers' },
+    { name: 'Leads', href: '/admin/leads' },
   ];
 
   const handleLogout = () => {
@@ -95,7 +96,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
                     active
-                      ? 'bg-navy text-white shadow-md'
+                      ? 'bg-[#030e44] text-white shadow-md'
                       : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-100'
                   }`}
                 >
@@ -106,7 +107,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </div>
 
           {/* Page Content */}
-          <div className="bg-white border border-black rounded-2xl p-6 md:p-8 shadow-xl relative">
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xl relative">
             {children}
           </div>
         </div>

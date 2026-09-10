@@ -380,33 +380,34 @@ export default function AdminCustomersPage() {
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
-            <h2 className="text-xl font-semibold text-white">Customer Stories &amp; Reviews (Video Reviews)</h2>
-            <p className="text-xs text-muted-dark">
+            <h2 className="text-xl font-bold text-navy">Customer Stories &amp; Reviews (Video Reviews)</h2>
+            <p className="text-xs text-slate-600 mt-0.5">
               Manage physician video reviews. Up to 3 featured stories will be displayed on the homepage.
             </p>
           </div>
           <button
             onClick={openAddStoryModal}
-            className="bg-blue-default hover:bg-blue-bright text-white font-semibold py-2 px-4 rounded-lg text-xs transition-all cursor-pointer flex items-center gap-1.5 shadow"
+            className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-4 rounded-lg text-xs transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
+            style={{ color: '#ffffff' }}
           >
-            <Plus className="w-4 h-4" />
-            Add Story
+            <Plus className="w-4 h-4 text-white shrink-0" style={{ color: '#ffffff' }} />
+            <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>Add Story</span>
           </button>
         </div>
 
         {isLoading ? (
           <div className="flex items-center justify-center py-10">
-            <span className="w-8 h-8 border-3 border-blue-default border-t-transparent rounded-full animate-spin" />
+            <span className="w-8 h-8 border-3 border-[#030e44] border-t-transparent rounded-full animate-spin" />
           </div>
         ) : stories.filter(s => s.youtubeId).length === 0 ? (
-          <div className="text-center py-10 text-gray-500 font-semibold border border-dashed border-white/10 rounded-xl">
+          <div className="text-center py-10 text-slate-500 font-semibold border border-dashed border-slate-200 bg-slate-50/50 rounded-xl">
             No video reviews found. Click &quot;Add Story&quot; to create one.
           </div>
         ) : (
-          <div className="overflow-x-auto border border-white/8 rounded-xl">
-            <table className="w-full text-left border-collapse text-sm text-gray-300">
+          <div className="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-sm">
+            <table className="w-full text-left border-collapse text-sm text-slate-800">
               <thead>
-                <tr className="border-b border-white/10 text-white/50 text-xs font-semibold uppercase tracking-wider">
+                <tr className="border-b border-slate-200 bg-slate-50 text-slate-700 text-xs font-bold uppercase tracking-wider">
                   <th className="py-3 px-4">Customer</th>
                   <th className="py-3 px-4">Quote / Testimonial</th>
                   <th className="py-3 px-4">Tag Info</th>
@@ -414,16 +415,16 @@ export default function AdminCustomersPage() {
                   <th className="py-3 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-slate-100">
                 {stories.filter(s => s.youtubeId).map((story) => (
-                  <tr key={story._id} className="hover:bg-white/2 transition-colors">
+                  <tr key={story._id} className="hover:bg-slate-50/80 transition-colors">
                     <td className="py-3.5 px-4">
-                      <div className="font-semibold text-white leading-tight">{story.customerName}</div>
-                      <div className="text-xs text-gray-500 mt-1">{story.title}</div>
-                      <div className="text-[11px] text-blue-glow mt-0.5">{story.location}</div>
+                      <div className="font-semibold text-slate-900 leading-tight">{story.customerName}</div>
+                      <div className="text-xs text-slate-500 mt-1">{story.title}</div>
+                      <div className="text-[11px] text-blue-600 font-medium mt-0.5">{story.location}</div>
                     </td>
                     <td className="py-3.5 px-4 max-w-xs">
-                      <div className="text-xs text-gray-400 italic line-clamp-2">{story.description}</div>
+                      <div className="text-xs text-slate-600 italic line-clamp-2">{story.description}</div>
                       <div className="flex gap-0.5 mt-1.5">
                         {Array.from({ length: story.rating }).map((_, i) => (
                           <Star key={i} className="w-3 h-3 fill-amber-500 text-amber-500" />
@@ -432,18 +433,18 @@ export default function AdminCustomersPage() {
                     </td>
                     <td className="py-3.5 px-4">
                       {story.tag ? (
-                        <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wider bg-${story.tagColor}-500/10 text-${story.tagColor}-400 border border-${story.tagColor}-500/20`}>
+                        <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wider bg-${story.tagColor}-500/10 text-${story.tagColor}-600 border border-${story.tagColor}-500/20`}>
                           {story.tag}
                         </span>
                       ) : (
-                        <span className="text-gray-500 text-xs">-</span>
+                        <span className="text-slate-400 text-xs">-</span>
                       )}
                     </td>
                     <td className="py-3.5 px-4">
                       <button
                         onClick={() => toggleFeature(story)}
                         className={`inline-flex items-center gap-1 border-none bg-transparent cursor-pointer text-xs font-semibold transition-all ${
-                          story.featuredOnHomepage ? 'text-amber-400' : 'text-gray-500'
+                          story.featuredOnHomepage ? 'text-amber-600' : 'text-slate-400'
                         }`}
                         title={story.featuredOnHomepage ? 'Deselect homepage feature' : 'Select homepage feature'}
                       >
@@ -454,14 +455,14 @@ export default function AdminCustomersPage() {
                       <div className="flex items-center justify-end gap-2">
                         <button
                           onClick={() => openEditStoryModal(story)}
-                          className="p-1.5 rounded bg-white/5 hover:bg-white/10 text-white border-none cursor-pointer transition-colors"
+                          className="p-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 cursor-pointer transition-colors"
                           title="Edit Story"
                         >
                           <Edit2 className="w-3.5 h-3.5" />
                         </button>
                         <button
                           onClick={() => handleDeleteStory(story._id)}
-                          className="p-1.5 rounded bg-red-500/10 hover:bg-red-500/20 text-red-400 border-none cursor-pointer transition-colors"
+                          className="p-1.5 rounded bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 cursor-pointer transition-colors"
                           title="Delete Story"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
@@ -476,37 +477,38 @@ export default function AdminCustomersPage() {
         )}
       </div>
 
-      <hr className="border-white/5" />
+      <hr className="border-slate-200" />
 
       {/* Text Testimonials Sub-section */}
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
-            <h2 className="text-xl font-semibold text-white">More from our Partners <span className="text-sm font-normal text-muted-dark ml-1">(Text Testimonials)</span></h2>
-            <p className="text-xs text-muted-dark">Stories without a YouTube video — shown in the &ldquo;More from our partners&rdquo; grid on the customer stories page.</p>
+            <h2 className="text-xl font-bold text-navy">More from our Partners <span className="text-sm font-normal text-slate-500 ml-1">(Text Testimonials)</span></h2>
+            <p className="text-xs text-slate-600 mt-0.5">Stories without a YouTube video — shown in the &ldquo;More from our partners&rdquo; grid on the customer stories page.</p>
           </div>
           <button
             onClick={openAddTestimonialModal}
-            className="bg-blue-default hover:bg-blue-bright text-white font-semibold py-2 px-4 rounded-lg text-xs transition-all cursor-pointer flex items-center gap-1.5 shadow"
+            className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-4 rounded-lg text-xs transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
+            style={{ color: '#ffffff' }}
           >
-            <Plus className="w-4 h-4" />
-            Add Text Testimonial
+            <Plus className="w-4 h-4 text-white shrink-0" style={{ color: '#ffffff' }} />
+            <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>Add Text Testimonial</span>
           </button>
         </div>
 
         {isLoading ? (
           <div className="flex items-center justify-center py-10">
-            <span className="w-8 h-8 border-3 border-blue-default border-t-transparent rounded-full animate-spin" />
+            <span className="w-8 h-8 border-3 border-[#030e44] border-t-transparent rounded-full animate-spin" />
           </div>
         ) : partnerTestimonials.length === 0 ? (
-          <div className="text-center py-10 text-gray-500 font-semibold border border-dashed border-white/10 rounded-xl">
+          <div className="text-center py-10 text-slate-500 font-semibold border border-dashed border-slate-200 bg-slate-50/50 rounded-xl">
             No text testimonials yet. Click &quot;Add Text Testimonial&quot; to create one.
           </div>
         ) : (
-          <div className="overflow-x-auto border border-white/8 rounded-xl">
-            <table className="w-full text-left border-collapse text-sm text-gray-300">
+          <div className="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-sm">
+            <table className="w-full text-left border-collapse text-sm text-slate-800">
               <thead>
-                <tr className="border-b border-white/10 text-white/50 text-xs font-semibold uppercase tracking-wider">
+                <tr className="border-b border-slate-200 bg-slate-50 text-slate-700 text-xs font-bold uppercase tracking-wider">
                   <th className="py-3 px-4">Partner</th>
                   <th className="py-3 px-4">Quote</th>
                   <th className="py-3 px-4">Tag</th>
@@ -514,27 +516,27 @@ export default function AdminCustomersPage() {
                   <th className="py-3 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-slate-100">
                 {partnerTestimonials.map((testimonial) => (
-                  <tr key={testimonial._id} className="hover:bg-white/2 transition-colors">
+                  <tr key={testimonial._id} className="hover:bg-slate-50/80 transition-colors">
                     <td className="py-3.5 px-4">
-                      <div className="font-semibold text-white leading-tight">{testimonial.name}</div>
-                      <div className="text-[11px] text-blue-glow mt-1">{testimonial.practice}</div>
+                      <div className="font-semibold text-slate-900 leading-tight">{testimonial.name}</div>
+                      <div className="text-[11px] text-blue-600 font-medium mt-1">{testimonial.practice}</div>
                     </td>
                     <td className="py-3.5 px-4 max-w-xs">
-                      <div className="text-xs text-gray-400 italic line-clamp-2">{testimonial.quote}</div>
+                      <div className="text-xs text-slate-600 italic line-clamp-2">{testimonial.quote}</div>
                     </td>
                     <td className="py-3.5 px-4">
                       {testimonial.tag ? (
-                        <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wider bg-${testimonial.tagColor}-500/10 text-${testimonial.tagColor}-400 border border-${testimonial.tagColor}-500/20`}>
+                        <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wider bg-${testimonial.tagColor}-500/10 text-${testimonial.tagColor}-600 border border-${testimonial.tagColor}-500/20`}>
                           {testimonial.tag}
                         </span>
                       ) : (
-                        <span className="text-gray-500 text-xs">-</span>
+                        <span className="text-slate-400 text-xs">-</span>
                       )}
                     </td>
                     <td className="py-3.5 px-4 capitalize">
-                      <span className="bg-white/5 border border-white/10 rounded-full px-2.5 py-0.5 text-xs text-white">
+                      <span className="bg-slate-100 border border-slate-200 rounded-full px-2.5 py-0.5 text-xs text-slate-800 font-medium">
                         {testimonial.category}
                       </span>
                     </td>
@@ -542,14 +544,14 @@ export default function AdminCustomersPage() {
                       <div className="flex items-center justify-end gap-2">
                         <button
                           onClick={() => openEditTestimonialModal(testimonial)}
-                          className="p-1.5 rounded bg-white/5 hover:bg-white/10 text-white border-none cursor-pointer transition-colors"
+                          className="p-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 cursor-pointer transition-colors"
                           title="Edit Testimonial"
                         >
                           <Edit2 className="w-3.5 h-3.5" />
                         </button>
                         <button
                           onClick={() => handleDeleteTestimonial(testimonial._id)}
-                          className="p-1.5 rounded bg-red-500/10 hover:bg-red-500/20 text-red-400 border-none cursor-pointer transition-colors"
+                          className="p-1.5 rounded bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 cursor-pointer transition-colors"
                           title="Delete Testimonial"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
@@ -564,95 +566,95 @@ export default function AdminCustomersPage() {
         )}
       </div>
 
-      {/* feedback Modal */}
+      {/* Video Review Modal */}
       {isStoryModalOpen && (
         <div className="fixed inset-0 z-[5000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-navy border border-white/10 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
-            <div className="flex items-center justify-between border-b border-white/10 p-5">
-              <h3 className="text-lg font-semibold text-white">
+          <div className="bg-white border border-slate-200 rounded-2xl w-full max-w-2xl md:max-w-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[92vh] text-slate-900">
+            <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4 bg-slate-50/75">
+              <h3 className="text-lg font-bold text-navy">
                 {editingStory ? 'Edit Customer Review' : 'Add New Review'}
               </h3>
               <button
                 onClick={() => setIsStoryModalOpen(false)}
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border-none cursor-pointer flex items-center justify-center text-white"
+                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 cursor-pointer flex items-center justify-center text-slate-600 transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <form onSubmit={storyForm.handleSubmit(onStorySubmit)} className="p-6 overflow-y-auto space-y-4 flex-1">
-              <div className="grid grid-cols-2 gap-4">
+            <form onSubmit={storyForm.handleSubmit(onStorySubmit)} className="p-6 overflow-y-auto space-y-4 flex-1 bg-white">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Customer Name
                   </label>
                   <input
                     type="text"
                     placeholder="Dr. John Doe"
                     {...storyForm.register('customerName')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                   {storyForm.formState.errors.customerName && (
-                    <span className="text-red-400 text-xs mt-1 block">{storyForm.formState.errors.customerName.message}</span>
+                    <span className="text-red-600 text-xs mt-1 block">{storyForm.formState.errors.customerName.message}</span>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     YouTube Video ID
                   </label>
                   <input
                     type="text"
                     placeholder="e.g. dQw4w9WgXcQ"
                     {...storyForm.register('youtubeId')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                   {storyForm.formState.errors.youtubeId && (
-                    <span className="text-red-400 text-xs mt-1 block">{storyForm.formState.errors.youtubeId.message}</span>
+                    <span className="text-red-600 text-xs mt-1 block">{storyForm.formState.errors.youtubeId.message}</span>
                   )}
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Clinical Role / Title
                   </label>
                   <input
                     type="text"
                     placeholder="General Dentist, Prosthodontist..."
                     {...storyForm.register('title')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                   {storyForm.formState.errors.title && (
-                    <span className="text-red-400 text-xs mt-1 block">{storyForm.formState.errors.title.message}</span>
+                    <span className="text-red-600 text-xs mt-1 block">{storyForm.formState.errors.title.message}</span>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Location / Practice Info
                   </label>
                   <input
                     type="text"
                     placeholder="Park Avenue Dental, NYC"
                     {...storyForm.register('location')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                   {storyForm.formState.errors.location && (
-                    <span className="text-red-400 text-xs mt-1 block">{storyForm.formState.errors.location.message}</span>
+                    <span className="text-red-600 text-xs mt-1 block">{storyForm.formState.errors.location.message}</span>
                   )}
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Practice Category
                   </label>
                   <select
                     {...storyForm.register('category')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none transition-colors"
                   >
                     <option value="private">Private Practice</option>
                     <option value="group">Group Practice</option>
@@ -661,24 +663,24 @@ export default function AdminCustomersPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Outcome Tag (Optional)
                   </label>
                   <input
                     type="text"
                     placeholder="↑ 80% chair time"
                     {...storyForm.register('tag')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Tag Color
                   </label>
                   <select
                     {...storyForm.register('tagColor')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none transition-colors"
                   >
                     <option value="emerald">Green / Emerald</option>
                     <option value="blue">Blue</option>
@@ -688,9 +690,9 @@ export default function AdminCustomersPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Star Rating (1 - 5)
                   </label>
                   <input
@@ -698,7 +700,7 @@ export default function AdminCustomersPage() {
                     min={1}
                     max={5}
                     {...storyForm.register('rating')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none transition-colors"
                   />
                 </div>
 
@@ -708,9 +710,9 @@ export default function AdminCustomersPage() {
                       type="checkbox"
                       id="featuredOnHomepage"
                       {...storyForm.register('featuredOnHomepage')}
-                      className="w-4 h-4 accent-blue-default"
+                      className="w-4 h-4 accent-[#030e44] rounded cursor-pointer"
                     />
-                    <label htmlFor="featuredOnHomepage" className="text-xs font-semibold text-white cursor-pointer select-none">
+                    <label htmlFor="featuredOnHomepage" className="text-xs font-semibold text-slate-800 cursor-pointer select-none">
                       Feature on Homepage (Max 3)
                     </label>
                   </div>
@@ -718,46 +720,49 @@ export default function AdminCustomersPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                   Quote / Testimonial
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Enter patient fit outcomes and review comments..."
                   {...storyForm.register('description')}
-                  className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none resize-none font-sans"
+                  className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none resize-none font-sans placeholder:text-slate-400 transition-colors"
                 />
                 {storyForm.formState.errors.description && (
-                  <span className="text-red-400 text-xs mt-1 block">{storyForm.formState.errors.description.message}</span>
+                  <span className="text-red-600 text-xs mt-1 block">{storyForm.formState.errors.description.message}</span>
                 )}
               </div>
 
-              <div className="flex items-center gap-2 pt-2">
+              <div className="flex items-center gap-2 pt-1">
                 <input
                   type="checkbox"
                   id="published"
                   {...storyForm.register('published')}
-                  className="w-4 h-4 accent-blue-default"
+                  className="w-4 h-4 accent-[#030e44] rounded cursor-pointer"
                 />
-                <label htmlFor="published" className="text-xs font-semibold text-white cursor-pointer select-none">
+                <label htmlFor="published" className="text-xs font-semibold text-slate-800 cursor-pointer select-none">
                   Publish immediately (show on website)
                 </label>
               </div>
 
-              <div className="border-t border-white/10 pt-5 flex items-center justify-end gap-3">
+              <div className="border-t border-slate-200 pt-5 flex items-center justify-end gap-3">
                 <button
                   type="button"
                   onClick={() => setIsStoryModalOpen(false)}
-                  className="bg-transparent hover:bg-white/5 border border-white/10 text-white font-semibold py-2 px-4 rounded-lg text-xs cursor-pointer transition-colors"
+                  className="bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-semibold py-2 px-4 rounded-lg text-xs cursor-pointer transition-colors shadow-sm"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-blue-default hover:bg-blue-bright text-white font-semibold py-2 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow"
+                  className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow flex items-center gap-2"
+                  style={{ color: '#ffffff' }}
                 >
-                  {isSubmitting ? 'Saving...' : 'Save Changes'}
+                  <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>
+                    {isSubmitting ? 'Saving...' : 'Save Changes'}
+                  </span>
                 </button>
               </div>
             </form>
@@ -768,60 +773,60 @@ export default function AdminCustomersPage() {
       {/* Testimonial Modal */}
       {isTestimonialModalOpen && (
         <div className="fixed inset-0 z-[5000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-navy border border-white/10 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
-            <div className="flex items-center justify-between border-b border-white/10 p-5">
-              <h3 className="text-lg font-semibold text-white">
+          <div className="bg-white border border-slate-200 rounded-2xl w-full max-w-2xl md:max-w-3xl overflow-hidden shadow-2xl relative flex flex-col max-h-[92vh] text-slate-900">
+            <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4 bg-slate-50/75">
+              <h3 className="text-lg font-bold text-navy">
                 {editingTestimonial ? 'Edit Partner Testimonial' : 'Add New Testimonial'}
               </h3>
               <button
                 onClick={() => setIsTestimonialModalOpen(false)}
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border-none cursor-pointer flex items-center justify-center text-white"
+                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 cursor-pointer flex items-center justify-center text-slate-600 transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <form onSubmit={testimonialForm.handleSubmit(onTestimonialSubmit)} className="p-6 overflow-y-auto space-y-4 flex-1">
-              <div className="grid grid-cols-2 gap-4">
+            <form onSubmit={testimonialForm.handleSubmit(onTestimonialSubmit)} className="p-6 overflow-y-auto space-y-4 flex-1 bg-white">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Partner Name
                   </label>
                   <input
                     type="text"
                     placeholder="Dr. John Doe"
                     {...testimonialForm.register('name')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                   {testimonialForm.formState.errors.name && (
-                    <span className="text-red-400 text-xs mt-1 block">{testimonialForm.formState.errors.name.message}</span>
+                    <span className="text-red-600 text-xs mt-1 block">{testimonialForm.formState.errors.name.message}</span>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Practice Name / Location
                   </label>
                   <input
                     type="text"
                     placeholder="Park Avenue Dental, NYC"
                     {...testimonialForm.register('practice')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                   {testimonialForm.formState.errors.practice && (
-                    <span className="text-red-400 text-xs mt-1 block">{testimonialForm.formState.errors.practice.message}</span>
+                    <span className="text-red-600 text-xs mt-1 block">{testimonialForm.formState.errors.practice.message}</span>
                   )}
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Practice Category
                   </label>
                   <select
                     {...testimonialForm.register('category')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none transition-colors"
                   >
                     <option value="private">Private Practice</option>
                     <option value="group">Group Practice</option>
@@ -830,24 +835,24 @@ export default function AdminCustomersPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Outcome Tag (Optional)
                   </label>
                   <input
                     type="text"
                     placeholder="e.g. 5-Day Turnaround"
                     {...testimonialForm.register('tag')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none placeholder:text-slate-400 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Tag Color
                   </label>
                   <select
                     {...testimonialForm.register('tagColor')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none transition-colors"
                   >
                     <option value="emerald">Green / Emerald</option>
                     <option value="blue">Blue</option>
@@ -857,14 +862,14 @@ export default function AdminCustomersPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                     Profile Emoji
                   </label>
                   <select
                     {...testimonialForm.register('emoji')}
-                    className="w-full bg-navy-card border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-blue-default outline-none"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none transition-colors"
                   >
                     <option value="👨‍⚕️">Male Dentist (👨‍⚕️)</option>
                     <option value="👩‍⚕️">Female Dentist (👩‍⚕️)</option>
@@ -876,46 +881,49 @@ export default function AdminCustomersPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                   Quote / Testimonial
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Enter partner quote and review comments..."
                   {...testimonialForm.register('quote')}
-                  className="w-full bg-navy-card border border-white/10 rounded-lg px-3.5 py-2 text-white text-sm focus:border-blue-default outline-none resize-none font-sans"
+                  className="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-slate-900 text-sm focus:border-[#030e44] focus:ring-1 focus:ring-[#030e44] outline-none resize-none font-sans placeholder:text-slate-400 transition-colors"
                 />
                 {testimonialForm.formState.errors.quote && (
-                  <span className="text-red-400 text-xs mt-1 block">{testimonialForm.formState.errors.quote.message}</span>
+                  <span className="text-red-600 text-xs mt-1 block">{testimonialForm.formState.errors.quote.message}</span>
                 )}
               </div>
 
-              <div className="flex items-center gap-2 pt-2">
+              <div className="flex items-center gap-2 pt-1">
                 <input
                   type="checkbox"
                   id="testimonialPublished"
                   {...testimonialForm.register('published')}
-                  className="w-4 h-4 accent-blue-default"
+                  className="w-4 h-4 accent-[#030e44] rounded cursor-pointer"
                 />
-                <label htmlFor="testimonialPublished" className="text-xs font-semibold text-white cursor-pointer select-none">
+                <label htmlFor="testimonialPublished" className="text-xs font-semibold text-slate-800 cursor-pointer select-none">
                   Publish immediately (show on website)
                 </label>
               </div>
 
-              <div className="border-t border-white/10 pt-5 flex items-center justify-end gap-3">
+              <div className="border-t border-slate-200 pt-5 flex items-center justify-end gap-3">
                 <button
                   type="button"
                   onClick={() => setIsTestimonialModalOpen(false)}
-                  className="bg-transparent hover:bg-white/5 border border-white/10 text-white font-semibold py-2 px-4 rounded-lg text-xs cursor-pointer transition-colors"
+                  className="bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-semibold py-2 px-4 rounded-lg text-xs cursor-pointer transition-colors shadow-sm"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-blue-default hover:bg-blue-bright text-white font-semibold py-2 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow"
+                  className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow flex items-center gap-2"
+                  style={{ color: '#ffffff' }}
                 >
-                  {isSubmitting ? 'Saving...' : 'Save Changes'}
+                  <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>
+                    {isSubmitting ? 'Saving...' : 'Save Changes'}
+                  </span>
                 </button>
               </div>
             </form>

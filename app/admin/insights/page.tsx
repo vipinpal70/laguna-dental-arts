@@ -280,10 +280,13 @@ export default function AdminArticlesPage() {
         </div>
         <button
           onClick={openAddModal}
-          className="bg-navy hover:bg-navy/90 text-navy font-semibold py-2 px-4 rounded-lg text-xs transition-all cursor-pointer flex items-center gap-1.5 shadow"
+          className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-4 rounded-lg text-xs transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
+          style={{ color: '#ffffff' }}
         >
-          <Plus className="w-4 h-4" />
-          Write Article
+          <Plus className="w-4 h-4 text-white shrink-0" style={{ color: '#ffffff' }} />
+          <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>
+            Write Article
+          </span>
         </button>
       </div>
 
@@ -581,9 +584,12 @@ export default function AdminArticlesPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting || isUploading}
-                    className="bg-navy hover:bg-navy/90 text-navy font-semibold py-2 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow"
+                    className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow flex items-center gap-2"
+                    style={{ color: '#ffffff' }}
                   >
-                    {isSubmitting ? 'Saving…' : editingArticle ? 'Save Changes' : 'Publish Article'}
+                    <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>
+                      {isSubmitting ? 'Saving…' : editingArticle ? 'Save Changes' : 'Publish Article'}
+                    </span>
                   </button>
                 </div>
               </form>
