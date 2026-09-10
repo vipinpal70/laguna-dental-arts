@@ -17,8 +17,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = getService(slug);
   if (!service) return {};
   return {
-    title: service.title,
-    description: service.intro,
+    title: service.metaTitle ? { absolute: service.metaTitle } : service.title,
+    description: service.metaDescription || service.intro,
+    openGraph: {
+      title: service.metaTitle || service.title,
+      description: service.metaDescription || service.intro,
+      url: `https://www.lagunadentalarts.com/lab-services/${service.slug}`,
+      images: service.image ? [{ url: service.image }] : undefined,
+    },
   };
 }
 
@@ -28,13 +34,47 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   if (!service) notFound();
 
   const faq = buildServiceFaq(service);
+  const crumbLabel = service.breadcrumb
+    ? (service.breadcrumb.includes("/")
+        ? service.breadcrumb.split("/").pop()?.trim()
+        : service.breadcrumb.split("›").pop()?.trim()) || service.title
+    : service.title;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.lagunadentalarts.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Lab Services",
+        "item": "https://www.lagunadentalarts.com/lab-services",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": crumbLabel,
+        "item": `https://www.lagunadentalarts.com/lab-services/${service.slug}`,
+      },
+    ],
+  };
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className="pd-hero">
         <div className="container">
           <div className="pd-crumbs" style={{ fontSize: 12, color: "rgba(255,255,255,.58)" }}>
-            <Link href="/">Home</Link> &nbsp;›&nbsp; <Link href="/services">Lab Services</Link> &nbsp;›&nbsp; {service.title}
+            <Link href="/">Home</Link> &nbsp;›&nbsp; <Link href="/lab-services">Lab Services</Link> &nbsp;›&nbsp; {crumbLabel}
           </div>
           <span className="pd-kicker" style={{ marginTop: 28 }}>{service.category}</span>
           <h1 dangerouslySetInnerHTML={{ __html: service.heroHtml }} />

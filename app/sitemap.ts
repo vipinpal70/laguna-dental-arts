@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/about",
-    "/services",
+    "/lab-services",
     "/contact",
     "/insights",
     "/portal",
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const serviceRoutes = SERVICES.map((s) => ({
-    url: `${BASE_URL}/services/${s.slug}`,
+    url: `${BASE_URL}/lab-services/${s.slug}`,
     lastModified: new Date(),
   }));
 

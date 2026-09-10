@@ -17,12 +17,12 @@ export type ServiceLink = {
 };
 
 export const SERVICE_LINKS: ServiceLink[] = [
-  { title: "Crowns", desc: "Zirconia, e.max, PFM & full-contour", href: "/services/crowns", icon: "crown" },
-  { title: "Full-Arch Solutions", desc: "All-on-X hybrids & zirconia", href: "/services/full-arch", icon: "bridge" },
-  { title: "Night Guards & Appliances", desc: "Splints, retainers & ortho appliances", href: "/services/night-guards", icon: "nightguard" },
-  { title: "Implant Restoration", desc: "Custom abutments & screw-retained", href: "/services/implants", icon: "implant" },
-  { title: "Removables & Partials", desc: "Dentures, frameworks & flexibles", href: "/services/dentures", icon: "denture" },
-  { title: "Guides, Models & Wax-Ups", desc: "Surgical guides & digital planning", href: "/services", icon: "ortho" },
+  { title: "Crowns", desc: "Zirconia, e.max, PFM & full-contour", href: "/lab-services/crowns", icon: "crown" },
+  { title: "Full-Arch Solutions", desc: "All-on-X hybrids & zirconia", href: "/lab-services/full-arch", icon: "bridge" },
+  { title: "Night Guards & Appliances", desc: "Splints, retainers & ortho appliances", href: "/lab-services/night-guards", icon: "nightguard" },
+  { title: "Implant Restoration", desc: "Custom abutments & screw-retained", href: "/lab-services/implants", icon: "implant" },
+  { title: "Removables & Partials", desc: "Dentures, frameworks & flexibles", href: "/lab-services/dentures", icon: "denture" },
+  { title: "Guides, Models & Wax-Ups", desc: "Surgical guides & digital planning", href: "/lab-services", icon: "ortho" },
 ];
 
 export const NAV_LINKS = [
@@ -33,12 +33,12 @@ export const NAV_LINKS = [
 ];
 
 export const FOOTER_LAB_SERVICES = [
-  { label: "Crowns", href: "/services/crowns" },
-  { label: "Bridges", href: "/services/bridges" },
-  { label: "Implants", href: "/services/implants" },
-  { label: "Veneers", href: "/services/veneers" },
-  { label: "Dentures", href: "/services/dentures" },
-  { label: "View all →", href: "/services" },
+  { label: "Crowns", href: "/lab-services/crowns" },
+  { label: "Bridges", href: "/lab-services/bridges" },
+  { label: "Implants", href: "/lab-services/implants" },
+  { label: "Veneers", href: "/lab-services/veneers" },
+  { label: "Dentures", href: "/lab-services/dentures" },
+  { label: "View all →", href: "/lab-services" },
 ];
 
 export const SOCIAL_LINKS = [

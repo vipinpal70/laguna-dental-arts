@@ -84,8 +84,8 @@ export function Header() {
               onMouseLeave={closeServices}
             >
               <Link
-                className={`nav__link${isActive("/services") ? " is-active" : ""}`}
-                href="/services"
+                className={`nav__link${isActive("/lab-services") ? " is-active" : ""}`}
+                href="/lab-services"
                 aria-haspopup="true"
                 aria-expanded={servicesOpen}
               >
@@ -93,7 +93,7 @@ export function Header() {
                 <Icon name="chev" size={11} strokeWidth={2.4} className="chev" />
               </Link>
               <div className="mega" role="menu">
-                <Link className="mega__all bg-blue-500/20" href="/services">
+                <Link className="mega__all bg-blue-500/20" href="/lab-services">
                   <span>
                     <b className="text-blue-500">All Services</b>
                     <small>Explore our complete lab services</small>
@@ -180,7 +180,7 @@ export function Header() {
           </button>
           {mobileServicesOpen && (
             <div className="sub">
-              <Link href="/services" onClick={() => setMobileOpen(false)}>
+              <Link href="/lab-services" onClick={() => setMobileOpen(false)}>
                 All Services
               </Link>
               {SERVICE_LINKS.map((s) => (

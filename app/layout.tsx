@@ -8,11 +8,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Laguna Dental Arts — Full-Service Digital Dental Lab",
+    default: "California Dental Lab for Dentists | Laguna Dental Arts",
     template: "%s · Laguna Dental Arts",
   },
   description:
-    "Partner with Laguna Dental Arts for crowns, implants, dentures, surgical guides and digital dental lab support from our California-based team.",
+    "Laguna Dental Arts is a full-service dental lab in Elk Grove, CA serving dentists with crown, bridge, implant & removable work plus fast turnaround.",
   metadataBase: new URL("https://www.lagunadentalarts.com"),
 };
 

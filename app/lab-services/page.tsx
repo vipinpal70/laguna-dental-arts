@@ -59,7 +59,7 @@ export default function ServicesPage() {
               <Link
                 key={s.slug}
                 className="card pcard"
-                href={`/services/${s.slug}`}
+                href={`/lab-services/${s.slug}`}
                 data-categories={s.categories.join(" ")}
               >
                 <div className="pcard__media">
@@ -110,7 +110,7 @@ export default function ServicesPage() {
         primaryLabel="Become a Partner"
         primaryHref="/contact"
         secondaryLabel="Explore Lab Services"
-        secondaryHref="/services"
+        secondaryHref="/lab-services"
       />
     </main>
   );

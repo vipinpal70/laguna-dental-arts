@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Compass, Layers, MessageSquare } from "lucide-react";
@@ -7,6 +8,20 @@ import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { CtaBand } from "@/components/ui/CtaBand";
 
+export const metadata: Metadata = {
+  title: {
+    absolute: "California Dental Lab for Dentists | Laguna Dental Arts",
+  },
+  description:
+    "Laguna Dental Arts is a full-service dental lab in Elk Grove, CA serving dentists with crown, bridge, implant & removable work plus fast turnaround.",
+  openGraph: {
+    title: "California Dental Lab for Dentists | Laguna Dental Arts",
+    description:
+      "Laguna Dental Arts is a full-service dental lab in Elk Grove, CA serving dentists with crown, bridge, implant & removable work plus fast turnaround.",
+    url: "https://www.lagunadentalarts.com",
+  },
+};
+
 const PRODUCTS = [
   {
     key: "crown",
@@ -14,7 +29,7 @@ const PRODUCTS = [
     image: "/assets/LDA_product_images/dental-crown.png",
     title: "Crown",
     desc: "Precise-margin zirconia, e.max, and PFM restorations.",
-    href: "/services/crowns",
+    href: "/lab-services/crowns",
     linkLabel: "Explore crown & bridge",
   },
   {
@@ -23,7 +38,7 @@ const PRODUCTS = [
     image: "/assets/LDA_product_images/implant-restoration.png",
     title: "Implant Restorations",
     desc: "Custom abutments to screw-retained crowns, built to your plan.",
-    href: "/services/implants",
+    href: "/lab-services/implants",
     linkLabel: "Explore implants",
   },
   {
@@ -32,7 +47,7 @@ const PRODUCTS = [
     image: "/assets/LDA_product_images/full-arch.png",
     title: "Full-Arch Solutions",
     desc: "All-on-X hybrids and screw-retained zirconia, planned to delivery.",
-    href: "/services/full-arch",
+    href: "/lab-services/full-arch",
     linkLabel: "Explore full-arch",
   },
   {
@@ -41,7 +56,7 @@ const PRODUCTS = [
     image: "/assets/LDA_product_images/Denture.jpeg",
     title: "Removables & Partials",
     desc: "Dentures, partials, and flexible frameworks digital or traditional.",
-    href: "/services/dentures",
+    href: "/lab-services/dentures",
     linkLabel: "Explore removables",
   },
   {
@@ -50,7 +65,7 @@ const PRODUCTS = [
     image: "/assets/LDA_product_images/night-guards.jpeg",
     title: "Night Guards & Appliances",
     desc: "Splints, retainers, and orthodontic appliances, made to spec.",
-    href: "/services/night-guards",
+    href: "/lab-services/night-guards",
     linkLabel: "Explore appliances",
   },
   {
@@ -59,7 +74,7 @@ const PRODUCTS = [
     image: "/assets/LDA_product_images/surgical-guide.png",
     title: "Guides, Models & Wax-Ups",
     desc: "Surgical guides, printed models, and diagnostic wax-ups.",
-    href: "/services",
+    href: "/lab-services",
     linkLabel: "Explore digital dentistry",
   },
 ];
@@ -147,7 +162,7 @@ export default function HomePage() {
               <Link className="btn btn--lg btn--light" href="https://upload.lagunadentalarts.com/" target="_blank" rel="noopener noreferrer">
                 Digital Upload <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
               </Link>
-              <Link className="btn btn--lg btn--outline-light" href="/services">Explore Services</Link>
+              <Link className="btn btn--lg btn--outline-light" href="/lab-services">Explore Services</Link>
             </div>
           </div>
         </div>
@@ -213,7 +228,7 @@ export default function HomePage() {
               <h2 className="display">Built around the cases you see every day</h2>
               <p>Explore our full-service restorative menu, or talk with our team when a case needs technical guidance.</p>
             </div>
-            <Link className="btn" href="/services">
+            <Link className="btn" href="/lab-services">
               View All <Icon name="arrow" size={16} strokeWidth={2.4} />
             </Link>
           </div>

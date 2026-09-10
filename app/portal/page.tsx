@@ -109,7 +109,7 @@ export default function PortalPage() {
         primaryLabel="Become a Partner"
         primaryHref="/contact"
         secondaryLabel="Explore Lab Services"
-        secondaryHref="/services"
+        secondaryHref="/lab-services"
       />
     </main>
   );
