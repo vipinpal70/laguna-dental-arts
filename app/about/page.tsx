@@ -6,8 +6,21 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { TeamGrid } from "@/components/about/TeamGrid";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "The story, facility and people behind Laguna Dental Arts, a premium California dental laboratory.",
+  title: {
+    absolute: "About Our Full-Service Dental Lab | Laguna Dental Arts",
+  },
+  description:
+    "Learn about Laguna Dental Arts, a California dental laboratory combining digital precision, experienced technicians and responsive support.",
+  alternates: {
+    canonical: "https://lagunadentalarts.com/about",
+  },
+  openGraph: {
+    title: "About Our Full-Service Dental Lab | Laguna Dental Arts",
+    description:
+      "Learn about Laguna Dental Arts, a California dental laboratory combining digital precision, experienced technicians and responsive support.",
+    url: "https://lagunadentalarts.com/about",
+    type: "website",
+  },
 };
 
 const VALUES = [

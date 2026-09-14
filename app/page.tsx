@@ -10,15 +10,19 @@ import { CtaBand } from "@/components/ui/CtaBand";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "California Dental Lab for Dentists | Laguna Dental Arts",
+    absolute: "Laguna Dental Arts - Full-Service Digital Dental Lab",
   },
   description:
-    "Laguna Dental Arts is a full-service dental lab in Elk Grove, CA serving dentists with crown, bridge, implant & removable work plus fast turnaround.",
+    "Full-service California dental lab for crowns, implants, full-arch restorations, removables, appliances and digital workflows.",
+  alternates: {
+    canonical: "https://lagunadentalarts.com/",
+  },
   openGraph: {
-    title: "California Dental Lab for Dentists | Laguna Dental Arts",
+    title: "Laguna Dental Arts - Full-Service Digital Dental Lab",
     description:
-      "Laguna Dental Arts is a full-service dental lab in Elk Grove, CA serving dentists with crown, bridge, implant & removable work plus fast turnaround.",
-    url: "https://www.lagunadentalarts.com",
+      "Full-service California dental lab for crowns, implants, full-arch restorations, removables, appliances and digital workflows.",
+    url: "https://lagunadentalarts.com/",
+    type: "website",
   },
 };
 

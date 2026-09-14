@@ -6,8 +6,21 @@ import { SITE } from "@/lib/site-data";
 import { pt } from "zod/locales";
 
 export const metadata: Metadata = {
-  title: "Downloads & Resources",
-  description: "Download prescription lab slips, conversion Rx forms, shipping labels, and clinical resources for Laguna Dental Arts.",
+  title: {
+    absolute: "Download Rx Forms & Lab Slips | Laguna Dental Arts",
+  },
+  description:
+    "Download dental lab Rx forms, lab slips and practice resources from Laguna Dental Arts.",
+  alternates: {
+    canonical: "https://lagunadentalarts.com/downloads",
+  },
+  openGraph: {
+    title: "Download Rx Forms & Lab Slips | Laguna Dental Arts",
+    description:
+      "Download dental lab Rx forms, lab slips and practice resources from Laguna Dental Arts.",
+    url: "https://lagunadentalarts.com/downloads",
+    type: "website",
+  },
 };
 
 const DOWNLOADS = [

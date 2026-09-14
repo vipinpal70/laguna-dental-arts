@@ -5,8 +5,21 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact Laguna Dental Arts in Elk Grove, California. Become a partner, request a pickup or ask a clinical question.",
+  title: {
+    absolute: "Contact Our Elk Grove, CA Dental Lab | Laguna Dental Arts",
+  },
+  description:
+    "Contact Laguna Dental Arts in Elk Grove, California for dental lab cases, technical support, local pickup and delivery information.",
+  alternates: {
+    canonical: "https://lagunadentalarts.com/contact",
+  },
+  openGraph: {
+    title: "Contact Our Elk Grove, CA Dental Lab | Laguna Dental Arts",
+    description:
+      "Contact Laguna Dental Arts in Elk Grove, California for dental lab cases, technical support, local pickup and delivery information.",
+    url: "https://lagunadentalarts.com/contact",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
@@ -39,7 +52,7 @@ export default function ContactPage() {
             </div>
             <div className="info-row">
               <span className="ic ic-tile"><Icon name="clock" size={20} strokeWidth={1.8} /></span>
-              <div><h4>Business hours</h4><p>{SITE.hours}<br />{SITE.hoursNote}</p></div>
+              <div><h4>Business hours</h4><p>{SITE.hours ? <>{SITE.hours}<br /></> : null}{SITE.hoursNote}</p></div>
             </div>
             <div className="map-frame" style={{ width: "100%", maxWidth: "100%", height: 300, position: "relative" }}>
               <iframe

@@ -13,6 +13,7 @@ export interface Lead {
   practiceName?: string;
   interest?: string;
   message?: string;
+  marketingConsent?: boolean;
   status?: string;
   createdAt?: string;
 }
@@ -25,6 +26,7 @@ export interface LeadInput {
   practiceName?: string;
   interest?: string;
   message?: string;
+  marketingConsent?: boolean;
 }
 
 async function getCollection(): Promise<Collection<Document>> {

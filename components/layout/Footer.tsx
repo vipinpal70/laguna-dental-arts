@@ -60,6 +60,10 @@ export function Footer() {
                     <a href={l.href} download={l.download}>
                       {l.label}
                     </a>
+                  ) : l.target ? (
+                    <a href={l.href} target={l.target} rel={l.rel}>
+                      {l.label}
+                    </a>
                   ) : (
                     <Link href={l.href}>{l.label}</Link>
                   )}
@@ -73,7 +77,7 @@ export function Footer() {
               <li><a href={SITE.phoneHref}>{SITE.phone}</a></li>
               <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
               <li>{SITE.addressLine1}<br />{SITE.addressLine2}</li>
-              <li>{SITE.hours}</li>
+              {SITE.hours && <li>{SITE.hours}</li>}
             </ul>
           </div>
         </div>

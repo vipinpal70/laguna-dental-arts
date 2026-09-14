@@ -1,4 +1,13 @@
-export const SITE = {
+export const SITE: {
+  name: string;
+  phone: string;
+  phoneHref: string;
+  email: string;
+  addressLine1: string;
+  addressLine2: string;
+  hours?: string;
+  hoursNote: string;
+} = {
   name: "Laguna Dental Arts",
   phone: "+1 (916) 688-1333",
   phoneHref: "tel:+19166881333",
@@ -52,12 +61,14 @@ export type FooterLink = {
   label: string;
   href: string;
   download?: string;
+  target?: string;
+  rel?: string;
 };
 
 export const FOOTER_COMPANY: FooterLink[] = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
-  { label: "Doctor Portal", href: "/portal" },
+  { label: "Doctor Portal", href: "https://lagunadentalarts.abssandbox.com/", target: "_blank", rel: "noopener noreferrer" },
   {
     label: "Download Rx Form",
     href: "/downloads/Laguna_Dental_Arts_Lab_Slip.pdf",

@@ -24,6 +24,7 @@ export function ContactForm() {
       practiceName: (data.get("practiceName") as string) || "",
       interest: (data.get("interest") as string) || "",
       message: (data.get("message") as string) || "",
+      marketingConsent: (data.get("marketingConsent") as string) === "on",
     };
 
     try {
@@ -75,6 +76,16 @@ export function ContactForm() {
         <div className="field">
           <label>Message</label>
           <textarea name="message" placeholder="Tell us about your typical case volume and what you're looking for in a lab." />
+        </div>
+        <div className="field--checkbox">
+          <input
+            type="checkbox"
+            id="marketingConsent"
+            name="marketingConsent"
+          />
+          <label htmlFor="marketingConsent">
+            I agree to receive email and marketing communications from Laguna Dental Arts. I understand that I can unsubscribe at any time.
+          </label>
         </div>
         <button className="btn btn--lg" type="submit" disabled={submitting}>
           {submitting ? "Sending…" : "Send inquiry"} <Icon name="arrow" size={18} strokeWidth={2.4} className="arw" />

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/icons/Icon";
 import { InsightImage } from "@/components/ui/InsightImage";
@@ -6,6 +7,24 @@ import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { getPublishedInsights } from "@/lib/insights-db";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Dental Lab Insights | Laguna Dental Arts",
+  },
+  description:
+    "Read dental laboratory insights from Laguna Dental Arts on digital workflows, implants, restorative dentistry and practice-lab collaboration.",
+  alternates: {
+    canonical: "https://lagunadentalarts.com/insights",
+  },
+  openGraph: {
+    title: "Dental Lab Insights | Laguna Dental Arts",
+    description:
+      "Read dental laboratory insights from Laguna Dental Arts on digital workflows, implants, restorative dentistry and practice-lab collaboration.",
+    url: "https://lagunadentalarts.com/insights",
+    type: "website",
+  },
+};
 
 export default async function InsightsPage() {
   const articles = await getPublishedInsights();

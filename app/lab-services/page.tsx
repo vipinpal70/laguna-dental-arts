@@ -8,8 +8,21 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Lab Services",
-  description: "Fixed, removable, cosmetic and appliance work — engineered around fit, function and a natural finish.",
+  title: {
+    absolute: "Lab Services | Laguna Dental Arts",
+  },
+  description:
+    "Explore Laguna Dental Arts lab services including crowns, bridges, implants, veneers, dentures, appliances and digital dentistry solutions.",
+  alternates: {
+    canonical: "https://lagunadentalarts.com/lab-services",
+  },
+  openGraph: {
+    title: "Lab Services | Laguna Dental Arts",
+    description:
+      "Explore Laguna Dental Arts lab services including crowns, bridges, implants, veneers, dentures, appliances and digital dentistry solutions.",
+    url: "https://lagunadentalarts.com/lab-services",
+    type: "website",
+  },
 };
 
 const WORKFLOW = [
