@@ -1,9 +1,14 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/data/services";
+import { getPublishedInsights } from "@/lib/insights-db";
 
 const BASE_URL = "https://www.lagunadentalarts.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Regenerate on every request so newly published insights appear in the
+// sitemap without a rebuild (matches the insights pages' rendering mode).
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     "",
     "/about",
@@ -28,5 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...routes, ...serviceRoutes];
+  const insights = await getPublishedInsights();
+  const insightRoutes = insights.map((article) => ({
+    url: `${BASE_URL}/insights/${article.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...routes, ...serviceRoutes, ...insightRoutes];
 }
