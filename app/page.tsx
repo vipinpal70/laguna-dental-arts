@@ -32,7 +32,7 @@ const PRODUCTS = [
     categories: ["fixed"],
     image: "/assets/LDA_product_images/dental-crown.png",
     title: "Crown",
-    desc: "Precise-margin zirconia, e.max, and PFM restorations.",
+    desc: "Zirconia, e.max, and PFM restorations.",
     href: "/lab-services/crowns",
     linkLabel: "Explore crown & bridge",
   },
@@ -41,7 +41,7 @@ const PRODUCTS = [
     categories: ["implant", "fixed"],
     image: "/assets/LDA_product_images/implant-restoration.png",
     title: "Implant Restorations",
-    desc: "Custom abutments to screw-retained crowns, built to your plan.",
+    desc: "Custom abutments through screw-retained and cementable crowns, design to your plan.",
     href: "/lab-services/implants",
     linkLabel: "Explore implants",
   },
@@ -59,7 +59,7 @@ const PRODUCTS = [
     categories: ["removable"],
     image: "/assets/LDA_product_images/Denture.jpeg",
     title: "Removables & Partials",
-    desc: "Dentures, partials, and flexible frameworks digital or traditional.",
+    desc: "Dentures, partials, and flexible frameworks, digital or traditional.",
     href: "/lab-services/dentures",
     linkLabel: "Explore removables",
   },
@@ -84,61 +84,109 @@ const PRODUCTS = [
 ];
 
 const VALUES = [
-  { icon: Compass, title: "Digital Precision", desc: "3Shape and Exocad design paired with in-house milling of zirconia, PMMA, and PFM work engineered for accurate margins and consistent fit." },
-  { icon: Layers, title: "Expert Craftsmanship", desc: "Experienced technicians refine anatomy, texture, shade, and finish by hand where digital production meets restorative artistry." },
-  { icon: MessageSquare, title: "Dentist-Focused Support", desc: "Speak with real people who understand dental lab cases. We contact you when records need clarification and keep your clinical intent at the center." },
+  {
+    icon: Compass,
+    title: "Digital Precision",
+    desc: "3Shape and Exocad design paired with in-house milling of zirconia, PMMA, and PFM, engineered for accurate margins and a consistent fit.",
+  },
+  {
+    icon: Layers,
+    title: "Expert Craftsmanship",
+    desc: "Experienced technicians refine anatomy, texture, shade, and finish by hand, where digital production meets restorative artistry.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Dentist-Focused Support",
+    desc: "Talk to real people who understand lab cases. We reach out when records need clarification and keep your clinical intent at the center.",
+  },
 ];
 
 const WHY = [
-  { icon: "compass" as const, title: "Advanced Technology", desc: "Digital design, in-house milling, and 3D production support consistency across the cases you send." },
-  { icon: "gem" as const, title: "Experienced Technicians", desc: "Hand finishing and technical review from specialists in esthetics, removables, and implants." },
-  { icon: "check" as const, title: "Consistent Quality", desc: "Defined quality-control steps review the case before it leaves the lab not after it reaches your chair." },
-  { icon: "chat" as const, title: "Responsive Communication", desc: "Real people, not anonymous case processing. Reach the lab when questions or complex decisions arise." },
-  { icon: "list3" as const, title: "Full-Service Breadth", desc: "Manage more restorative categories routine, specialty, and complex through one relationship." },
-  { icon: "clock" as const, title: "Dentist-Centered Workflow", desc: "Predictable schedules and case consultation when treatment requires real collaboration." },
+  {
+    icon: "compass" as const,
+    title: "Advanced Technology",
+    desc: "Digital design, in-house milling, and 3D production keep the cases you send consistent.",
+  },
+  {
+    icon: "gem" as const,
+    title: "Experienced Technicians",
+    desc: "Hand finishing and technical review from specialists in esthetics, removables, and implants.",
+  },
+  {
+    icon: "check" as const,
+    title: "Consistent Quality",
+    desc: "A systematic quality control process ensures every case meets your standards and expectations.",
+  },
+  {
+    icon: "chat" as const,
+    title: "Responsive Communication",
+    desc: "Real people, not anonymous case processing. Reach the lab when questions or complex decisions come up.",
+  },
+  {
+    icon: "list3" as const,
+    title: "Full-Service Breadth",
+    desc: "Run routine, specialty, and complex categories through one full-service dental lab relationship.",
+  },
+  {
+    icon: "clock" as const,
+    title: "Dentist-Centered Workflow",
+    desc: "Predictable schedules and a process that respects your chair time.",
+  },
 ];
 
 const WORKFLOW = [
   { icon: "scan" as const, name: "Capture", desc: "Scan complete upper, lower, and bite records with your intraoral scanner." },
-  { icon: "upload" as const, name: "Submit", desc: "Upload files, photos, and the Rx securely or send a traditional case." },
+  { icon: "upload" as const, name: "Submit", desc: "Upload files, photos, and the Rx securely, or send a traditional case." },
   { icon: "search" as const, name: "Review & Plan", desc: "We check completeness and contact you if anything needs clarification." },
-  { icon: "mill" as const, name: "Fabricate & QC", desc: "CAD design, milling, finishing, and a defined quality-control review." },
+  { icon: "mill" as const, name: "Mill & QC", desc: "CAD design, milling, finishing, and a defined quality-control review." },
   { icon: "truck" as const, name: "Deliver", desc: "Your case ships back with access to the team for questions or follow-up." },
 ];
 
 const TESTIMONIALS = [
-    {
-    initials: "D",
-    name: "Daniel",
-    role: "Dentist",
-    image: "/images/testimonials/daniel.jpg",
+  {
+    initials: "RM",
+    name: "Dr. R. Martinez",
+    role: "DDS",
     quote:
-      "I have use Laguna Dental Arts for the past 9 years, It is by far the best lab to work with in the area, Chris is a pleasure to work with and is extremely knowledgeable about the latest technological trends in implant dentistry.",
-  },
-    {
-    initials: "BD",
-    name: "Binh Dao, DDS",
-    role: "Dentist",
-    image: "/images/testimonials/binh-dao.jpg",
-    quote:
-      "I'm a dentist in Roseville, CA and we have been using Laguna Dental Arts as our lab for a few years now. Whether it's a single posterior unit, same day stayplate, an implant supported hybrid or a full mouth porcelain rehab, Laguna has you covered. Titanium bars, custom abutments, PMMA and even implant planning and guides, whatever you need, they will help.",
+      "The communication is what sets Laguna apart. When a full-arch case needs a design decision, someone who understands the workflow calls me, not a ticketing system.",
   },
   {
-    initials: "DP",
-    name: "Diablo Periodontics",
-    role: "Dental Practice",
-    image: "/images/testimonials/diablo-periodontics.png",
+    initials: "SP",
+    name: "Dr. S. Patel",
+    role: "DMD",
     quote:
-      "Our office has been working with Laguna Dental Lab for a number of years, we are always satisfies with the outcomes of their surgical guides, Kee is especially helpful and always goes above and beyond for us. Thanks for all your hard work- Diablo Periodontics",
+      "Consistent margins, natural esthetics, and a team that flags missing records before production. My crown and bridge cases come back predictable, case after case.",
+  },
+  {
+    initials: "JC",
+    name: "Dr. J. Cho",
+    role: "DDS",
+    quote:
+      "Daily pickup keeps our schedule tight, and the digital workflow made switching from impressions painless. It feels like an extension of our practice.",
   },
 ];
 
 const FAQ = [
-  { q: "What dental lab services does Laguna Dental Arts provide?", a: "Laguna is a full-service dental laboratory for crowns and bridges, implants and full-arch restorations, removables, veneers, night guards, orthodontic appliances, surgical guides, models, and related digital workflows." },
-  { q: "Does Laguna Dental Arts accept digital scans?", a: "Yes. We accept cases from major intraoral scanner workflows and open STL or PLY files. Contact the lab if you need help connecting your scanner or transferring a case." },
-  { q: "Can I send traditional impressions?", a: "Yes. The lab supports digital and conventional workflows. Include a complete prescription, opposing records, bite, shade, and any photographs or component details required for the restoration." },
-  { q: "Do you offer dental lab pickup and delivery near Sacramento and Elk Grove?", a: "Laguna is located in Elk Grove and offers eligible Sacramento-area practices local pickup and delivery. Call the lab to confirm your practice location, schedule, and case requirements." },
-  { q: "How do I send a case or confirm turnaround time?", a: "Use the Dental Portal for a scan-based submission or contact the lab for a conventional case. Turnaround varies by service and complexity, so confirm the current estimate when scheduling the patient." },
+  {
+    q: "What dental lab services does Laguna Dental Arts provide?",
+    a: "Laguna is a full-service dental lab for crowns and bridges, veneers, implants and full-arch restorations, removables, night guards, orthodontic and surgical guides.",
+  },
+  {
+    q: "Does Laguna Dental Arts accept digital scans?",
+    a: "Yes. As a CAD/CAM dental lab, we accept cases from every major intraoral scanner workflow and open STL or PLY files. Contact the lab if you need help connecting your scanner.",
+  },
+  {
+    q: "Can I send traditional impressions?",
+    a: "Yes. The lab runs digital and conventional workflows. Include a complete prescription, opposing records, bite, shade, and any photographs or component details the restoration needs.",
+  },
+  {
+    q: "Do you offer pickup and delivery near Sacramento and Elk Grove?",
+    a: "Yes, we offer reliable daily pickup and delivery throughout the greater Sacramento area, along with tracked shipping nationwide.",
+  },
+  {
+    q: "Which scanners do you work with?",
+    a: "iTero, 3Shape, Medit, Primescan, and other major systems, plus open STL and PLY files.",
+  },
 ];
 
 const STRIP_ITEMS = [
@@ -146,7 +194,6 @@ const STRIP_ITEMS = [
   "3Shape & Exocad",
   "In-house milling",
   "HIPAA-conscious handling",
-  "Sacramento pickup & delivery",
 ];
 
 export default function HomePage() {
@@ -162,9 +209,12 @@ export default function HomePage() {
           </div>
           <div className="container">
             <h1 className="reveal">Your full-service <span className="mark">dental lab partner</span></h1>
+            <p className="hhero-sub reveal">
+              One lab for crowns, implants, full-arch, removables and ortho. Digital or traditional, we design, mill, and finish in-house so cases seat clean and arrive on schedule.
+            </p>
             <div className="hhero-ctas reveal">
               <Link className="btn btn--lg btn--light" href="https://upload.lagunadentalarts.com/" target="_blank" rel="noopener noreferrer">
-                Digital Upload <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
+                Send a Case <Icon name="arrow" size={16} strokeWidth={2.4} className="arw" />
               </Link>
               <Link className="btn btn--lg btn--outline-light" href="/lab-services">Explore Services</Link>
             </div>
@@ -190,7 +240,7 @@ export default function HomePage() {
           <div className="shead shead--center reveal">
             <span className="eyebrow center">More than a dental lab</span>
             <h2 className="display">A partner in your practice</h2>
-            <p className="lead">Working with multiple laboratories makes case management harder than it needs to be. Laguna brings a broad restorative menu, digital tooling, and real people together in one place.</p>
+            <p className="lead">Juggling multiple labs makes case management harder than it should be. A full-service dental lab pulls a broad restorative menu, digital tooling, and real people into one place. You send the case. We carry it from design to finish, and we call you before we guess.</p>
           </div>
           <div className="val-grid">
             {VALUES.map((v) => {
@@ -209,31 +259,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* One lab built for everyon */}
+      {/* One lab built for your bench */}
       <section className="section">
         <div className="container">
           <div className="shead shead--center reveal">
             <span className="eyebrow center">One lab, built for your bench</span>
             <h2 className="display">Capability you can plan around</h2>
           </div>
-          <div className="stat-grid stat-grid--light stat-grid--2 reveal">
-            <div className="stat"><StatCounter to={35} suffix="+" /><div className="stat__label">Years in business</div></div>
-            <div className="stat"><StatCounter to={1} suffix="M+" /><div className="stat__label">Cases delivered</div></div>
+          <div className="stat-grid stat-grid--light reveal">
+            <div className="stat">
+              <StatCounter to={35} suffix="+" />
+              <div className="stat__label">Years in Business</div>
+            </div>
+            <div className="stat">
+              <StatCounter to={1} suffix="M+" />
+              <div className="stat__label">Case delivery</div>
+            </div>
+            <div className="stat">
+              <StatCounter to={8} />
+              <div className="stat__label">Restorative categories handled</div>
+            </div>
+            <div className="stat">
+              <StatCounter to={100} suffix="%" />
+              <div className="stat__label">of cases pass a defined quality-control review before delivery</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* products */}
+      {/* Restorative menu */}
       <section className="section section--tint" id="products">
         <div className="container">
           <div className="shead-row reveal">
             <div className="shead" style={{ maxWidth: 560 }}>
-              <span className="eyebrow">Restorative solutions</span>
+              <span className="eyebrow">Restorative menu</span>
               <h2 className="display">Built around the cases you see every day</h2>
-              <p>Explore our full-service restorative menu, or talk with our team when a case needs technical guidance.</p>
+              <p>Filter by category, then talk with our team when a case needs technical guidance. Every category runs through the same CAD/CAM dental lab pipeline, so quality holds whether you send one crown or a full arch.</p>
             </div>
             <Link className="btn" href="/lab-services">
-              View All <Icon name="arrow" size={16} strokeWidth={2.4} />
+              View All Services <Icon name="arrow" size={16} strokeWidth={2.4} />
             </Link>
           </div>
           <div className="prodgrid prodgrid--3 prodgrid--keep reveal">
@@ -253,13 +317,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* workflow */}
+      {/* Digital dentistry made simple */}
       <section className="section" id="workflow">
         <div className="container">
           <div className="shead shead--center reveal">
             <span className="eyebrow center">Digital dentistry made simple</span>
             <h2 className="display">A workflow built around the scanner you already use</h2>
-            <p>Use the scanner you own, upload files securely, or send a traditional impression with a completed Rx. Your clinical instructions stay at the center of design and production.</p>
+            <p>Use the scanner you own, upload files securely, or send a traditional impression with a completed Rx. Your clinical instructions stay at the center of design and production at our digital dental lab in California.</p>
           </div>
           <div className="flow">
             <div className="flow__track" style={{ gridTemplateColumns: `repeat(${WORKFLOW.length}, 1fr)` }}>
@@ -282,13 +346,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* why */}
+      {/* Why practices choose Laguna */}
       <section className="section section--tint" id="why">
         <div className="container">
           <div className="shead reveal">
             <span className="eyebrow">Why practices choose Laguna</span>
             <h2 className="display">More than a vendor. <br /> A laboratory partner.</h2>
-            <p>The best laboratory relationship is built on clear communication, repeatable processes, technical capability, and a team that understands how lab decisions affect your schedule.</p>
+            <p>The best lab relationship runs on clear communication, consistent processes, technical range, and a team that understands the importance of meeting your due dates.</p>
           </div>
           <div className="why__grid">
             {WHY.map((w) => (
@@ -325,7 +389,7 @@ export default function HomePage() {
       <CtaBand
         eyebrow="Let's work together"
         title="Ready to start your next case?"
-        lead="Your next case deserves a laboratory partner who understands the prescription, the timeline, and the patient behind the restoration."
+        lead="Your next case deserves a full-service dental lab partner who understands the prescription, the timeline, and the patient behind the restoration."
         primaryLabel="Send Your Next Case"
         primaryHref="/portal"
         secondaryLabel="Talk With Our Team"
@@ -334,3 +398,4 @@ export default function HomePage() {
     </main>
   );
 }
+

@@ -6,6 +6,29 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.lagunadentalarts.com",
+          },
+        ],
+        destination: "https://lagunadentalarts.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "header",
+            key: "x-forwarded-host",
+            value: "www\\.lagunadentalarts\\.com(:\\d+)?",
+          },
+        ],
+        destination: "https://lagunadentalarts.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/services",
         destination: "/lab-services",
         permanent: true,
