@@ -1,12 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from "@/components/icons/Icon";
+import { SITE } from "@/lib/site-data";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (!showModal) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShowModal(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [showModal]);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,8 +59,8 @@ export function ContactForm() {
         throw new Error(body?.error || "Something went wrong. Please try again.");
       }
       setSent(true);
+      setShowModal(true);
       form.reset();
-      setTimeout(() => setSent(false), 3200);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
     } finally {
@@ -93,6 +114,64 @@ export function ContactForm() {
         {sent && <div className="form-success">Request received ✓ We&apos;ll be in touch shortly.</div>}
         {error && <div className="form-success" style={{ background: "#fee2e2", color: "#b91c1c" }}>{error}</div>}
       </form>
+
+      {showModal && (
+        <div
+          className="thankyou-modal-backdrop"
+          onClick={() => setShowModal(false)}
+          role="presentation"
+        >
+          <div
+            className="thankyou-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="thankyou-modal-title"
+          >
+            <button
+              type="button"
+              className="thankyou-modal__close"
+              onClick={() => setShowModal(false)}
+              aria-label="Close thank you modal"
+            >
+              <Icon name="close" size={16} strokeWidth={2.4} />
+            </button>
+
+            <div className="thankyou-modal__icon">
+              <Icon name="check" size={28} strokeWidth={2.6} />
+            </div>
+
+            <h3 id="thankyou-modal-title" className="thankyou-modal__title">
+              Thank You!
+            </h3>
+
+            <p className="thankyou-modal__desc">
+              Your inquiry has been received. Our clinical team will review your message and reach out shortly.
+            </p>
+
+            {/* <div className="thankyou-modal__info">
+              <div className="thankyou-modal__info-item">
+                <span className="thankyou-modal__info-label">Direct phone:</span>
+                <a href={SITE.phoneHref} className="thankyou-modal__info-link">{SITE.phone}</a>
+              </div>
+              <div className="thankyou-modal__info-item">
+                <span className="thankyou-modal__info-label">Email:</span>
+                <a href={`mailto:${SITE.email}`} className="thankyou-modal__info-link">{SITE.email}</a>
+              </div>
+            </div> */}
+
+            {/* <div className="thankyou-modal__actions">
+              <button
+                type="button"
+                className="btn btn--lg thankyou-modal__btn"
+                onClick={() => setShowModal(false)}
+              >
+                Done
+              </button>
+            </div> */}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

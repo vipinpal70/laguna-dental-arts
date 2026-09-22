@@ -2684,6 +2684,131 @@ h3.display {
   border-color: rgba(79, 211, 154, 0.3);
 }
 
+/* Thank You Modal */
+.thankyou-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(3, 14, 68, 0.72);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: bioModalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.thankyou-modal {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px 32px 32px;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(3, 14, 68, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: bioModalPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.thankyou-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(3, 14, 68, 0.06);
+  border: 1px solid rgba(3, 14, 68, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.thankyou-modal__close:hover {
+  background: var(--navy);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.thankyou-modal__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(79, 211, 154, 0.16);
+  border: 2px solid rgba(79, 211, 154, 0.4);
+  color: #0f6b41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.thankyou-modal__title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.thankyou-modal__desc {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.thankyou-modal__info {
+  background: #f7f9fd;
+  border: 1px solid rgba(3, 14, 68, 0.08);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  text-align: left;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thankyou-modal__info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.thankyou-modal__info-label {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.thankyou-modal__info-link {
+  color: var(--blue-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.thankyou-modal__info-link:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.thankyou-modal__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.thankyou-modal__btn {
+  width: 100%;
+  justify-content: center;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 0.82fr;
