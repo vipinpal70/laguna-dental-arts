@@ -36,7 +36,7 @@ export const SERVICE_LINKS: ServiceLink[] = [
 
 export const NAV_LINKS = [
   { label: "About Us", href: "/about" },
-  { label: "Dental Portal", href: "/portal" },
+  { label: "Dental Portal", href: "https://lagunadentalarts.absevolutionwebservices.com/" },
   { label: "Insights", href: "/insights" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -68,7 +68,7 @@ export type FooterLink = {
 export const FOOTER_COMPANY: FooterLink[] = [
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
-  { label: "Doctor Portal", href: "https://lagunadentalarts.abssandbox.com/", target: "_blank", rel: "noopener noreferrer" },
+  { label: "Doctor Portal", href: "https://lagunadentalarts.absevolutionwebservices.com/", target: "_blank", rel: "noopener noreferrer" },
   {
     label: "Download Rx Form",
     href: "/downloads/Laguna_Dental_Arts_Lab_Slip.pdf",

@@ -117,8 +117,8 @@ export function Header() {
 
             {/* 3. Dental Portal */}
             <Link
-              className={`nav__link${isActive("https://lagunadentalarts.abssandbox.com/") ? " is-active" : ""}`}
-              href="https://lagunadentalarts.abssandbox.com/"
+              className={`nav__link${isActive("https://lagunadentalarts.absevolutionwebservices.com/") ? " is-active" : ""}`}
+              href="https://lagunadentalarts.absevolutionwebservices.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -196,7 +196,7 @@ export function Header() {
         <Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link>
 
         {/* 3. Dental Portal */}
-        <Link href="https://lagunadentalarts.abssandbox.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>Doctor Portal</Link>
+        <Link href="https://lagunadentalarts.absevolutionwebservices.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>Doctor Portal</Link>
 
         {/* 4. Insights */}
         <Link href="/insights" onClick={() => setMobileOpen(false)}>Insights</Link>
