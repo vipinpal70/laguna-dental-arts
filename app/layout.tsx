@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "Full-service California dental lab for crowns, implants, full-arch restorations, removables, appliances and digital workflows.",
   metadataBase: new URL("https://lagunadentalarts.com"),
+  verification: {
+    google: "O-BQKcmBKEkIa0vgGhyFStxv6HLAwTdpWoUeGWi-qOU",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
