@@ -3990,8 +3990,9 @@ h3.display {
 }
 
 .footer__bottom {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr auto 1fr; */
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
   margin-top: 52px;

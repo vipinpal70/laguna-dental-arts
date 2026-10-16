@@ -82,8 +82,8 @@ export function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <span className="footer__bottom-left">© 2026 LAGUNA DENTAL ARTS · ISO 13485 · FDA REGISTERED</span>
-          <span className="footer__bottom-center">
+          {/* <span className="footer__bottom-left">© 2026 LAGUNA DENTAL ARTS · ISO 13485 · FDA REGISTERED</span> */}
+          <span className="footer__bottom-left">
             <Link href="/privacy">PRIVACY</Link>
             {" · "}
             <Link href="/terms">TERMS</Link>
