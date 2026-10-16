@@ -83,13 +83,13 @@ export function Footer() {
         </div>
         <div className="footer__bottom">
           {/* <span className="footer__bottom-left">© 2026 LAGUNA DENTAL ARTS · ISO 13485 · FDA REGISTERED</span> */}
-          <span className="footer__bottom-left">
+          {/* <span className="footer__bottom-left">
             <Link href="/privacy">PRIVACY</Link>
             {" · "}
             <Link href="/terms">TERMS</Link>
             {" · "}
             <Link href="/privacy#hipaa">HIPAA</Link>
-          </span>
+          </span> */}
           <span className="footer__bottom-right">
             Marketing Partner -{" "}
             <a href="https://Vuilive.com" target="_blank" rel="noopener noreferrer">
