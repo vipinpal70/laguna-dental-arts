@@ -50,11 +50,6 @@ export const FOOTER_LAB_SERVICES = [
   { label: "View all →", href: "/lab-services" },
 ];
 
-export const FOOTER_LOCATIONS = [
-  { label: "Sacramento Dental Lab", href: "/sacramento-dental-lab" },
-  { label: "California Dental Lab", href: "/california-dental-lab" },
-];
-
 export const SOCIAL_LINKS = [
   { name: "facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61583964119515#" },
   { name: "instagram", label: "Instagram", href: "https://www.instagram.com/lagunadentalarts?igsi=aHFxbXp2dzg2OGY4" },
@@ -72,6 +67,8 @@ export type FooterLink = {
 
 export const FOOTER_COMPANY: FooterLink[] = [
   { label: "About", href: "/about" },
+  { label: "Sacramento Dental Lab", href: "/sacramento-dental-lab" },
+  { label: "California Dental Lab", href: "/california-dental-lab" },
   { label: "Insights", href: "/insights" },
   { label: "Doctor Portal", href: "https://lagunadentalarts.absevolutionwebservices.com/", target: "_blank", rel: "noopener noreferrer" },
   {

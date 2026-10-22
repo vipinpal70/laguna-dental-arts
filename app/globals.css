@@ -3929,8 +3929,8 @@ h3.display {
 
 .footer__top {
   display: grid;
-  grid-template-columns: 1.35fr repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 40px;
 }
 
 .footer__brand p {
