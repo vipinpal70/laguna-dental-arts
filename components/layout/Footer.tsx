@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { SocialIcon } from "@/components/icons/SocialIcon";
-import { FOOTER_COMPANY, FOOTER_LAB_SERVICES, SITE, SOCIAL_LINKS } from "@/lib/site-data";
+import { FOOTER_COMPANY, FOOTER_LAB_SERVICES, FOOTER_LOCATIONS, SITE, SOCIAL_LINKS } from "@/lib/site-data";
 
 export function Footer() {
   const pathname = usePathname();
@@ -67,6 +67,21 @@ export function Footer() {
                   ) : (
                     <Link href={l.href}>{l.label}</Link>
                   )}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h5>Locations</h5>
+            <ul>
+              {FOOTER_LOCATIONS.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    style={pathname === l.href ? { color: "#FFFFFF", fontWeight: 600 } : undefined}
+                  >
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>

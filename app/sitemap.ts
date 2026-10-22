@@ -21,6 +21,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/terms",
     "/privacy",
     "/downloads",
+    "/sacramento-dental-lab",
+    "/california-dental-lab",
   ];
 
   const routes = staticRoutes.map((path) => ({

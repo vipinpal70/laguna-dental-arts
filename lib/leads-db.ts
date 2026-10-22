@@ -21,6 +21,7 @@ export interface Lead {
 export interface LeadInput {
   firstName?: string;
   lastName?: string;
+  name?: string;
   email?: string;
   phone?: string;
   practiceName?: string;
@@ -48,9 +49,23 @@ function serialize(doc: Document | null): Lead | null {
 export async function createLead(data: LeadInput): Promise<Lead> {
   const col = await getCollection();
   const now = new Date();
+
+  let firstName = (data.firstName || "").trim();
+  let lastName = (data.lastName || "").trim();
+
+  if (!lastName && data.name) {
+    const parts = data.name.trim().split(/\s+/);
+    if (parts.length > 1) {
+      firstName = firstName || parts.slice(0, -1).join(" ");
+      lastName = parts[parts.length - 1];
+    } else {
+      lastName = parts[0];
+    }
+  }
+
   const doc = {
-    firstName: (data.firstName || "").trim(),
-    lastName: (data.lastName || "").trim(),
+    firstName,
+    lastName,
     email: (data.email || "").trim(),
     phone: (data.phone || "").trim(),
     practiceName: (data.practiceName || "").trim(),

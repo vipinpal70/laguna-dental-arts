@@ -39,6 +39,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/sacramento-dental-lab.html",
+        destination: "/sacramento-dental-lab",
+        permanent: true,
+      },
+      {
+        source: "/california-dental-lab.html",
+        destination: "/california-dental-lab",
+        permanent: true,
+      },
+      {
         source: "/rx/Laguna_Dental_Arts_Lab_Slip.pdf",
         destination: "/",
         permanent: true,

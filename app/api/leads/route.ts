@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createLead, getAllLeads } from "@/lib/leads-db";
+import { createZohoLead } from "@/lib/zoho";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -26,6 +27,14 @@ export async function POST(request: Request) {
       );
     }
     const created = await createLead(body);
+
+    // Send to Zoho CRM
+    try {
+      await createZohoLead(body);
+    } catch (err) {
+      console.error("Zoho CRM sync failed:", err);
+    }
+
     return NextResponse.json(created, { status: 201 });
   } catch (err) {
     console.error("POST /api/leads failed:", err);
