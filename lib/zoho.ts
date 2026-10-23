@@ -127,6 +127,8 @@ export async function createZohoLead(contact: ZohoLeadInput) {
 
     if (!res.ok) {
         console.error("Zoho CRM create lead response error:", res.status, result);
+    } else {
+        console.log("Zoho CRM lead created successfully:", result);
     }
 
     return result;
