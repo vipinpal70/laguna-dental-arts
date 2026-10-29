@@ -39,14 +39,14 @@ export const SERVICES: Service[] = [
       "fixed",
       "crown"
     ],
-    "title": "Crown",
-    "heroHtml": "Precision-milled <em>crown.</em>",
+    "title": "Dental Crown Lab",
+    "heroHtml": "Single-unit crowns. <em>Seated the first time.</em>",
     "art": "crown",
     "image": "/assets/LDA_product_images/dental-crown.png",
-    "cardDesc": "Our full-contour and layered crowns are designed from premium zirconia, lithium disilicate and PFM systems. Each restoration is milled or pressed, finished by experienced ceramists and verified before delivery.",
-    "intro": "Our full-contour and layered crowns are designed from premium zirconia, lithium disilicate and PFM systems. Each restoration is milled or pressed, finished by experienced ceramists and verified before delivery.",
-    "metaTitle": "Dental Crowns | Full-Contour & Layered | Laguna Dental Arts",
-    "metaDescription": "Full-contour and layered dental crowns crafted in zirconia, lithium disilicate, and PFM for dependable margins and natural aesthetics. Start a case today.",
+    "cardDesc": "From Full Contour Zirconia to e.max, our crowns are designed for precise fit, reliable function, and natural esthetics. Each restoration is carefully finished and inspected before delivery.",
+    "intro": "From Full Contour Zirconia to e.max, our crowns are designed for precise fit, reliable function, and natural esthetics. Each restoration is carefully finished and inspected before delivery.",
+    "metaTitle": "Dental Crown Lab | Zirconia, e.max & PFM | Laguna Dental Arts",
+    "metaDescription": "A dental crown lab milling single-unit zirconia, e.max and PFM crowns to a precise marginal fit. Verified to ±20µm and tracked in your portal. Start a case.",
     "breadcrumb": "Home / Lab Services / Crowns",
     "specs": [
       [
@@ -66,15 +66,48 @@ export const SERVICES: Service[] = [
         "VITA Classical"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Posterior restorations: Full-contour zirconia crowns engineered for strength on molars and premolars under heavy load.",
+        "Anterior esthetics: Esthetic zirconia or e.max for anterior teeth where translucency and shade blending matter most.",
+        "Veneers and thin restorations: e.max offers strength with excellent translucency for conservative, highly esthetic cases."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the case",
+      "body": "High-strength zirconia (1200 MPa, monolithic, 5-axis milled) carries posterior load, esthetic layered zirconia (840 MPa) blends into anterior sites, e.max lithium disilicate presses for exceptional translucency, and PFM remains available where clinically indicated. Every crown is measured against a ±20µm marginal-fit tolerance, hand-characterized for shade, and verified before it ships, with a typical in-lab time of 6 to 8 working days tracked in your portal."
+    },
     "included": [
-      "High-translucency options for anterior esthetics",
-      "High-strength grades for posterior load-bearing cases",
-      "Layered ceramics available for premium cases",
+      "Marginal fit verified to a ±20µm tolerance before delivery",
+      "Hand-characterized shades for natural esthetics",
+      "High-strength zirconia, esthetic layered zirconia, e.max, and PFM options",
       "Biocompatible, clinically proven materials",
-      "Compatible with all major digital workflows",
+      "Compatible with all major digital and traditional workflows",
       "Rush options available by confirmation"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "Which crown material should I prescribe: zirconia, e.max, or PFM?",
+        "a": "It depends on location, esthetic goals, available reduction, occlusion, and opposing dentition. Send the clinical details and our specialists will evaluate and consult with you."
+      },
+      {
+        "q": "What records should I send for a crown case?",
+        "a": "A complete prescription, final impression or digital scan, opposing arch, bite record, shade, and any photographs. Implant crowns also need the implant system, platform, and scan-body details."
+      },
+      {
+        "q": "Do you accept digital scans and traditional impressions?",
+        "a": "Both. Upload an open file from any major scanner, or send a conventional impression. As a dental crown lab, we work either way."
+      },
+      {
+        "q": "How long does a crown take?",
+        "a": "Typical in-lab time is 6 to 8 working days, tracked in your portal, with rush options on request."
+      },
+      {
+        "q": "What if a crown needs an adjustment?",
+        "a": "Tell us what you saw chairside and we correct the design. Fit is verified to ±20µm before delivery, so adjustments stay rare."
+      }
+    ]
   },
   {
     "slug": "bridges",
@@ -83,14 +116,14 @@ export const SERVICES: Service[] = [
     "categories": [
       "fixed"
     ],
-    "title": "Bridges",
+    "title": "Crown & Bridge Dental Lab",
     "heroHtml": "Engineered spans. <em>Predictable fit.</em>",
     "art": "bridge",
     "image": "/assets/LDA_product_images/dental-bridge.png",
-    "cardDesc": "Multi-unit bridges are engineered for strength, connector integrity and clean tissue contours. Our team balances material selection, span length and esthetics for a restoration designed to seat confidently.",
-    "intro": "Multi-unit bridges are engineered for strength, connector integrity and clean tissue contours. Our team balances material selection, span length and esthetics for a restoration designed to seat confidently.",
-    "metaTitle": "Dental Bridges | Engineered Spans & Fit | Laguna Dental Arts",
-    "metaDescription": "Multi-unit dental bridges engineered for strength, connector integrity and clean tissue contours. Zirconia and PFM options. Start a case today.",
+    "cardDesc": "Whether a simple three-unit or a longer span, our bridges balance connector strength with pontic esthetics and hygienic, tissue-friendly contours. We engineer the framework to the span, so the bridge drops in without rocking and holds up under load.",
+    "intro": "Whether a simple three-unit or a longer span, our bridges balance connector strength with pontic esthetics and hygienic, tissue-friendly contours. As a crown and bridge dental lab, we engineer the framework to the span, so the bridge drops in without rocking and holds up under load.",
+    "metaTitle": "Crown & Bridge Dental Lab | Laguna Dental Arts",
+    "metaDescription": "A crown and bridge dental lab building multi-unit bridges for connector strength, fit and natural contour. Zirconia, PFZ or PFM. Start a case today.",
     "breadcrumb": "Home / Lab Services / Bridges",
     "specs": [
       [
@@ -110,15 +143,46 @@ export const SERVICES: Service[] = [
         "3-unit to full-arch"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Three-unit to multi-unit bridges: Strategically designed for reliable connector strength and to manage flexure across longer edentulous spans."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the case",
+      "body": "Full-zirconia delivers monolithic strength for long spans and posterior load (1200 MPa, high strength), esthetic layered zirconia pairs a strong core with layered esthetics in the display zone, and PFM remains a dependable option for specific spans. Connector dimensions are engineered to the span and material to resist fracture, ovate and modified-ridge-lap pontics balance esthetics with cleansability, and fit is verified across every abutment so the bridge drops in without rocking. For full-arch work, our full-arch dental lab workflow extends the same framework engineering across the whole span."
+    },
     "included": [
-      "Full-contour and layered zirconia options",
-      "Connector dimensions reviewed for the indication",
-      "Pontic contours designed for hygienic access",
+      "Engineered connectors sized to the span and material",
+      "Hygienic, ovate or modified-ridge-lap pontic design",
+      "Fit verified across every abutment before delivery",
+      "Full-zirconia, esthetic layered zirconia, and PFM options",
       "Digital design review available when requested",
-      "Major scanner workflows accepted",
-      "Case-specific support from our technical team"
+      "Major scanner workflows accepted"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "Which material is best for a dental bridge?",
+        "a": "It depends on span length, connector dimensions, esthetic zone, occlusal load, and clearance. Send the clinical details and our specialist will evaluate and consult with you."
+      },
+      {
+        "q": "How many units can a bridge span?",
+        "a": "There's no single safe span. Abutment support, pontic position, material, connector design, parafunction, and occlusion get evaluated together before we approve the framework."
+      },
+      {
+        "q": "Can you fabricate implant-supported bridges?",
+        "a": "Yes, screw-retained and cement-retained. Provide the implant manufacturer, platform, restorative components, and implant-level records. Full-arch cases route through our full-arch dental lab workflow."
+      },
+      {
+        "q": "What records are needed for a bridge case?",
+        "a": "Prescription, prepared arch, opposing arch, bite, shade, and photographs when esthetics matter. Long-span and implant cases may add a verified model or provisional reference."
+      },
+      {
+        "q": "Do you accept digital scans for bridges?",
+        "a": "Yes. Capture clear margins, complete interproximal data, an accurate bite, and enough soft tissue for predictable design."
+      }
+    ]
   },
   {
     "slug": "implants",
@@ -127,15 +191,15 @@ export const SERVICES: Service[] = [
     "categories": [
       "implant"
     ],
-    "title": "Implant Restoration",
+    "title": "Dental Implant Lab",
     "heroHtml": "Built around the <em>implant.</em>",
     "art": "implant",
     "image": "/assets/LDA_product_images/implant-restoration.png",
-    "cardDesc": "Custom abutments, screw-retained crowns and full-arch implant restoration are planned around the restorative space, tissue architecture and approved implant components.",
-    "intro": "Custom abutments, screw-retained crowns and full-arch implant restoration are planned around the restorative space, tissue architecture and approved implant components.",
-    "metaTitle": "Implant Restorations | Custom Abutments & Crowns | Laguna Dental Arts",
-    "metaDescription": "Custom implant abutments and screw-retained crowns designed to specific implant platforms for stable emergence and tissue health. Start a case today.",
-    "breadcrumb": "Home / Lab Services / Implant Restoration",
+    "cardDesc": "From single custom abutments to full-arch restorations, our dental implant lab produces implant work with the platform accuracy and emergence profile that make seating straightforward.",
+    "intro": "From single custom abutments to full-arch restorations, our dental implant lab produces implant work with the platform accuracy and emergence profile that make seating straightforward. Tell us the system, and we verify the interface before designing.",
+    "metaTitle": "Dental Implant Lab | Custom Abutments | Laguna Dental Arts",
+    "metaDescription": "A dental implant lab: custom abutments, screw-retained crowns and full-arch restorations on every major system. Platform-accurate and digitally planned. Start a case.",
+    "breadcrumb": "Home / Lab Services / Implants",
     "specs": [
       [
         "Turnaround",
@@ -154,15 +218,48 @@ export const SERVICES: Service[] = [
         "Screw / Cement"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Custom abutments: Titanium and zirconia abutments shaped for ideal emergence and tissue support.",
+        "Screw-retained crowns: Retrievable, hygienic restorations with precise access-channel placement.",
+        "Full-arch restorations: Hybrid and monolithic full-arch work strategically designed with our full-arch specialists."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the system you placed",
+      "body": "Anodized titanium abutments (Ti-6Al-4V) give a durable, platform-matched interface, zirconia abutments provide esthetic, tissue-friendly support in the display zone, and monolithic zirconia carries full-arch strength with minimized chipping risk. Every interface is verified on your major implant system before design, abutment contours are engineered to support and shape peri-implant tissue, and screw-retained options simplify maintenance and future service. Digital planning aligns the restoration and surgical goals from the start."
+    },
     "included": [
-      "Custom emergence-profile design",
-      "Titanium, zirconia and Ti-base options",
-      "Screw-channel positioning reviewed before production",
-      "Authentic or approved compatible components",
-      "Full-arch planning support",
+      "Platform-accurate interfaces verified on all major implant systems",
+      "Designed emergence profiles that support peri-implant tissue",
+      "Retrievable, screw-retained options for easy maintenance",
+      "Titanium, zirconia and Ti-base abutment options",
+      "Digital guided-planning support",
       "Digital and traditional submissions accepted"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "Which implant systems does Laguna Dental Arts support?",
+        "a": "The major systems. Every prescription should name the manufacturer, implant line, platform, connection, and restorative components, so the interface is verified before design."
+      },
+      {
+        "q": "Should I prescribe a screw-retained or cement-retained crown?",
+        "a": "It depends on angulation, access-channel position, retrievability, tissue contours, esthetics, and restorative space. Send the records and our dental implant specialist will review the case with you."
+      },
+      {
+        "q": "What records are required for an implant restoration?",
+        "a": "Prescription, implant-level impression or scan-body scan, opposing arch, bite, shade, implant system and platform, and photos where relevant. Full-arch cases need extra verification records."
+      },
+      {
+        "q": "Can you fabricate custom abutments and full-arch restorations?",
+        "a": "Yes: custom abutments, single-unit implant crowns, implant bridges, overdenture components, and full-arch restorations."
+      },
+      {
+        "q": "Can you make a surgical guide from a CBCT and intraoral scan?",
+        "a": "Yes, we can design and produce the surgical guide using the CBCT and intraoral scans, with final approval from the clinician."
+      }
+    ]
   },
   {
     "slug": "veneers",
@@ -171,14 +268,14 @@ export const SERVICES: Service[] = [
     "categories": [
       "fixed"
     ],
-    "title": "Veneers",
-    "heroHtml": "Thin ceramics. <em>Natural light.</em>",
+    "title": "Dental Veneers Lab",
+    "heroHtml": "Ultra-thin ceramics. <em>Lifelike translucency.</em>",
     "art": "veneer",
     "image": "/assets/LDA_product_images/dental-veneers.png",
-    "cardDesc": "Layered and pressed veneers are crafted for lifelike translucency, surface texture and shade integration. Every case is evaluated for preparation, material thickness and the intended smile design.",
-    "intro": "Layered and pressed veneers are crafted for lifelike translucency, surface texture and shade integration. Every case is evaluated for preparation, material thickness and the intended smile design.",
-    "metaTitle": "Dental Veneers | Aesthetic Ceramic Veneers | Laguna Dental Arts",
-    "metaDescription": "Ultra-thin aesthetic dental veneers handcrafted in lithium disilicate and feldspathic porcelain for lifelike translucency and precise fit. Start a case.",
+    "cardDesc": "Cosmetic cases live and die on esthetics. We shade-map, hand-layer, and finish every unit with the surface texture and translucency that make it disappear into the smile.",
+    "intro": "Cosmetic cases live and die on esthetics. As a dental veneers lab, we shade-map, hand-layer, and finish every unit with the surface texture and translucency that make it disappear into the smile. Send calibrated photos and we match the case to the face, not just a shade tab.",
+    "metaTitle": "Dental Veneers Lab | Layered Ceramics | Laguna Dental Arts",
+    "metaDescription": "A dental veneers lab hand-layering ultra-thin feldspathic and e.max veneers with lifelike translucency and precise shade mapping. Start a case today.",
     "breadcrumb": "Home / Lab Services / Veneers",
     "specs": [
       [
@@ -198,15 +295,48 @@ export const SERVICES: Service[] = [
         "VITA Classical"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Smile design: Full or partial veneer cases planned around facial esthetics and the patient's goals.",
+        "Diastema and shape: Closing gaps and refining tooth shape with minimal, conservative preparation.",
+        "Shade transformation: Brightening and harmonizing color across the esthetic zone."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the case",
+      "body": "Feldspathic porcelain remains the gold standard for layered, lifelike esthetics, lithium disilicate (e.max) brings strength with excellent translucency, and pressed ceramic delivers predictable, refined results for thin restorations. Ceramists build translucency and character that flat, monolithic units can't match, every design preserves tooth structure while hitting the target result, and detailed shade mapping keeps the result matched to your operatory vision."
+    },
     "included": [
-      "Layered and pressed ceramic options",
+      "Hand-layered feldspathic, e.max, and pressed ceramic options",
+      "Conservative designs that preserve tooth structure",
+      "Detailed shade mapping and communication",
       "Diagnostic wax-up support",
-      "Texture and characterization matched to photographs",
-      "Stump-shade consideration for predictable value",
       "Try-in guidance available",
       "Digital smile-design records welcomed"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "What records should I send for a veneer case?",
+        "a": "A final impression or scan, opposing arch, bite, prescription, stump shades, requested final shades, and calibrated photographs. A provisional or approved diagnostic design helps our dental veneers lab communicate shape and proportion."
+      },
+      {
+        "q": "Do you provide diagnostic wax-ups or digital mock-ups?",
+        "a": "Yes. A wax-up or digital design lets the dentist and patient review length, proportion, midline, incisal position, and tissue relationships before final fabrication."
+      },
+      {
+        "q": "What veneer material should I choose?",
+        "a": "It depends on desired translucency, masking, preparation design, bonding plan, and functional load. Send stump shade and reduction details and our ceramists recommend a fit."
+      },
+      {
+        "q": "Can minimal-prep or no-prep veneers be made?",
+        "a": "In selected additive cases, yes, but not every smile has the space or tooth position. The treating dentist determines preparation after clinical and diagnostic evaluation."
+      },
+      {
+        "q": "How do I get a predictable multi-unit shade match?",
+        "a": "Use consistent lighting, include a known shade tab in the same plane, photograph stump shades, and describe value, translucency, texture, and characterization. Approving the diagnostic design first removes ambiguity."
+      }
+    ]
   },
   {
     "slug": "dentures",
@@ -216,15 +346,15 @@ export const SERVICES: Service[] = [
       "digital",
       "removable"
     ],
-    "title": "Digital Dentures",
-    "heroHtml": "Digital dentures. <br /><em>Repeatable fit.</em>",
+    "title": "Removable Dentures Lab",
+    "heroHtml": "Traditionally &amp; digitally <em>designed dentures.</em>",
     "art": "denture",
     "image": "/assets/LDA_product_images/Denture.jpeg",
-    "cardDesc": "Full dentures, partial frameworks and implant overdentures are designed for balanced function, natural tooth arrangement and an archived workflow that makes future service simpler.",
-    "intro": "Full dentures, partial frameworks and implant overdentures are designed for balanced function, natural tooth arrangement and an archived workflow that makes future service simpler.",
-    "metaTitle": "Digital Dentures | Full & Partial Removables | Laguna Dental Arts",
-    "metaDescription": "Precision digital dentures and removables designed for balanced occlusion, comfortable borders, and natural smile aesthetics. Start a case today.",
-    "breadcrumb": "Home / Lab Services / Digital Dentures",
+    "cardDesc": "Full and partial dentures traditionally designed and manufactured in our lab. Additionally, we offer printed digital dentures.",
+    "intro": "Full and partial dentures traditionally designed and manufactured in our lab. Additionally, we offer printed digital dentures.",
+    "metaTitle": "Removable Dentures Lab | Full & Partial | Laguna Dental Arts",
+    "metaDescription": "A removable dentures lab designing full and partial dentures, cast frame, clear frame (semi-rigid), flexible partials, and overdentures. Start a case.",
+    "breadcrumb": "Home / Lab Services / Dentures",
     "specs": [
       [
         "Turnaround",
@@ -243,6 +373,18 @@ export const SERVICES: Service[] = [
         "Full / Partial / Overdenture"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Full dentures: Complete upper and lower dentures with balanced occlusion and natural tooth arrangement.",
+        "Partial dentures: Metal-framework, semi-rigid clear framework and flexible partials designed around the remaining dentition.",
+        "Implant overdentures: Locator-retained overdentures, with mesh, metal frame or titanium bar for added stability."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the case",
+      "body": "Traditional dentures use a technician-fabricated acrylic base reinforced with fiber for strength and durability, while milled or printed dentures give a dense, accurate, digitally archived base. Cast frameworks mill precise metal frameworks (Co-Cr) for partial dentures, clear framework partials offer a semi-rigid, esthetic, BPA-free option with minimal water absorption, and flexible partials stay comfortable and esthetic, available as unilateral designs. Digital design means a replacement can be produced from the archived file, and a leaner digital process can reduce chair time and try-ins."
+    },
     "included": [
       "Digitally archived tooth arrangement and base design",
       "Full and partial denture workflows",
@@ -251,7 +393,24 @@ export const SERVICES: Service[] = [
       "Try-in stages available by case type",
       "Repair and reline services available"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "What types of dentures and partials can the lab fabricate?",
+        "a": "Complete dentures, removable partial dentures, immediate dentures, and implant-retained overdentures. Contact our removable specialist for case-specific material, attachment, and design options."
+      },
+      {
+        "q": "Do you offer digital dentures?",
+        "a": "Yes. Digital records support design and archived manufacturing, so future spares or replacements stay simple when the clinical condition holds."
+      },
+      {
+        "q": "What records are needed for a complete denture case?",
+        "a": "Impressions or scans, jaw relation, vertical dimension, midline and smile-line references, tooth selection, shade, and photographs. We flag anything missing before the next stage."
+      },
+      {
+        "q": "Can you fabricate implant-retained overdentures?",
+        "a": "Yes, using prescribed attachment or implant and component details, restorative space, and verified records."
+      }
+    ]
   },
   {
     "slug": "night-guards",
@@ -260,14 +419,14 @@ export const SERVICES: Service[] = [
     "categories": [
       "digital"
     ],
-    "title": "Night Guards",
+    "title": "Night Guard Lab",
     "heroHtml": "Protection designed for <em>comfort.</em>",
     "art": "nightguard",
     "image": "/assets/LDA_product_images/night-guards.jpeg",
-    "cardDesc": "Hard, soft and dual-laminate protection finished for patient comfort.",
-    "intro": "Hard, soft and dual-laminate guards are fabricated from accurate digital or traditional records, with thoughtful occlusal refinement and polished edges for patient comfort.",
-    "metaTitle": "Night Guards & Splints | Occlusal Protection | Laguna Dental Arts",
-    "metaDescription": "Custom night guards, hard-soft splints, and occlusal appliances designed from digital impressions for accurate retention and wear protection. Start a case.",
+    "cardDesc": "Precise occlusal guards that fit comfortably and protect teeth and restorations from grinding and clenching.",
+    "intro": "Precise occlusal guards that fit comfortably and protect teeth and restorations from grinding and clenching.",
+    "metaTitle": "Night Guard Lab | Occlusal Splints | Laguna Dental Arts",
+    "metaDescription": "A night guard lab making hard, soft, hard/soft and thermal occlusal guards. Protection for bruxism, clenching and protecting your patient's anterior restorations. Start a case.",
     "breadcrumb": "Home / Lab Services / Night Guards",
     "specs": [
       [
@@ -287,15 +446,48 @@ export const SERVICES: Service[] = [
         "Digital / Traditional"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Bruxism protection: Guards that absorb and distribute grinding forces to protect natural teeth.",
+        "Restoration protection: Shielding crowns, veneers, and implants from occlusal wear at night.",
+        "Clenching relief: Comfortable appliances that reduce load on the joints and musculature."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the grinding load",
+      "body": "As an occlusal splint lab, we match the material to the case: hard guards (rigid) for maximum durability with heavy grinders, soft guards (light-duty) for a gentler option on lighter cases, and thermal guards that soften under warm water to flex and conform to the patient's teeth, then become rigid in the mouth. Every guard is digitally designed to hug the arch without unnecessary bulk and ships as a simple, quick case to keep patients protected fast."
+    },
     "included": [
-      "Bruxism and protective appliance options",
-      "Comfort-focused border finishing",
+      "Hard, soft, hard/soft and thermal material options",
+      "Comfortable, snug digital design without unnecessary bulk",
       "Occlusal adjustment before delivery",
       "Upper or lower arch designs",
       "Digital files archived for replacement",
-      "Rush service available by confirmation"
+      "Fast turnaround to keep patients protected"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "Should I prescribe a hard or hard/soft guard?",
+        "a": "Hard guards favor durability and precise occlusal adjustment; a hard/soft night guard adds a softer internal surface. Match the choice to diagnosis, parafunction, dentition, comfort, and your occlusal plan."
+      },
+      {
+        "q": "What records are required for a night guard?",
+        "a": "Accurate upper and lower scans or impressions, a bite record when indicated, the prescribed arch, material preference, coverage, and occlusal design."
+      },
+      {
+        "q": "Can I send a digital scan for a night guard?",
+        "a": "Yes. Our night guard lab accepts major intraoral scanner workflows and open files. Scan full occlusal surfaces, borders, and enough soft tissue for retention, plus an accurate bite. We will produce a stone model from the printed model."
+      },
+      {
+        "q": "Is a night guard the same as a sports mouthguard?",
+        "a": "No. A night guard protects against clenching or grinding and manages the chosen occlusal scheme. A sports mouthguard cushions impact during athletics."
+      },
+      {
+        "q": "How do I choose upper versus lower placement and thickness?",
+        "a": "Arch, thickness, and design depend on retention, restorative space, gag tolerance, opposing restorations, wear pattern, and goals. Put the preference on the prescription or ask our team."
+      }
+    ]
   },
   {
     "slug": "orthodontics",
@@ -304,14 +496,14 @@ export const SERVICES: Service[] = [
     "categories": [
       "digital"
     ],
-    "title": "Orthodontics",
-    "heroHtml": "Digital appliances made to <em>move.</em>",
+    "title": "Orthodontic Appliance Lab",
+    "heroHtml": "Clear aligners, retainers, <em>and indirect bonding trays.</em>",
     "art": "ortho",
     "image": "/assets/LDA_product_images/orthodontics.png",
-    "cardDesc": "Clear retainers, related appliances and indirect bonding solutions are produced from precise digital records for predictable fit and an efficient clinical workflow.",
-    "intro": "Retainers, indirect bonding trays and custom orthodontic appliances are produced from precise digital records for a predictable fit and an efficient clinical workflow.",
-    "metaTitle": "Orthodontic Appliances | Retainers & Trays | Laguna Dental Arts",
-    "metaDescription": "Clear retainers, indirect bonding trays, and orthodontic appliances fabricated from high-accuracy digital setups and durable polymers. Start a case.",
+    "cardDesc": "Digital orthodontic workflows, from clear aligner setups and retainers to indirect bonding trays, produced from your scans for an accurate, comfortable fit.",
+    "intro": "Digital orthodontic workflows, from clear aligner setups and retainers to indirect bonding trays, produced from your scans for an accurate, comfortable fit. As an orthodontic appliance lab, we archive every setup, so a replacement reproduces from the same file instead of a new impression.",
+    "metaTitle": "Orthodontic Appliance Lab | Laguna Dental Arts",
+    "metaDescription": "An orthodontic appliance lab producing clear aligner setups, retainers and indirect bonding trays from your scans. Accurate, comfortable fit. Start a case.",
     "breadcrumb": "Home / Lab Services / Orthodontics",
     "specs": [
       [
@@ -331,15 +523,48 @@ export const SERVICES: Service[] = [
         "Digital"
       ]
     ],
+    "whereFits": {
+      "title": "Where this restoration fits",
+      "items": [
+        "Clear aligners: Staged aligner setups for mild-to-moderate movement, designed digitally.",
+        "Retainers: Durable clear and wire retainers to hold results after treatment.",
+        "Indirect bonding: Precise trays for accurate, efficient bracket placement."
+      ]
+    },
+    "featureSection": {
+      "title": "Materials matched to the appliance",
+      "body": "As a CAD/CAM dental lab, we produce every appliance from your digital scan: clear, durable thermoform for staged aligner movement, rigid clear or wire retention that lasts, and accurate transfer trays for indirect bonding. Setups and trays are produced from accurate scans for a reliable, comfortable fit with smooth, well-finished edges, and every design is archived so replacements are simple to reproduce."
+    },
     "included": [
-      "Clear retainer fabrication",
+      "Clear retainer and aligner-setup fabrication",
       "Digital setup support",
       "Indirect bonding tray options",
       "Accurate trim lines and polished borders",
       "Archived files for replacement appliances",
       "Open scanner-file compatibility"
     ],
-    "faq": []
+    "faq": [
+      {
+        "q": "What orthodontic appliances and retainers can the lab make?",
+        "a": "Clear thermoformed retainers, wire retainers, aligner-related setups, and selected appliances. Submit the prescription and records and our orthodontic appliance lab confirms the design and workflow."
+      },
+      {
+        "q": "What scan records are needed for a retainer or aligner case?",
+        "a": "Complete upper and lower arches, clear terminal molars, gingival margins, interproximal anatomy, an accurate bite, and the treatment prescription. Remove scan artifacts and confirm attachments or planned removals."
+      },
+      {
+        "q": "Can a retainer be replaced from an archived scan?",
+        "a": "Often yes, if the approved design and usable records are on file and the tooth position hasn't changed. The clinician verifies fit; a new scan is preferred after movement or dental work."
+      },
+      {
+        "q": "Which retainer type should I prescribe?",
+        "a": "Clear and wire retainers differ in esthetics, durability, adjustment, and occlusal behavior. Choose based on the retention plan, patient factors, and any restorative considerations."
+      },
+      {
+        "q": "Do you provide aligner treatment planning?",
+        "a": "We support aligner-related digital setups and appliance fabrication from your prescription. Share treatment goals and staging so responsibilities, approvals, and delivery stay clear."
+      }
+    ]
   },
   {
     "slug": "zirconia-crowns",

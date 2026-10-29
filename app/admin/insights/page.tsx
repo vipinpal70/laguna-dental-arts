@@ -1,12 +1,17 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import toast from 'react-hot-toast';
 import { Edit2, Trash2, Plus, X, Eye, EyeOff, Upload, ImageIcon, ChevronRight } from 'lucide-react';
-import { getStoredArticles, saveArticle, deleteArticle, togglePublishStatus } from '@/lib/insights-store';
+import {
+  useInsightsQuery,
+  useSaveArticleMutation,
+  useDeleteArticleMutation,
+  useTogglePublishMutation,
+} from '@/lib/hooks/useInsights';
 
 /* ─── Templates ─────────────────────────────────────────────────────────── */
 
@@ -111,11 +116,13 @@ interface ArticleResource {
 /* ─── Component ──────────────────────────────────────────────────────────── */
 
 export default function AdminArticlesPage() {
-  const [articles, setArticles] = useState<ArticleResource[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { data, isLoading } = useInsightsQuery();
+  const articles = (data ?? []) as unknown as ArticleResource[];
+  const saveMutation = useSaveArticleMutation();
+  const deleteMutation = useDeleteArticleMutation();
+  const toggleMutation = useTogglePublishMutation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingArticle, setEditingArticle] = useState<ArticleResource | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Template picker (shown before the form for new articles)
   const [step, setStep] = useState<'pick-template' | 'edit-article'>('pick-template');
@@ -140,42 +147,86 @@ export default function AdminArticlesPage() {
 
   const watchedImageUrl = watch('imageUrl');
 
-  /* ─── Fetch ── */
-  const fetchArticles = async () => {
-    setIsLoading(true);
-    try {
-      const data = await getStoredArticles();
-      setArticles(data as any[]);
-    } catch (err: any) {
-      toast.error(err.message || 'Error loading articles');
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  /* ─── Image Upload (File -> resized/compressed Data URL) ──
+   * Cover photos come straight off a phone/DSLR (often 5-10MB) and are
+   * stored inline in Mongo (no blob storage configured for this deployment).
+   * Downscaling + re-encoding as JPEG here keeps each article a few hundred
+   * KB instead of multiple MB, which is what was making /insights pages
+   * take minutes to load. */
+  const MAX_IMAGE_DIMENSION = 1600;
+  const IMAGE_JPEG_QUALITY = 0.8;
 
-  useEffect(() => {
-    fetchArticles();
-  }, []);
+  // const compressImage = (file: File): Promise<string> =>
+  //   new Promise((resolve, reject) => {
+  //     const reader = new FileReader();
+  //     reader.onerror = () => reject(new Error('Could not read the file'));
+  //     reader.onload = () => {
+  //       const img = new window.Image();
+  //       img.onerror = () => reject(new Error('Could not decode the image'));
+  //       img.onload = () => {
+  //         const scale = Math.min(1, MAX_IMAGE_DIMENSION / Math.max(img.width, img.height));
+  //         const canvas = document.createElement('canvas');
+  //         canvas.width = Math.round(img.width * scale);
+  //         canvas.height = Math.round(img.height * scale);
+  //         const ctx = canvas.getContext('2d');
+  //         if (!ctx) {
+  //           reject(new Error('Canvas is not supported in this browser'));
+  //           return;
+  //         }
+  //         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  //         resolve(canvas.toDataURL('image/jpeg', IMAGE_JPEG_QUALITY));
+  //       };
+  //       img.src = reader.result as string;
+  //     };
+  //     reader.readAsDataURL(file);
+  //   });
 
-  /* ─── Image Upload (File -> Data URL) ── */
-  const handleImageUpload = (file: File) => {
+  const handleImageUpload = async (file: File) => {
     if (!file) return;
     setIsUploading(true);
     try {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const url = e.target?.result as string;
-        setValue('imageUrl', url);
-        setImagePreview(url);
-        toast.success('Image loaded successfully');
-        setIsUploading(false);
-      };
-      reader.readAsDataURL(file);
-    } catch (err: any) {
-      toast.error(err.message || 'Image upload failed');
-      setIsUploading(false);
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('/api/insights/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result?.error || `Image upload failed (${response.status})`);
+      }
+
+    if (
+      typeof result?.url !== "string" ||
+      !result.url.startsWith("https://")
+    ) {
+      throw new Error("The upload API returned an invalid image URL.");
     }
-  };
+
+    // Save only the Cloudinary URL in the form.
+    setValue("imageUrl", result.url, {
+      shouldDirty: true,
+      shouldValidate: true,
+    });
+
+    // Display the uploaded image in the editor.
+    setImagePreview(result.url);
+
+    toast.success("Image uploaded successfully");
+  } catch (err: unknown) {
+    const message =
+      err instanceof Error
+        ? err.message
+        : "Image upload failed. Please try again.";
+
+    toast.error(message);
+  } finally {
+    setIsUploading(false);
+  }
+};
 
   /* ─── Open modals ── */
   const openAddModal = () => {
@@ -232,28 +283,23 @@ export default function AdminArticlesPage() {
 
   /* ─── Submit ── */
   const onSubmit = async (values: ArticleFormValues) => {
-    setIsSubmitting(true);
     try {
-      await saveArticle({
+      await saveMutation.mutateAsync({
         ...values,
         _id: editingArticle?._id,
       });
       toast.success(editingArticle ? 'Article updated' : 'Article created');
       closeModal();
-      fetchArticles();
     } catch (err: any) {
       toast.error(err.message || 'Error saving article');
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
   const handleDelete = async (id: string) => {
     if (!confirm('Delete this article?')) return;
     try {
-      await deleteArticle(id);
+      await deleteMutation.mutateAsync(id);
       toast.success('Article deleted');
-      fetchArticles();
     } catch (err: any) {
       toast.error(err.message || 'Error deleting article');
     }
@@ -261,9 +307,8 @@ export default function AdminArticlesPage() {
 
   const togglePublish = async (article: ArticleResource) => {
     try {
-      await togglePublishStatus(article._id, !article.published);
+      await toggleMutation.mutateAsync({ id: article._id, published: !article.published });
       toast.success('Publish status updated');
-      fetchArticles();
     } catch (err: any) {
       toast.error(err.message || 'Error');
     }
@@ -583,12 +628,12 @@ export default function AdminArticlesPage() {
                   </button>
                   <button
                     type="submit"
-                    disabled={isSubmitting || isUploading}
+                    disabled={saveMutation.isPending || isUploading}
                     className="bg-[#030e44] hover:bg-[#070742] text-white !text-white font-semibold py-2.5 px-5 rounded-lg text-xs cursor-pointer disabled:opacity-50 disabled:pointer-events-none transition-colors shadow flex items-center gap-2"
                     style={{ color: '#ffffff' }}
                   >
                     <span className="text-white !text-white font-semibold" style={{ color: '#ffffff' }}>
-                      {isSubmitting ? 'Saving…' : editingArticle ? 'Save Changes' : 'Publish Article'}
+                      {saveMutation.isPending ? 'Saving…' : editingArticle ? 'Save Changes' : 'Publish Article'}
                     </span>
                   </button>
                 </div>

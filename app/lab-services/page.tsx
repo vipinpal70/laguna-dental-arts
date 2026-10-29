@@ -9,17 +9,17 @@ import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Lab Services | Laguna Dental Arts",
+    absolute: "Dental Lab Solutions & Services | Laguna Dental Arts",
   },
   description:
-    "Explore Laguna Dental Arts lab services including crowns, bridges, implants, veneers, dentures, appliances and digital dentistry solutions.",
+    "Full dental lab solutions from Laguna Dental Arts: crowns, bridges, implants, veneers, dentures, guards and appliances, made in one California lab. Explore services.",
   alternates: {
     canonical: "https://lagunadentalarts.com/lab-services",
   },
   openGraph: {
-    title: "Lab Services | Laguna Dental Arts",
+    title: "Dental Lab Solutions & Services | Laguna Dental Arts",
     description:
-      "Explore Laguna Dental Arts lab services including crowns, bridges, implants, veneers, dentures, appliances and digital dentistry solutions.",
+      "Full dental lab solutions from Laguna Dental Arts: crowns, bridges, implants, veneers, dentures, guards and appliances, made in one California lab. Explore services.",
     url: "https://lagunadentalarts.com/lab-services",
     type: "website",
   },
@@ -36,10 +36,10 @@ const WORKFLOW = [
 
 const FAQ = [
   { q: "What services does Laguna Dental Arts provide?", a: "We support crown and bridge, implant restorations, full-arch solutions, veneers, dentures and partials, night guards, orthodontic appliances, surgical guides, models, and digital planning." },
-  { q: "Do you accept both digital scans and traditional impressions?", a: "Yes. We work with major intraoral scanner systems and open digital files, while continuing to support conventional impressions and physical records when the case calls for them." },
-  { q: "Can your technicians help me choose a material or workflow?", a: "Yes. Send the clinical objective, restorative space, occlusion, esthetic requirements, and relevant records. Our team can explain laboratory options while the prescribing dentist retains the clinical decision." },
-  { q: "What information should accompany every lab case?", a: "Include a complete prescription, patient identifier, due date, restoration and material, shade, prepared and opposing arches, bite, and any implant or appliance details. Add photographs or diagnostic records when they affect design." },
-  { q: "How do I confirm turnaround or request local pickup?", a: "Turnaround depends on service and complexity. Use the portal or call the lab to confirm the current estimate; Sacramento-area practices can also contact us to arrange eligible pickup and delivery." },
+  { q: "Do you accept both digital scans and traditional impressions?", a: "Yes. We work with the major intraoral scanner systems, and we still take conventional impressions and physical records when the case calls for it." },
+  { q: "Can your technicians help me choose a material or workflow?", a: "Yes. Send the clinical objective, restorative space, occlusion, esthetics, and records, and our team explains the lab options while you keep the clinical decision." },
+  { q: "What information should accompany every lab case?", a: "A complete prescription, patient identifier, due date, restoration and material, shade, prepared and opposing arches, bite, and any implant or appliance details. Add photographs when they affect design." },
+  { q: "How do I confirm turnaround or request pickup?", a: "Call the lab for turnaround times and to schedule a pickup." },
 ];
 
 export default function ServicesPage() {
@@ -48,9 +48,9 @@ export default function ServicesPage() {
       <section className="phero phero--image phero--services">
         <div className="container">
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Lab Services</div>
-          <span className="eyebrow reveal">Lab Services</span>
-          <h1 className="display reveal">Everything your practice sends us, made in one lab.</h1>
-          <p className="phero__sub reveal">Fixed, removable, cosmetic and appliance work engineered around fit, function and a natural finish. Choose a service to explore materials, workflow and downloads.</p>
+          <span className="eyebrow reveal">Dental lab solutions</span>
+          <h1 className="display reveal">Everything your practice sends out, can be made at Laguna Dental Arts.</h1>
+          <p className="phero__sub reveal">From fixed and removable restorations to cosmetic cases and orthodontic solutions, every product is crafted for precise fit, dependable function, and natural-looking results – all from one trusted lab.</p>
         </div>
       </section>
 
@@ -111,7 +111,7 @@ export default function ServicesPage() {
 
       <section className="section" style={{ paddingBottom: 0 }} id="faq">
         <div className="container">
-          <div className="shead shead--center reveal"><span className="eyebrow center">FAQ</span><h2 className="display">Dental lab service questions.</h2></div>
+          <div className="shead shead--center reveal"><span className="eyebrow center">FAQ</span><h2 className="display">FAQs on our dental lab services.</h2></div>
           <FaqAccordion items={FAQ} />
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function ServicesPage() {
       <CtaBand
         eyebrow="Become a Partner"
         title="Ready to partner with Laguna?"
-        lead="Send your first case, tour the lab, or talk through what your practice needs. We'll set up your portal and a dedicated case team within a day."
+        lead="Ready to send your first case, schedule a lab tour, or speak with a specialist, our team makes it easy to get started."
         primaryLabel="Become a Partner"
         primaryHref="/contact"
         secondaryLabel="Explore Lab Services"

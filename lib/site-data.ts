@@ -14,7 +14,7 @@ export const SITE: {
   email: "rx-photos@lagunadentalarts.com",
   addressLine1: "9152 Elkmont Way",
   addressLine2: "Elk Grove, CA 95624",
-  // hours: "Monday–Friday · 7:00–18:00 PT",
+  hours: "Monday to Friday, 7:00 to 6PM",
   hoursNote: "Case pickups until 17:00 PT",
 };
 

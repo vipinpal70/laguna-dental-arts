@@ -27,7 +27,13 @@ export async function POST(request: Request) {
     }
     const created = await createInsight(body);
     return NextResponse.json(created, { status: 201 });
-  } catch (err) {
+  } catch (err: any) {
+    if (err?.code === 11000) {
+      return NextResponse.json(
+        { error: "An article with this slug already exists" },
+        { status: 409 }
+      );
+    }
     console.error("POST /api/insights failed:", err);
     return NextResponse.json({ error: "Failed to create insight" }, { status: 500 });
   }

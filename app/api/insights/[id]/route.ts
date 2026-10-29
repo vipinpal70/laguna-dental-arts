@@ -29,7 +29,13 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
       return NextResponse.json({ error: "Article not found" }, { status: 404 });
     }
     return NextResponse.json(updated);
-  } catch (err) {
+  } catch (err: any) {
+    if (err?.code === 11000) {
+      return NextResponse.json(
+        { error: "An article with this slug already exists" },
+        { status: 409 }
+      );
+    }
     console.error("PUT /api/insights/[id] failed:", err);
     return NextResponse.json({ error: "Failed to update insight" }, { status: 500 });
   }

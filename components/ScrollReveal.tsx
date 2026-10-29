@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export function ScrollReveal() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const searchParamsKey = searchParams.toString();
 
   useEffect(() => {
     const revealTargets = document.querySelectorAll(".reveal");
@@ -42,7 +44,7 @@ export function ScrollReveal() {
       io.disconnect();
       flowObserver?.disconnect();
     };
-  }, [pathname]);
+  }, [pathname, searchParamsKey]);
 
   return null;
 }

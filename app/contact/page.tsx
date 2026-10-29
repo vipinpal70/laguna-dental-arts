@@ -6,17 +6,17 @@ import { SITE } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact Our Elk Grove, CA Dental Lab | Laguna Dental Arts",
+    absolute: "Contact Our Dental Lab in Elk Grove | Laguna Dental Arts",
   },
   description:
-    "Contact Laguna Dental Arts in Elk Grove, California for dental lab cases, technical support, local pickup and delivery information.",
+    "Contact Laguna Dental Arts, a dental lab in Elk Grove, CA. Become a partner, request a pickup, or ask a clinical question. Same-business-day replies.",
   alternates: {
     canonical: "https://lagunadentalarts.com/contact",
   },
   openGraph: {
-    title: "Contact Our Elk Grove, CA Dental Lab | Laguna Dental Arts",
+    title: "Contact Our Dental Lab in Elk Grove | Laguna Dental Arts",
     description:
-      "Contact Laguna Dental Arts in Elk Grove, California for dental lab cases, technical support, local pickup and delivery information.",
+      "Contact Laguna Dental Arts, a dental lab in Elk Grove, CA. Become a partner, request a pickup, or ask a clinical question. Same-business-day replies.",
     url: "https://lagunadentalarts.com/contact",
     type: "website",
   },
@@ -30,13 +30,25 @@ export default function ContactPage() {
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / Contact</div>
           <span className="eyebrow reveal">Contact</span>
           <h1 className="display reveal">Let&apos;s talk about your cases.</h1>
-          <p className="phero__sub reveal">Become a partner, request a pickup, or ask a clinical question. Our Elk Grove dental lab keeps communication direct, and your technician is available seven days a week.</p>
+          <p className="phero__sub reveal">Whether you have a quick question or a complex case, our specialists are ready to support you.</p>
         </div>
       </section>
 
       <section className="section">
         <div className="container contact-grid">
-          <ContactForm />
+          <div className="reveal">
+            <ContactForm />
+            <div className="info-row" style={{ marginTop: 32 }}>
+              <div>
+                <h4>What happens next</h4>
+                <ol style={{ marginTop: 10, paddingLeft: 20, color: "var(--ink-soft)", lineHeight: 1.7 }}>
+                  <li>Our team responds promptly and makes every inquiry a priority.</li>
+                  <li>You send your first case.</li>
+                  <li>We open your account, set up the portal, and assign a technician.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
           <div className="reveal">
             <div className="info-row">
               <span className="ic ic-tile"><Icon name="pin" size={20} strokeWidth={1.8} /></span>
@@ -66,6 +78,12 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
               <span className="media__cap" style={{ zIndex: 10, pointerEvents: "none" }}>MAP · {SITE.addressLine1.toUpperCase()}</span>
+            </div>
+            <div className="info-row" style={{ marginTop: 24 }}>
+              <div>
+                <h4>Local pickup, statewide shipping</h4>
+                <p>For practices near Sacramento, our drivers run daily pickup and delivery, so cases move without days lost to a mail queue. Further out, we ship nationwide with tracking and fast turnaround.</p>
+              </div>
             </div>
           </div>
         </div>

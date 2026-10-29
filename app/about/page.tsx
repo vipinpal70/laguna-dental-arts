@@ -2,32 +2,32 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/icons/Icon";
+import { StatCounter } from "@/components/ui/StatCounter";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { TeamGrid } from "@/components/about/TeamGrid";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Our Full-Service Dental Lab | Laguna Dental Arts",
+    absolute: "Dental Labs in California | About Laguna Dental Arts",
   },
   description:
-    "Learn about Laguna Dental Arts, a California dental laboratory combining digital precision, experienced technicians and responsive support.",
+    "Laguna Dental Arts is one of the dental labs in California pairing master ceramists with a fully digital, in-house, made-in-USA workflow. Precision on every case.",
   alternates: {
     canonical: "https://lagunadentalarts.com/about",
   },
   openGraph: {
-    title: "About Our Full-Service Dental Lab | Laguna Dental Arts",
+    title: "Dental Labs in California | About Laguna Dental Arts",
     description:
-      "Learn about Laguna Dental Arts, a California dental laboratory combining digital precision, experienced technicians and responsive support.",
+      "Laguna Dental Arts is one of the dental labs in California pairing master ceramists with a fully digital, in-house, made-in-USA workflow. Precision on every case.",
     url: "https://lagunadentalarts.com/about",
     type: "website",
   },
 };
 
 const VALUES = [
-  { n: "01", title: "Precision", desc: "We measure fit, not vibes. Every unit is verified against tolerance before it ships, so it seats the way it should." },
-  { n: "02", title: "Craft", desc: "Digital tools handle the geometry; our master ceramists give each restoration the character of a natural tooth." },
-  { n: "03", title: "Partnership", desc: "You get named technicians and an account lead who learn your preferences  support that feels like an extension of your team." },
-  { n: "04", title: "Innovation", desc: "We adopt new materials and workflows deliberately, validating each one before it ever touches a patient case." },
+  { n: "01", title: "Precision", desc: "We don't guess – we verify. Every restoration is carefully checked for accuracy and fit before delivery." },
+  { n: "02", title: "Partnership", desc: "You'll work with a dedicated technician and a relationship manager who understand your preferences and provide support that feels like an extension of your team." },
+  { n: "03", title: "Innovation", desc: "We invest in the latest technology while helping shape what comes next in digital dentistry." },
 ];
 
 export default function AboutPage() {
@@ -36,9 +36,9 @@ export default function AboutPage() {
       <section className="phero phero--image phero--about">
         <div className="container">
           <div className="phero__crumbs reveal"><Link href="/">Home</Link> / About</div>
-          <span className="eyebrow reveal">Our Story</span>
-          <h1 className="display reveal">A California laboratory obsessed with fit.</h1>
-          <p className="phero__sub reveal">For over 25 years, dental restorations have been our focus. Here&apos;s what that experience has taught us.</p>
+          <span className="eyebrow reveal">About Laguna Dental Arts</span>
+          <h1 className="display reveal">A California dental lab obsessed with fit.</h1>
+          <p className="phero__sub reveal">For 37 years we&apos;ve done one thing: make restorations dentists can seat with confidence. Here&apos;s how a small California studio grew into one of the most precise dental labs in California.</p>
         </div>
       </section>
 
@@ -51,33 +51,32 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="reveal">
-            <span className="eyebrow">Est. 1998</span>
+            <span className="eyebrow">Est. 1989</span>
             <h2 className="display" style={{ marginTop: 18 }}>Founded by ceramists, run like a manufacturer.</h2>
-            <p className="lead" style={{ marginTop: 20 }}>Laguna Dental Arts began at a single bench in Elk Grove, where our founders set an uncompromising standard for marginal fit, shade, and restorative quality. As dentistry evolved, we expanded our capabilities across both traditional and digital workflows, investing in scanners, milling, printing, and case-management systems that keep every restoration traceable.</p>
-            {/* <p className="lead" style={{ marginTop: 18, color: "var(--ink-soft)" }}>Today, that same standard runs across a 12,000&nbsp;sq&nbsp;ft facility and a team of 140. The tools have evolved. The obsession hasn&apos;t.</p> */}
+            <p className="lead" style={{ marginTop: 20 }}>Laguna Dental Arts began at a single bench in California, where our founders set an uncompromising standard for marginal fit and shade. As digital dentistry matured, we invested early: scanners, milling, printing, and a case-management system that treats every restoration as a traceable medical device. Today that same standard runs across a modern facility and a full technical team. The tools have changed. The obsession with quality did not. That is what makes Laguna one of the dental labs in California worth switching to.</p>
           </div>
         </div>
       </section>
 
       <section className="section section--navy">
         <div className="container">
-          <div className="shead reveal"><span className="eyebrow">Our Strengths</span><h2 className="display">Excellence in every restoration.</h2></div>
+          <div className="shead reveal"><span className="eyebrow">By the numbers</span><h2 className="display">Scale you can rely on.</h2></div>
           <div className="stat-grid reveal">
             <div className="stat">
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 600, marginBottom: 6 }}>All-on-X &amp; Full-Arch</h3>
-              <div className="stat__label">Specialists in complex cases.</div>
+              <StatCounter to={37} suffix="+" />
+              <div className="stat__label">Years in business</div>
             </div>
             <div className="stat">
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 600, marginBottom: 6 }}>Chairside support</h3>
-              <div className="stat__label">Expert help when it matters.</div>
+              <StatCounter to={1} suffix="M+" />
+              <div className="stat__label">Cases delivered</div>
             </div>
             <div className="stat">
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 600, marginBottom: 6 }}>Dentist-focused</h3>
-              <div className="stat__label">Service built around your needs.</div>
+              <StatCounter to={45} />
+              <div className="stat__label">Team members</div>
             </div>
             <div className="stat">
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 600, marginBottom: 6 }}>Custom Esthetics</h3>
-              <div className="stat__label">Beautiful, natural-looking results.</div>
+              <StatCounter to={13} suffix="K" />
+              <div className="stat__label">Sq ft facility</div>
             </div>
           </div>
         </div>
@@ -104,7 +103,7 @@ export default function AboutPage() {
 
       <section className="section section--tint">
         <div className="container">
-          <div className="shead reveal"><span className="eyebrow">What we stand for</span><h2 className="display">Four commitments behind every case.</h2></div>
+          <div className="shead reveal"><span className="eyebrow">What we stand for</span><h2 className="display">Three commitments behind every case.</h2></div>
           <div className="values reveal">
             {VALUES.map((v) => (
               <div className="value" key={v.n}>
@@ -122,7 +121,7 @@ export default function AboutPage() {
           <div className="team-showcase__head reveal">
             <span className="eyebrow center">Our Team</span>
             <h2 className="display">The people behind <span>every restoration.</span></h2>
-            <p>Experienced specialists across design, ceramics, implants and client support work together to make every case predictable from intake to delivery.</p>
+            <p>Experienced technicians across all departments — crown and bridge, implants, full arch, surgical, removable, orthodontic and customer experience — work together to make every case predictable. When you call Laguna Dental Arts, you can ask your technician by name.</p>
           </div>
           <TeamGrid />
         </div>
@@ -131,7 +130,7 @@ export default function AboutPage() {
       <CtaBand
         eyebrow="Become a Partner"
         title="Ready to partner with Laguna?"
-        lead="Send your first case, tour the lab, or talk through what your practice needs. We'll set up your portal and a dedicated case team within a day."
+        lead="Send your first case, tour the lab, or talk through what your practice needs. We set up your portal and a dedicated technician. This is the difference a full-service dental lab built on partnership makes."
         primaryLabel="Become a Partner"
         primaryHref="/contact"
         secondaryLabel="Explore Lab Services"

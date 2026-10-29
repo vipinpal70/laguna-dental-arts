@@ -71,7 +71,7 @@ export function ContactForm() {
   return (
     <div className="card formcard reveal">
       <h2 className="display" style={{ fontSize: "1.6rem" }}>Send an inquiry</h2>
-      <p style={{ color: "var(--ink-soft)", margin: "10px 0 26px" }}>Tell us a little about your practice and we&apos;ll set you up.</p>
+      <p style={{ color: "var(--ink-soft)", margin: "10px 0 26px" }}>Tell us a little about your practice and we&apos;ll set you up. New partners get a portal and a dedicated case team, most within a day of reaching out.</p>
       <form onSubmit={onSubmit}>
         <div className="field--row">
           <div className="field"><label>First name</label><input name="firstName" required placeholder="Jane" /></div>
@@ -86,11 +86,13 @@ export function ContactForm() {
           <label>I&apos;m interested in</label>
           <select name="interest" defaultValue="Becoming a partner">
             <option>Becoming a partner</option>
-            <option>Crowns &amp; bridges</option>
+            <option>Crowns &amp; Bridges</option>
             <option>Implants</option>
-            <option>Cosmetic / veneers</option>
-            <option>Dentures</option>
-            <option>Appliances</option>
+            <option>Cosmetic &amp; Veneers</option>
+            <option>Removable</option>
+            <option>Orthodontic</option>
+            <option>Full-Arch</option>
+            <option>Surgical</option>
             <option>Something else</option>
           </select>
         </div>
